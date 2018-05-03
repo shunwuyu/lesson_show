@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>前端将数据转化为弹幕效果的实现方式</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .detailImg {
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_jpg/Pn4Sm0RsAuiaciazWxakTEAibLIg5bnCBZFl0GGZ7B4zrgjEoOYO4eibmbjyacB0gsWouFTGsloLaAopQ4NiaHANmOg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1) no-repeat;
+    background-size: cover;
+  }
+  #barrageDiv>div {
+    position: absolute;
+    width: 100%;
+    height:20%;
+    overflow: hidden;
+    /* background: red; */
+  }
+  #barrageLayer1{
+    top: 0%;
+  }
+  #barrageLayer2{
+    top: 25%;
+  }
+  #barrageLayer3{
+    top: 50%;
+  }
+  #barrageLayer4{
+    top: 75%;
+  }
+
+  .barrageDivClass {
+    position: absolute;
+    top: 10px;
+    padding: 0 10px;
+    line-height: 60px;
+  }
+  .barrageDivClass_img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .barrageDivClass_txt {
+    font-style: 24px;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="detailImg">
+    <div id="barrageDiv">
+      <div id="barrageLayer1"></div>
+      <div id="barrageLayer2"></div>
+      <div id="barrageLayer3"></div>
+      <div id="barrageLayer4"></div>
+    </div>
+  </div>
+  <script>
+  const comments = [];
+  let current = 0;
+  const channelStatus = [0,0,0,0];
+  const channelDivs = document.querySelectorAll('#barrageDiv>div');
+
+  fetch('https://www.easy-mock.com/mock/5a09867f28b23066479b8365/ajaxData/comments')
+  .then(data => data.json())
+  .then(data => {
+    comments.push(...data.data.comments);
+    // console.log(comments)
+    barrage();
+  })
+
+  function barrage() {
+    showComment()
+    setInterval(showComment, 1100)
+  }
+
+  function isChannelFree() {
+    return channelStatus.some(channel => channel < 2)
+  }
+
+  function getChannelIndex() {
+    const freeChannelIndex = [];
+    channelStatus.map((channel, i) => {
+      // console.log(channel, i);
+      if (channel < 2) {
+        freeChannelIndex.push(i);
+      }
+    });
+
+    return freeChannelIndex[Math.floor(Math.random()*freeChannelIndex.length)];
+  }
+
+  function showComment() {
+    if (current >= comments.length -1) {
+      current = 0
+    }
+    if (isChannelFree()) {
+      // console.log(channelStatus)    
+      const channelIndex = getChannelIndex();
+      // console.log(channelIndex);
+      // console.log(comments[current].avatar);
+      const comment = comments[current];
+      appendComment(comment, channelIndex);
+      current++;
+      channelStatus[channelIndex]++;
+    } 
+  }
+
+  function appendComment(comment, channelIndex) {
+   
+    let commentBox = document.createElement('div');
+    let commentImg = document.createElement('span');
+    let commentText = document.createElement('span');
+    commentBox.className = 'barrageDivClass';
+    commentText.innerHTML = comment.content;
+    commentBox.appendChild(commentImg);
+    commentImg.className = 'barrageDivClass_img';
+    commentImg.style.backgroundImage = `url(${comment.avatar})`;
+    commentText.className = 'barrageDivClass_txt';
+    commentBox.appendChild(commentText);
+    commentBox.style.left = '700px';
+    channelDivs[channelIndex].appendChild(commentBox);
+    const moveInterval = setInterval(function() {
+      let left = parseInt(commentBox.style.left);
+      if (left < -1000) {
+        // console.log(commentBox.parentNode);
+        commentBox.parentNode.removeChild(commentBox)
+        // console.log('移除了');
+        clearInterval(moveInterval);
+        channelStatus[channelIndex]--;
+      } else {
+        commentBox.style.left = left - 3 + 'px';
+      }
+      
+    } , 25)
+  }
+
+  </script>
+</body>
+</html>
