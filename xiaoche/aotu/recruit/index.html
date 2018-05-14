@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>京东招聘demo</title>
+  <meta name="format-detection" content="telephone=no"/>
+  <link rel="stylesheet" href="./css/common.css">
+  <script>
+  !function(x) {
+    function w() {
+      var v, u, t, tes, scale,
+      s = x.document,
+      r = s.documentElement,
+      a = r.clientWidth,
+      h = r.clientHeight,
+      ratio = 1080/1736;
+      if (!v && !u) {
+        // console.log('fdfd');
+        // console.log(x.navigator.appVersion)
+        // alert(x.navigator.appVersion)
+        // 两次! 一定是布尔值
+        // AppleWebKit苹果公司开发的，谷歌也合作了， 移动端都是这个内核
+        var n = !!x.navigator.appVersion.match(/AppleWebKit.*Mobile.*/);
+        
+        // console.log(n);
+        // 像素密度比
+        v = x.devicePixelRatio;
+        // console.log(v);
+        v = n ? v : 1, u = 1 / v;
+      }
+      // html
+      // console.log(a / h > ratio); 横向
+      // console.log(a) 375*667
+      r.style.fontSize = a / h > ratio ? h * ratio /320*20 + "px":  a / 320 *20 + "px";
+      scale = a / h > ratio ? h / 1736 : a / 1080;
+      document.write('\
+<style>\
+  .m{-webkit-transform:scale('+scale+') translate3d(-50%,-50%,0); transform:scale(' + scale + ') translate3d(-50%,-50%,0);-webkit-transform-origin:0 0;transform-origin:0 0;}\
+</style>\
+  '); 
+      // console.log(r.style.fontSize);
+      // console.log(x, s, r, a, h);
+    }
+    w();
+  }(window);
+  </script>
+</head>
+<body ontouchstart>
+  <div class="mod_container">
+    <div class="part part3 in">
+      <div class="timeline">
+        <div class="timeline_tit">
+          宣讲行程
+          <span>Campus Talk Schedule</span>
+        </div>
+        <div class="timeline_icon">
+          <svg viewBox="0 0 102 102">
+            <circle cx="51" cy="51" r="50" transform="rotate(90 51 51)"></circle>
+          </svg>
+        </div>
+        <ul class="timeline_list">
+          <li class="timeline_item timeline_item_sp">
+            <span class="timeline_item_cnt flag">
+              <i class="flag_sin"></i>
+            </span>
+            <span class="timeline_item_cnt country">Singapore</span>
+            <b></b>
+          </li>
+          <li class="timeline_item">
+            <span class="timeline_item_cnt time">09 / 20</span>
+            <span class="timeline_item_cnt city">INSEAD</span>
+            <b></b>
+          </li>
+          <li class="timeline_item">
+              <span class="timeline_item_cnt time">09 / 21</span>
+              <span class="timeline_item_cnt city">NTU</span>
+              <b></b>
+          </li>
+          <li class="timeline_item timeline_item_sp">
+              <span class="timeline_item_cnt flag"><i class="flag_us"></i></span>
+              <span class="timeline_item_cnt country">U.S</span>
+              <b></b>
+          </li>
+          <li class="timeline_item">
+              <span class="timeline_item_cnt time">09 / 26</span>
+              <span class="timeline_item_cnt city">UCLA</span>
+              <b></b>
+          </li>
+          <li class="timeline_item">
+              <span class="timeline_item_cnt time">09 / 28</span>
+              <span class="timeline_item_cnt city">UC Berkely</span>
+              <b></b>
+          </li>
+          <li class="timeline_item">
+              <span class="timeline_item_cnt time">10 / 05</span>
+              <span class="timeline_item_cnt city">Wharton</span>
+              <b></b>
+          </li>
+          <li class="timeline_item timeline_item_sp">
+              <span class="timeline_item_cnt flag"><i class="flag_uk"></i></span>
+              <span class="timeline_item_cnt country">U.K</span>
+              <b></b>
+          </li>
+          <li class="timeline_item">
+              <span class="timeline_item_cnt time">10 / 29</span>
+              <span class="timeline_item_cnt city">LBS</span>
+              <b></b>
+          </li>
+          <li class="timeline_line"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

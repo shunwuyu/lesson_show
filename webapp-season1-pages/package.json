@@ -1,0 +1,15 @@
+{
+  "name": "webapp-season1-pages",
+  "version": "0.1.0",
+  "description": "[season1](https://github.com/ninghao/webapp-season1-pages/blob/master/app/index.html)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "material-design-icons": "^3.0.1"
+  }
+}

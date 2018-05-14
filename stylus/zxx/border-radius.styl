@@ -1,0 +1,39 @@
+support-for-ie ?= true
+
+vendor(prop, args)
+  -webkit-{prop} args
+  {prop} args
+
+opacity(n)
+  opacity n
+  if support-for-ie
+    filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
+// border-radius()
+//   -webkit-border-radius arguments
+//   -moz-border-radius arguments
+//   border-radius arguments
+
+border-radius()
+  vendor('border-radius', arguments)
+
+stripe(even = #fff, odd = #eee)
+  tr
+    background-color odd
+    &.even
+    &:nth-child(even)
+        background-color even
+
+
+.box
+  border-radius 5px 10px / 15px 25px
+
+#logo
+  &:hover
+      opacity 0.5
+
+table
+  stripe red green
+  td
+    padding 4px 10px
+

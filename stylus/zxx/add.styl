@@ -1,0 +1,55 @@
+// add(a, b)
+//   a + b
+add(a, b=a)
+  a = unit(a, px)
+  b = unit(b, px)
+  a + b
+
+sub(a, b)
+  a - b 
+
+sizes()
+  15px 10px
+
+swap(a, b)
+  return b a
+
+stringish(val)
+  if val is a 'string' or val is a 'ident'
+    return 100px
+  else
+    return 0px
+
+compare(a, b)
+  if a > b
+    higher
+  else if a < b
+    lower
+  else
+    equal
+
+plus = add
+
+invoke(a, b, fn)
+  fn(a, b)
+
+sum()
+  n = 0
+  for num in arguments
+    n = n + num
+  return unit(n, px)
+
+get(hash, key)
+  return pair[1] if pair[0] == key for pair in hash
+
+
+
+body
+  padding sizes()[0]
+  margin swap(10px, 15px)[0]
+  height stringish(0)
+  width plus(20, 20)
+  padding invoke(5, 10, add)
+  padding invoke(5, 10, sub)
+  padding sum(1,2,3,4,5)  
+  // width compare(10, 20)

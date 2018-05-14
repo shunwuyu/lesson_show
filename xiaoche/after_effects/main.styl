@@ -1,0 +1,641 @@
+h = 622px
+w = 609px
+red = rgb(255, 59, 48)
+orange = rgb(255, 149, 0)
+yellow = rgb(255, 204, 0)
+green = rgb(76, 217, 100)
+tealBlue = rgb(90, 200, 250)
+blue = rgb(0, 122, 255)
+purple = rgb(88, 86, 214)
+pink = rgb(255, 45, 85)
+*
+  margin 0
+  padding 0
+html, body
+  min-height 667px
+.search_egg
+  position fixed
+  width 750px
+  height 1334px
+  overflow hidden
+  background-color rgba(0,0,0,.4);
+  border-radius 30px
+  zoom: .5;
+  left 50%
+  top 50%
+  transform translate3d(-50%, -50%, 0)
+
+.balls
+  width w
+  height h
+  position absolute
+  top 50%
+  left 50%
+  margin-top unit(h / -2, 'px')
+  margin-left unit(w / -2, 'px')
+  z-index 3
+  .ball
+    border-radius 50%
+    position absolute
+    opacity .7
+    f = 12
+    &:nth-child(1)
+      width 120px
+      height 120px
+      background yellow
+      left 205px
+      top 56px
+      dur = 3 * f + 4 -5
+      animation moveUp1 (dur/f*1s) (5/f*1s) both ease-in-out
+      @keyframes moveUp1
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27-5)/dur * 100%}
+          transform translate3d(0, 0, 0)
+        {(28-5)/dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(2)
+      width 80px
+      height 80px
+      background yellow
+      left 175px
+      top 95px
+      dur = 3 * f + 10 - 8
+      animation moveUp2 (dur / f * 1s) (8 / f * 1s) both ease-in-out
+      @keyframes moveUp2
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 8) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        {(28 - 8) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(3)
+      width 120px
+      height 120px
+      background yellow
+      left 98px
+      top 76px
+      dur = 3 * f + 4 -2
+      animation moveUp3 (dur / f * 1s) (2 / f * 1s) both ease-in-out
+      @keyframes moveUp3
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 2) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 2) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(4)
+      width 48px
+      height 48px
+      background orange
+      left 121px
+      top 165px
+      dur = 3 * f + 9 - 8
+      animation moveUp4 (dur / f * 1s) (8 / f * 1s) both ease-in-out
+      @keyframes moveUp4
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 8) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 8) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(5)
+      width 35px
+      height 35px
+      background orange
+      left 85px
+      top 140px
+      dur = 3 * f + 4 - 5
+      animation moveUp5 (dur / f * 1s) (5 / f * 1s) both ease-in-out
+      @keyframes moveUp5
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 5) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 5) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+      
+    &:nth-child(6)
+      width 102px
+      height 102px
+      background orange
+      left 43px
+      top 160px
+      dur = 3 * f + 10 - 5
+      animation moveUp6 (dur / f * 1s) (5 / f * 1s) both ease-in-out
+      @keyframes moveUp6
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 5) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 5) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+    &:nth-child(7)
+      width 52px
+      height 52px
+      background pink
+      left 76px
+      top 235px
+      dur = 3 * f + 3 -7
+      animation moveUp7 (dur / f * 1s) (7 / f * 1s) both ease-in-out
+      @keyframes moveUp7
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 7) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 7) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(8)
+      width 80px
+      height 80px
+      background pink
+      left 41px
+      top 263px
+      dur = 3 * f + 9 - 4
+      animation moveUp8 (dur / f * 1s) (4 / f * 1s) both ease-in-out
+      @keyframes moveUp8
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 4) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 4) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+      
+    &:nth-child(9)
+      width 120px
+      height 120px
+      background pink
+      left 0
+      top 298px
+      dur = 4 * f + 0 - 6
+      animation moveUp9 (dur / f * 1s) (6 / f * 1s) both ease-in-out
+      @keyframes moveUp9
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 6) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 6) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(10)
+      width 52px
+      height 52px
+      background blue
+      left 76px
+      top 361px
+      dur = 3 * f + 2 - 3
+      animation moveUp10 (dur / f * 1s) (3 / f * 1s) both ease-in-out
+      @keyframes moveUp10
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 3) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 3) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+        
+    
+    &:nth-child(11)
+      width 52px
+      height 52px
+      background blue
+      left 86px
+      top 387px
+      dur = 3 * f + 1 - 7
+      animation moveUp11 (dur / f * 1s) (7 / f * 1s) both ease-in-out
+      @keyframes moveUp11
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 7) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 7) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+    &:nth-child(12)
+      width 36px
+      height 36px
+      background blue
+      left 77px
+      top 397px
+      dur = 3 * f + 3 -2
+      animation moveUp3 (dur / f * 1s) (2 / f * 1s) both ease-in-out
+      @keyframes moveUp12
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 2) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 2) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(13)
+      width 80px
+      height 80px
+      background blue
+      left 75px
+      top 425px
+      dur = 3 * f + 2 - 8
+      animation moveUp13 (dur / f * 1s) (8 / f * 1s) both ease-in-out
+      @keyframes moveUp13
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 8) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 8) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(14)
+      width 36px
+      height 36px
+      background blue
+      left 74px
+      top 511px
+      dur = 2 * f + 11 - 4
+      animation moveUp14 (dur / f * 1s) (4 / f * 1s) both ease-in-out
+      @keyframes moveUp14
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 4) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 4) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+        
+    &:nth-child(15)
+      width 52px
+      height 52px
+      background blue
+      left 132px
+      top 480px
+      dur = 3 * f + 1 - 7
+      animation moveUp15 (dur / f * 1s) (7 / f * 1s) both ease-in-out
+      @keyframes moveUp15
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 7) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 7) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+    &:nth-child(16)
+      width 36px
+      height 36px
+      background blue
+      left 169px
+      top 511px
+      dur = 3 * f + 2 - 4
+      animation moveUp16 (dur / f * 1s) (4 / f * 1s) both ease-in-out
+      @keyframes moveUp16
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 4) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 4) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+        
+    &:nth-child(17)
+      width 80px
+      height 80px
+      background tealBlue
+      left 153px
+      top 524px
+      dur = 3 * f + 3 - 7
+      animation moveUp17 (dur / f * 1s) (7 / f * 1s) both ease-in-out
+      @keyframes moveUp17
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 7) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 7) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(18)
+      width 52px
+      height 52px
+      background tealBlue
+      left 212px
+      top 542px
+      dur = 3 * f + 5 - 1
+      animation moveUp18 (dur / f * 1s) (1 / f * 1s) both ease-in-out
+      @keyframes moveUp18
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 1) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 1) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(19)
+      width 80px
+      height 80px
+      background tealBlue
+      left 241px
+      top 537px
+      dur = 3 * f + 3 - 2
+      animation moveUp19 (dur / f * 1s) (2 / f * 1s) both ease-in-out
+      @keyframes moveUp19
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 2) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 2) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+    &:nth-child(20)
+      width 80px
+      height 80px
+      background tealBlue
+      left 285px
+      top 524px
+      dur = 3 * f + 3 - 8
+      animation moveUp20 (dur / f * 1s) (8 / f * 1s) both ease-in-out
+      @keyframes moveUp20
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 8) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 8) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(21)
+      width 60px
+      height 60px
+      background tealBlue
+      left 325px
+      top 529px
+      dur = 4 * f + 0 - 3
+      animation moveUp21 (dur / f * 1s) (3 / f * 1s) both ease-in-out
+      @keyframes moveUp21
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 3) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 3) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+    &:nth-child(22)
+      width 52px
+      height 52px
+      background tealBlue
+      left 358px
+      top 538px
+      dur = 3 * f + 1 - 6
+      animation moveUp22 (dur / f * 1s) (6 / f * 1s) both ease-in-out
+      @keyframes moveUp22
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 6) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 6) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(23)
+      width 52px
+      height 52px
+      background tealBlue
+      left 393px
+      top 542px
+      dur = 3 * f + 5 - 2
+      animation moveUp13 (dur / f * 1s) (2 / f * 1s) both ease-in-out
+      @keyframes moveUp23
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 2) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 2) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(24)
+      width 36px
+      height 36px
+      background tealBlue
+      left 410px
+      top 587px
+      dur = 3 * f + 2 - 7
+      animation moveUp24 (dur / f * 1s) (7 / f * 1s) both ease-in-out
+      @keyframes moveUp24
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 7) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 7) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(25)
+      width 80px
+      height 80px
+      background tealBlue
+      left 422px
+      top 524px
+      dur = 3 * f + 1 - 3
+      animation moveUp25 (dur / f * 1s) (3 / f * 1s) both ease-in-out
+      @keyframes moveUp25
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 3) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 3) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(26)
+      width 60px
+      height 60px
+      background tealBlue
+      left 455px
+      top 500px
+      dur = 3 * f + 9 - 7
+      animation moveUp26 (dur / f * 1s) (7 / f * 1s) both ease-in-out
+      @keyframes moveUp26
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 7) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 7) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+        
+    &:nth-child(27)
+      width 36px
+      height 36px
+      background tealBlue
+      left 512px
+      top 556px
+      dur = 3 * f + 1 - 1
+      animation moveUp27 (dur / f * 1s) (1 / f * 1s) both ease-in-out
+      @keyframes moveUp27
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 1) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 1) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+    
+    &:nth-child(28)
+      width 102px
+      height 102px
+      background blue
+      left 471px
+      top 465px
+      dur = 3 * f + 10 - 5
+      animation moveUp28 (dur / f * 1s) (5 / f * 1s) both ease-in-out
+      @keyframes moveUp28
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 5) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 5) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+    &:nth-child(29)
+      width 80px
+      height 80px
+      background blue
+      left 493px
+      top 431px
+      dur = 3 * f + 5 - 7
+      animation moveUp29 (dur / f * 1s) (7 / f * 1s) both ease-in-out
+      @keyframes moveUp29
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 7) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 7) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+    &:nth-child(30)
+      width 60px
+      height 60px
+      background blue
+      left 549px
+      top 472px
+      dur = 3 * f + 7 - 1
+      animation moveUp30 (dur / f * 1s) (1 / f * 1s) both ease-in-out
+      @keyframes moveUp30
+        0%
+          transform translate3d(0, 1175px, 0)
+        {(27 - 1) / dur * 100%}
+          transform translate3d(0, 0 , 0)
+        {(28 - 1) / dur * 100%}
+          transform translate3d(0, 0, 0)
+        100%
+          transform translate3d(0, -1225px, 0)
+
+.mac
+  width w
+  height h
+  position absolute
+  top 50%
+  left 50%
+  margin-top unit(h / -2, 'px')
+  margin-left unit(w / -2, 'px')
+  z-index 2
+  &-inner
+    mac_url = 'https://res.cloudinary.com/dgnx97ptu/image/upload/v1520317668/apple-mac_hgeegs.png'
+    position absolute
+    left 94px
+    top 31px
+    width 446px
+    height 540px
+    background url(mac_url) 0 0 no-repeat
+    background-size 100%
+    animation mac_inner_in_out ((52-28)/12*1s) (30/12*1s) both
+
+@keyframes mac_inner_in_out
+  0%
+    opacity 0
+    transform scale(1)
+  {5 / 24 * 100%}
+    opacity 1
+  {(47 - 28) / 24 * 100%}
+    opacity 1
+  30%
+    transform scale((180 / 446))
+  50%
+    transform scale((208 / 446))
+  65%
+    transform scale((200 / 446))
+  100%
+    opacity 0
+    transform scale((200 / 446))
+
+.main
+  &.start-fade-in
+    animation start-fade-in .6s both
+  
+.search-egg
+  &.fade-out
+    animation fade-out .6s both
+
+@keyframes start-fade-in
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@keyframes fade-out
+  0%
+    opacity 1
+  100%
+    opacity 0
+
+

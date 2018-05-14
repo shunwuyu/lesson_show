@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- <script src="http://www.semantic-ui.cn/examples/assets/library/jquery.min.js"></script> -->
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    function JQueryEle(ele) {
+      this.ele = ele;
+    }
+    JQueryEle.prototype = {
+      html: function(str) {
+        this.ele.innerHTML =  str;
+      }
+    }
+    var jQuery = {};
+    jQuery.wrapper = function(ele) {
+      const jqueryEle = new JQueryEle(ele);
+      return jqueryEle;
+    }
+    function $(selector) {
+      // console.log(typeof selector);
+      if (typeof selector === 'string') {
+        const ele = document.querySelector(selector);
+        if (ele) {
+          return jQuery.wrapper(ele);
+        }
+      //页面ready事件
+      } else if (typeof selector === 'function') {
+        // DOM加载完成后网页内容加载之前执行，也就是html加载完成后，图片加载之前 
+        // console.log(selector)
+        // 解析HTML构建DOM Tree
+        // 构建渲染树（解析样式信息）
+        // 布局渲染树（布局node节点）
+        // 绘制Render Tree 渲染树
+        document.addEventListener('DOMContentLoaded',selector,false);
+      }
+    }
+
+    $(function() {
+      console.log('page ready')
+      $('#root').html('<p>神奇的jquery</p>')
+    })
+
+  </script>
+</body>
+</html>

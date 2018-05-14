@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<wxs src="./api.wxs" module="api" />
+<view class="container">
+  <view class="userinfo">
+    <button size="mini" wx:if="{{!hasUserInfo && canIUse}}"
+   open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"
+      background-size="cover"/>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="titleBar">
+    <view class="status">
+      <text class="{{status == '1'?'active':''}}" data-status="1" bindtap="showStatus">全部</text>
+      <text class="{{status == '2'?'active':''}}" data-status="2" bindtap="showStatus">未完成</text>
+      <text class="{{status == '3'?'active':''}}" data-status="3" bindtap="showStatus">已完成</text>
+    </view>
+    <view class="add">
+      <button class="mini-btn" type="warn" size="mini" bindtap="addTodoShow">+添加</button>
+    </view>
+  </view>
+  <scroll-view scroll-y class="lists">
+    <block wx:if="{{curLists.length < 1}}">
+      <view class="nodata">暂无数据</view>
+    </block>
+    <view class="item" wx:for="{{curLists}}" wx:key="index">
+      <view class="content"  data-index="{{index}}" style="{{item.txtStyle}}"
+       bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
+        <icon class="icon-small" type="{{item.status === '0'?'circle':'success'}}" size="23"
+         data-item="{{item.id}}" bindtap="changeTodo"></icon>
+        <text class="title {{item.status === '1'?'over':''}}">{{item.title}}</text>
+        <text class="time">{{api.formatTime(item.id)}}</text>
+      </view>
+      <view class="del" data-item="{{item.id}}" bindtap="delTodo">
+        <text>删除</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="addForm {{addShow?'':'hide'}}">
+    <view class="addForm-div">
+      <input type="text" class="weui-input" placeholder="请输入todo" value="{{addText}}" bindinput="setInput" focus="{{focus}}"/>
+      <view class="addForm-btn">
+        <button class="weui-btn mini-btn" size="mini" bindtap="addTodo" type="warn">确定添加</button>
+        <button class="weui-btn mini-btn" type="default" bindtap="addTodoHide" size="mini">取消</button>
+      </view>
+    </view>
+  </view>
+</view>
+

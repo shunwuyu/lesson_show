@@ -1,0 +1,18 @@
+.box {
+  -webkit-border-radius: 5px 10px/15px 25px;
+  border-radius: 5px 10px/15px 25px;
+}
+#logo:hover {
+  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+table tr {
+  background-color: #008000;
+}
+table tr.even,
+table tr:nth-child(even) {
+  background-color: #f00;
+}
+table td {
+  padding: 4px 10px;
+}

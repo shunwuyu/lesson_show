@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://www.semantic-ui.cn/examples/assets/library/jquery.min.js"></script>
+</head>
+<body>
+  <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525327929710&di=9aa2bd5e32164164df56390f0b71040a&imgtype=jpg&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D2439355652%2C1852440864%26fm%3D214%26gp%3D0.jpg" alt="" onLoad="photoLoaded"/>
+  <script>
+    const date = new Date()
+    window.onload = function() {
+      const now = new Date()
+      console.log('window.onload');
+      console.log(now - date);
+    }
+    $(function() {
+      console.log('dom ready');
+    })
+    function photoLoaded() {
+      console.log('loaded');
+    }
+  </script>
+</body>
+</html>
