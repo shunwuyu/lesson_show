@@ -1,0 +1,21 @@
+<import src="/towxml/entry.wxml" />
+<import src="/templates/spinner.wxml"/>
+<template is="spinner" data="{{isLoading}}"/>
+
+<view class="featured-media">
+  <image mode="aspectFill" src="/assets/images/a.png"/>
+</view>
+<view class="article">
+  <view class="article__h1">
+    {{ title }}
+  </view>
+  <view class="article__section">
+    <view class="article__p">
+      <template is="entry" data="{{...article}}"/>
+    </view>
+    <view class="article__meta">
+      <image class="article__avatar" src="{{author.avatar}}"/>
+      <view>{{author.name}}</view>
+    </view>
+  </view>
+</view>
