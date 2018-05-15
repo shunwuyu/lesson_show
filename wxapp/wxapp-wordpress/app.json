@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/demo/demo",
-    "pages/posts/show"
+    "pages/posts/show",
+    "pages/posts/create",
+    "pages/users/login",
+    "pages/users/show"
   ],
   "window": {
     "navigationBarTitleText": "旅梦开发团",
@@ -24,10 +27,16 @@
         "selectedIconPath": "assets/icons/home-active.png"
       },
       {
-        "text": "演示",
-        "pagePath": "pages/demo/demo",
-        "iconPath": "assets/icons/event.png",
-        "selectedIconPath": "assets/icons/event-active.png"
+        "text": "创作",
+        "pagePath": "pages/posts/create",
+        "iconPath": "assets/icons/add.png",
+        "selectedIconPath": "assets/icons/add-active.png"
+      },
+      {
+        "text": "我",
+        "pagePath": "pages/users/show",
+        "iconPath": "assets/icons/face.png",
+        "selectedIconPath": "assets/icons/face-active.png"
       }
     ]
   },

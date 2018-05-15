@@ -1,0 +1,31 @@
+<view class="toptips toptips_warn" wx:if="{{showMessage}}">
+  {{message}}
+</view>
+<view class="cells__title">用户名</view>
+<view class="cells cells_after-title">
+  <view class="cell cell_input">
+    <view class="cell_bd">
+      <input type="text" focus
+       class="input" placeholder="输入用户名"
+       bindinput="onInputUsername" />
+    </view>
+  </view>
+</view>
+<div class="cells__title">密码</div>
+<view class="cells cells_after-title">
+  <view class="cell cell_input">
+    <view class="cell__bd">
+      <input password class="input"
+      placeholder="输入密码" bindinput="onInputPassword" />
+    </view>
+  </view>
+</view>
+<view class="btn-area">
+  <button class="btn" type="primary"
+   bindtap="onTapSubmitButton">
+  {{bind? '绑定微信帐号': '登录'}}
+  </button>
+  <button class="btn" type="default"
+  bindtap="onTapRegisterButton" wx:if="{{bind}}">
+  注册新用户并绑定微信帐号</button>
+</view>
