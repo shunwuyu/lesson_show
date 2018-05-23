@@ -1,0 +1,166 @@
+<import src="../../utils/loading.wxml"/>
+<import src="../../utils/image.wxml"/>
+<view id="header" class="tab">
+  <view class="tab-item {{rec.idx==tabidx?'tbi-cur':''}}" data-t="0"
+   bindtap="switchtab">
+    <text class="tbi-text">个性推荐</text>
+  </view>
+  <view class="tab-item {{playlist.idx==tabidx?'tbi-cur':''}}" data-t="1"
+   bindtap="switchtab">
+    <text class="tbi-text">歌手</text>
+  </view>
+  <view class="tab-item {{djlist.idx==tabidx?'tbi-cur':''}}" data-t="2"
+   bindtap="switchtab">
+    <text class="tbi-text">主播电台</text>
+  </view>
+  <view class="tab-item {{sort.idx==tabidx?'tbi-cur':''}}" data-t="3"
+   bindtap="switchtab">
+    <text class="tbi-text">排行榜</text>
+  </view>
+  <navigator class="tab-item" 
+  url="../search/search"
+  id="lastsearch">
+    <icon type="search" size="18" color="#666"/>
+  </navigator>
+</view>
+<view id="main" class="page_pp">
+  <view class="tab_cnt" hidden="{{tabidx!=0}}">
+    <swiper indicator-dots="true" autoplay="true" circular="true">
+      <swiper-item wx:for-items="{{banner}}" wx:key="{{item.targetId}}">
+        <image src="{{item.pic}}" class="slide-image" width="750" height="290"/>
+      </swiper-item>
+    </swiper>
+    <view id="album_loading" wx:if="{{!rec.loading}}">
+      <image src="../../image/cm2_discover_icn_start_big@2x.png"/>
+      正在为您生成个性化推荐
+    </view>
+    <view wx:else>
+      <view id="rec_nav">
+        <view>
+          <navigator url="../fm/fm">
+            <view class="recn_ico">
+              <image src="../../image/cm2_discover_icn_fm-ip6@2x.png"/>
+            </view>
+            私人FM
+          </navigator>
+        </view>
+        <view>
+          <navigator url="../recsongs/index">
+            <view class="recn_ico">{{thisday}}</view>
+            每日歌曲推荐
+          </navigator>
+        </view>
+        <view>
+            <navigator url="../playlist/index?pid=3778678">
+              <view class="recn_ico">
+                <image src="../../image/cm2_discover_icn_upbill-ip6@2x.png"></image>
+              </view>
+              云音乐热歌榜
+            </navigator>
+        </view>
+      </view>
+      <view class="st_title">
+        <image width="30" mode="widthFix" src="../../image/cm2_discover_icn_recmd@2x.png"/>
+        推荐歌单
+        <view class="rbtn" bindtap="switchtab" data-t="1">更多</view>
+      </view>
+      <view class="flex-boxlist">
+        <view class="tl_cnt" wx:for-items="{{rec.re[0]}}" wx:key="{{item.id}}">
+          <navigator url="../playlist/playlist?pid={{item.id}}&from=toplist">
+            <view class="cover">
+              <image class="music_cover" src="{{item.picUrl}}?param=200y200"/>
+              <view class="img_playcount">
+                <image src="../../image/p0.png"/>
+                  {{item.playCount}}
+              </view>
+            </view>
+            <text class="name">{{item.name}}</text>
+          </navigator>
+        </view>
+      </view>
+      <!--newsongs-->
+      <view class="st_title">
+        <image width="30" mode="widthFix" src="../../image/cm2_discover_icn_newest@2x.png"/>更新音乐
+        <navigator class="rbtn" url="../new/index">更多</navigator>
+      </view>
+      <view class="flex-boxlist">
+        <view class="tl_cnt" wx:for-items="{{rec.re[1]}}" wx:for-index="idx" wx:if="{{idx<6}}" wx:for-item="re" wx:key="{{re.id}}">
+          <navigator url="../playing/index?id={{re.id}}&&br={{re.song.privilege.maxbr}}">
+            <view class="cover">
+              <image class="music_cover" src="{{re.song.album.picUrl}}?param=200y200" />
+              <text>{{re.playcount}}</text>
+            </view>
+            <view class="tl_info">
+              <view>{{re.name}}</view>
+              <view class="tli_des">{{re.song.artists[0].name}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <!--mv-->
+      <view class="st_title">
+        <image width="30" mode="widthFix" src="../../../image/cm2_discover_icn_mv@2x.png" />推荐Mv
+        <view class="rbtn" >更多></view>
+      </view>
+      <view class='flex-boxlist mvs flex-two'>
+        <view wx:for="{{rec.re[2]}}" class="tl_cnt" wx:for-item="re" wx:key="{{re}}">
+          <navigator url="../mv/index?id={{re.id}}">
+            <view class="cover">
+              <view class="img_playcount">
+                <template is="image" data="{{src:'../../image/video.png',width:28,height:20}}" />{{re.playCount}}</view>
+              <image src="{{re.picUrl}}?param=320y180" class="mv_cover" />
+            </view>
+            <view class="tl_info">
+              <view>{{re.name}}</view>
+              <view class="tli_des">{{re.artistName}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <!--dj-->
+      <view class="st_title">
+        <image width="30" mode="widthFix" src="../../../image/cm2_discover_icn_radio@2x.png" />主播电台
+        <view class="rbtn"  bindtap="switchtab" data-t="2">更多></view>
+      </view>
+      <view class='flex-boxlist'>
+        <view class="tl_cnt" wx:for-items="{{rec.re[3]}}" wx:key="{{item.id}}">
+          <navigator url="../program/index?pid={{item.id}}">
+            <view class="cover">
+              <image src="{{item.picUrl}}?param=200y200" class="music_cover" />
+            </view>
+            <text class="name">{{item.name}}</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tab_cnt" hidden="{{tabidx!=1}}">
+    <view class="listheader" id="plc_header">
+      {{catelist.checked.name}}
+      <text bindtap="togglePtype" id="catselectbtn">选择分类</text>
+    </view>
+    <block wx:if="{{playlist.loading}}">
+      <view class="flex-boxlist flex-two">
+        <view class="tl_cnt cateplaylit"
+        wx:for-items="{{playlist.list.playlists}}"
+        wx:key="{{item.id}}">
+          <navigator url="../playlist/playlist?pid={{item.id}}&from=toplist">
+            <view class="cover">
+              <image class="music_cover" src="{{item.coverImgUrl}}?param=200y200"/>
+              <view class="img_creator">
+                <template is="image" data="{{src:'../../../image/cm2_icn_userhead@2x.png',width:24}}"/>
+                {{item.creator.nickname}}
+                <view class="img_playcount">
+                  <img src="../../image/p0.png"/>
+                  {{item.playCount}}
+                </view>
+                <text class="name">{{item.name}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </block>
+    <template wx:if="{{playlist.loading||playlist.list.more}}" is="loading" />
+  </view>
+</view>

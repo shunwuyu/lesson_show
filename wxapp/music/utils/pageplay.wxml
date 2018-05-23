@@ -1,0 +1,5 @@
+<template name="pp">
+  <view class="pageplay" wx:if="{{music.id}}">
+    
+  </view>
+</template>

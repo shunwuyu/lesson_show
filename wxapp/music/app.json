@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/playlist/playlist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#BB2C08",
+    "backgroundColor": "#fbfcfd",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#fff",
+    "borderStyle": "#333",
+    "backgroundColor": "#212121",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/cm2_btm_icn_discovery.png",
+        "selectedIconPath": "image/cm2_btm_icn_discovery_prs.png",
+        "text": "发现音乐"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "image/cm2_btm_icn_music.png",
+        "selectedIconPath": "image/cm2_btm_icn_music_prs.png",
+        "text": "我的音乐"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
