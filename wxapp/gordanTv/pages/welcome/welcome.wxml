@@ -1,0 +1,25 @@
+<view class="container">
+  <!-- <view style="position:fixed;top:0;left:0;">
+    <text>{{angle}}</text>
+  </view> -->
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/images/more/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="/images/more/title8.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <!-- <image class="logo" src="{{userInfo.avatarUrl}}"></image>  -->
+        <image class="wave" src="/images/more/wave.png" mode="aspectFill" />
+        <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"/>
+      </view>
+      <view class="bd">
+        <image class="smalltitle" src="/images/more/confirm-word1.png"></image>
+        <view class="confirm-btn" bindtap="goToIndex">
+          <text>进入狗窝</text>
+        </view>
+        <text class="copyright">欢迎体验狗蛋TV-关注微博@我吃酸萝卜</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="password" id="inputId">
+    <a href="javascript:;" id="switch">切换</a>
+  </div>
+  <script>
+    const switchEle = document.getElementById('switch');
+    const inputEle = document.getElementById('inputId');
+    switchEle.addEventListener('click', function() {
+      inputEle.type = inputEle.type == 'password'?'text':'password'
+    }, false);
+  </script>
+</body>
+</html>
