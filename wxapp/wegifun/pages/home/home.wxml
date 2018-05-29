@@ -1,0 +1,63 @@
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access head" url="/pages/home/auth/auth" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{userInfo.avatar}}"/>
+    </view>
+    <view class="weui-cell__bd">
+      <view class="name">{{userInfo.nickName}}</view>
+      <view class="stu_id">{{stu_id}}</view>
+    </view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-cells" wx:if="{{userInfo.isBindEdu}}">
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/score/score">
+    <view class="weui-cell__hd">
+      <image src="/images/icon_score.png"/>
+    </view>
+    <view class="weui-cell__bd">90</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-cells">
+  <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" 
+  url="/pages/card/card">
+    <view class="weui-cell__hd">
+      <image src="/images/icon_card.png"/>
+    </view>
+    <view class="weui-cell__bd">校园卡</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/electric/electric" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/images/icon_electric.png" />
+    </view>
+    <view class="weui-cell__bd">电卡</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-cells">
+  <navigator url="/pages/catalog/catalog" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+        <image src="/images/icon_catalog.png" />
+    </view>
+    <view class="weui-cell__bd">登记</view>
+    <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class="weui-cells">
+    <navigator url="/pages/service/service" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/images/icon_service.png" />
+        </view>
+        <view class="weui-cell__bd">服务</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="/pages/setting/setting" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/images/icon_setting.png" />
+        </view>
+        <view class="weui-cell__bd">设置</view>
+        <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
+    </navigator>
+</view>

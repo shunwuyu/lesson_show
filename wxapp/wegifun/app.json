@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/electric/electric",
+    "pages/electric/recharge/recharge",
+    "pages/logs/logs",
+    "pages/card/card",
+    "pages/card/record/record",
+    "pages/electric/setting/setting"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#393A3F",
+    "navigationBarTitleText": "微吉风",
+    "navigationBarTextStyle": "white",
+    "backgroundColorTop": "#ebebeb",
+    "backgroundColorBottom": "#ebebeb"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#46C01B",
+    "backgroundColor": "#FCFCFC",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "课表",
+        "iconPath": "images/icon_index.png",
+        "selectedIconPath": "images/icon_index_hl.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_hl.png"
+      }
+    ]
+  }
+}

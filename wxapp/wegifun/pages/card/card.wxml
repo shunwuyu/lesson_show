@@ -1,0 +1,13 @@
+<view class="weui-msg">
+    <image src="/images/icon_money.png" />
+    <text>我的余额</text>
+    <text class="result">¥ 0.5</text>
+    <view class="weui-msg__opr-area">
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="toRecord">消费记录</button>
+        </view>
+    </view>
+</view>
+<view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__text">你五毛我五毛，那么咱俩就能一块啦</view>
+</view>

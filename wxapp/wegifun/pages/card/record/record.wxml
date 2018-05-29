@@ -1,0 +1,51 @@
+<view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">开始日期</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker data-type="startPicker" mode="date" value="{{startDate}}" start="2017-02-01" end="{{startPickerEnd}}" bindchange="bindDateChange">
+                <view class="weui-input">{{startDate}}</view>
+            </picker>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">结束日期</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker data-type="endPicker" mode="date" value="{{endDate}}" start="{{endPickerStart}}" end="{{dateArr[1]}}" bindchange="bindDateChange">
+                <view class="weui-input">{{endDate}}</view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view class="weui-btn-area">
+  <button class="weui-btn" type="primary" bindtap="bindSubmit">确定</button>
+</view>
+<view class="weui-cells__title" wx:if="{{records.length}}">{{records.length}}条记录，{{total}}元</view>
+<view class="weui-form-preview" wx:for="{{records}}" wx:key="{{index}}">
+  <view class="weui-form-preview__hd">
+      <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">金额</view>
+          <view class="weui-form-preview__value_in-hd">¥ {{item.amount}}</view>
+      </view>
+  </view>
+   <view class="weui-form-preview__bd">
+      <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">区域</view>
+          <view class="weui-form-preview__value">{{item.area}}</view>
+      </view>
+      <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">窗口</view>
+          <view class="weui-form-preview__value">{{item.platform}}</view>
+      </view>
+      <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">时间</view>
+          <view class="weui-form-preview__value">{{item.time}}</view>
+      </view>
+  </view> 
+  <view class="weui-form-preview__ft">
+      <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">操作</navigator>
+  </view> 
+</view>
