@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/dashboard/index",
+    "pages/badge/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "components/cell-group/index"
+  ],
+  "window": {        
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
