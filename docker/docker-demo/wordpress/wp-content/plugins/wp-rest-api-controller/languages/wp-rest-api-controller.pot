@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: rest-api-exposed 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-18 20:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: TwentySixteen-Child/functions.php:14
+msgctxt "Post Type General Name"
+msgid "Jobs"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:15
+msgctxt "Post Type Singular Name"
+msgid "Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:16 TwentySixteen-Child/functions.php:17
+msgid "Jobs"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:18
+msgid "Job Archives"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:19
+msgid "Parent Job:"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:20
+msgid "All Jobs"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:21
+msgid "Add New Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:22
+msgid "Add Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:23
+msgid "New Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:24
+msgid "Edit Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:25
+msgid "Update Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:26
+msgid "View Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:27
+msgid "Search Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:28
+msgid "Job Not found"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:29
+msgid "Job Not found in Trash"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:30
+msgid "Job Image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:31
+msgid "Set job image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:32
+msgid "Remove job image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:33
+msgid "Use as job image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:34
+msgid "Insert into job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:35
+msgid "Uploaded to this job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:36
+msgid "Jobs list"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:37
+msgid "Jobs list navigation"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:38
+msgid "Filter jobs list"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:41 TwentySixteen-Child/functions.php:42
+#: TwentySixteen-Child/functions.php:96 TwentySixteen-Child/functions.php:97
+msgid "Job"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:69
+msgctxt "Post Type General Name"
+msgid "Portfolios"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:70
+msgctxt "Post Type Singular Name"
+msgid "Portfolio"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:71 TwentySixteen-Child/functions.php:72
+msgid "Portfolio"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:73
+msgid "Portfolio Archives"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:74
+msgid "Parent Portfolio:"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:75
+msgid "All Portfolio Items"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:76
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:77
+msgid "Add Portfolio Item"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:78
+msgid "New Portfolio Item"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:79
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:80
+msgid "Update Portfolio Item"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:81
+msgid "View Portfolio Item"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:82
+msgid "Search Portfolio Items"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:83
+msgid "Portfolio Item Not found"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:84
+msgid "Portfolio Item Not found in Trash"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:85
+msgid "Portfolio Item Image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:86
+msgid "Set portfolio image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:87
+msgid "Remove portfolio image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:88
+msgid "Use as portfolio image"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:89
+msgid "Insert into portfolio"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:90
+msgid "Uploaded to this portfolio"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:91
+msgid "Portfolios list"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:92
+msgid "Portfolios list navigation"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:93
+msgid "Filter portfolios list"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:128
+msgid "Jobs Details"
+msgstr ""
+
+#: TwentySixteen-Child/functions.php:192
+msgid "Portfolio Details"
+msgstr ""
+
+#: admin/class-wp-rest-api-controller-admin.php:101
+msgid ""
+"This post type is disabled. Enable it and save the settings, to access this "
+"link."
+msgstr ""
+
+#: admin/class-wp-rest-api-controller-admin.php:119
+msgid "WP REST API Controller"
+msgstr ""
+
+#: admin/class-wp-rest-api-controller-admin.php:120
+msgid "REST API Controller"
+msgstr ""
+
+#: admin/class-wp-rest-api-controller-admin.php:149
+msgid "Settings have been successfully updated."
+msgstr ""
+
+#: admin/class-wp-rest-api-controller-admin.php:155
+msgid ""
+"The WP REST API Controller cache has been cleared, and the post type and "
+"meta data lists below have been updated."
+msgstr ""
+
+#: admin/partials/settings-functions.php:95
+msgid "Toggle visibility of post types and select meta data to the REST API."
+msgstr ""
+
+#: admin/partials/settings-functions.php:134
+msgid "Enabled"
+msgstr ""
+
+#: admin/partials/settings-functions.php:134
+msgid "Disabled"
+msgstr ""
+
+#: admin/partials/settings-functions.php:144
+msgid "REST Endpoint"
+msgstr ""
+
+#: admin/partials/settings-functions.php:144
+#, php-format
+msgid "Access the %s post type via the REST API at the following URL."
+msgstr ""
+
+#: admin/partials/settings-functions.php:145
+msgid "Edit Endpoint"
+msgstr ""
+
+#: admin/partials/settings-functions.php:151
+msgid "Save New Endpoint"
+msgstr ""
+
+#: admin/partials/settings-functions.php:157
+msgid ""
+"This endpoint was updated. You need to re-save the settings to access this "
+"post type at the endpoint above."
+msgstr ""
+
+#: admin/partials/settings-functions.php:179
+msgid "Meta Key"
+msgstr ""
+
+#: admin/partials/settings-functions.php:179
+msgid "This is the default meta key stored by WordPress."
+msgstr ""
+
+#: admin/partials/settings-functions.php:180
+msgid "Custom Meta Key"
+msgstr ""
+
+#: admin/partials/settings-functions.php:180
+msgid "Specify a custom meta key to use instead of the default."
+msgstr ""
+
+#: admin/partials/settings-functions.php:194
+msgid "On"
+msgstr ""
+
+#: admin/partials/settings-functions.php:194
+msgid "Off"
+msgstr ""
+
+#: admin/partials/settings-functions.php:213
+#, php-format
+msgid "Expose the %s post type to the REST API."
+msgstr ""
+
+#: admin/partials/settings-page.php:12
+msgid "Clear Cache"
+msgstr ""
+
+#: admin/partials/settings-page.php:13
+msgid "Save Settings"
+msgstr ""
+
+#: admin/partials/settings-page.php:16
+msgid "WP REST API Controller Settings"
+msgstr ""
+
+#: admin/partials/settings-page.php:31
+msgid "Delete REST API Cache"
+msgstr ""
+
+#: admin/partials/settings-page.php:31
+msgid ""
+"Clear the WP REST API Cache stored in this plugin. If you recently "
+"registered a new post type, or assigned new meta data to a post - click this "
+"to update the lists above."
+msgstr ""
+
+#: node_modules/grunt-pot/test/fixtures/some-file.php:3
+msgid "I'm a translatable string."
+msgstr ""
+
+#: node_modules/grunt-pot/test/fixtures/some-other-file.php:4
+msgid "Me too"
+msgstr ""
+
+#: node_modules/grunt-pot/test/fixtures/some-other-file.php:7
+#, php-format
+msgid "I have %d apple"
+msgid_plural "I have %d apples"
+msgstr[0] ""
+msgstr[1] ""
+
+#. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
+#: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
+msgid "yyyy-mm-dd"
+msgstr ""
