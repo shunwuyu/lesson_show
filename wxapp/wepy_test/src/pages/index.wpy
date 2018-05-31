@@ -1,0 +1,179 @@
+<style lang="less">
+.container {
+  background-color: #eee;
+}
+.swiperarea {
+  width: 100%;
+}
+.swiper{
+  height:400rpx;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+.slide-image:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff;
+  padding: 50px 20px;
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7));
+}
+.swiper-item {
+  position: relative;
+}
+.title_en {
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  z-index: 2;
+  padding: 20px;
+}
+.line {
+  width: 90%;
+  height: 2rpx;
+  background: #aaa;
+  margin: 15rpx;
+}
+.cards-area {
+  width: 100%;
+  .date {
+    color: #666;
+    text-align: center;
+    margin-bottom: 10rpx;
+    opacity: .8;
+    &:before {
+      position: absolute;
+      content: "————";
+      left: 450rpx;
+      right: 0;
+    }
+    &:after {
+      position: absolute;
+      content: "————";
+      left: 0;
+      right: 450rpx;
+    }
+  }
+}
+
+.info {
+  color: gray;
+  opacity: .8;
+  margin-bottom: 20rpx;
+  &.loading {
+    width: 70rpx;
+    height: 70rpx;
+  }
+}
+
+</style>
+<template>
+  <view class="container">
+    <view class="swiperarea">
+      <swiper class="swiper" autoplay indicator-dots="true" indicator-color="#fff">
+        <repeat for="{{swiperObjects}}">
+          <swiper-item class="swiper-item">
+            <text class="title_en">{{item.title_en}}</text>
+            <image src="{{item.thumbnail_urls[0]}}" class="slide-image"
+            mode="widthFix" @tap="tap({{item.id}})"/>
+          </swiper-item>
+        </repeat>
+      </swiper>
+    </view>
+    <view class="line"></view>
+    <view class="cards-area">
+      <repeat for="{{detail.objects}}">
+        <view @tap="tap({{item.id}})" wx:if="{{item.id}}">
+          <card :title="item.title_en" :content="item.summary" :grade="item.grade_info" :words="item.length" :reviews="item.num_reviews" :thumbnail="item.thumbnail_urls[0]"/>
+        </view>
+      </repeat>
+    </view>
+    <text class="info" wx:if="{{info}}">{{info}}</text>
+    <image wx:else class="info loading" src="../assets/loading.gif"/>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import Card from '../components/card'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: 'test',
+      enablePullDownRefresh: true
+    }
+    components = {
+      card: Card
+    }
+
+    data = {
+      currentPage: 1,
+      detail: {
+        objects: []
+      },
+      isLoadingMore: false
+    }
+
+    methods = {
+      tap (id) {
+        wx.navigateTo({
+          url: `/pages/article?id=${id}`
+        })
+      }
+    }
+
+    computed = {
+      swiperObjects () {
+        console.log(this.data.detail.objects.slice(0, 5));
+        return this.data.detail.objects.slice(0, 5);
+      }
+    }
+
+    onLoad() {
+      wx.showLoading({
+        title: '加载中'
+      });
+      this.loadList();
+    }
+
+    onPullDownRefresh () {
+      console.log(1);
+      wx.stopPullDownRefresh();
+    } 
+
+    onReachBottom () {
+      this.currentPage++;
+      if (this.currentPage >= 10) {
+        this.isLoadingMore = false
+        this.info = 'No more news'
+        this.$apply()
+        return
+      }
+      this.isLoadingMore = true;
+      this.loadList()
+    }
+
+    onShareAppMessage () {
+      return {
+        title: 'News Lite',
+        path: '/pages/index'
+      }
+    }
+
+    loadList () {
+      wx.request({
+        url: `https://www.shanbay.com/api/v2/news/articles/?ipp=10&page=${this.currentPage}`,
+        success: (res) => {
+          if (res.data.msg === 'SUCCESS') {
+            this.detail.objects = this.detail.objects.concat(res.data.data.objects)
+          }
+          this.$apply();
+          wx.hideLoading();
+        }
+      })
+    }
+  }
+</script>

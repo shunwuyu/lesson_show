@@ -1,0 +1,7 @@
+{
+  "touchuiwx.enable": true,
+  "files.associations": {
+    "*.wxa": "vue",
+    "*.wx": "vue"
+  }
+}

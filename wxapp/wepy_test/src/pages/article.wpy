@@ -1,0 +1,66 @@
+<style lang="less">
+</style>
+<template>
+  <view class="container" id="{{detail.articleId}}" @tap="handleTap">
+    <view class="title">{{detail.title_en}}</view>
+    <text class="source">via: {{detail.source.name_en}}</text>
+    <view wx:for="{{paragrahs}}" class="paragrah">
+
+    </view>
+  </view>
+</template>
+<script>
+import wepy from 'wepy'
+export default class Article extends wepy.page {
+  config = {
+    navigationBarTitleText: 'News Lite'
+  }
+  data = {
+    selectedWordPosition: [0, 0],
+    detail: {
+      content: '<article_content ><para><href></href><img><url></url><desc></desc></img></para><para ><sent><![CDATA[ ]]></sent></para></article_content>',
+      articleId: null,
+      title_en: '',
+      source: {}
+    },
+    annotation: [{sentence_id: '', annotation: {}}]
+  }
+
+  compouted =  {
+    articleContent () {
+      return this.parseContent(this.data.detail.content.article_content);
+    },
+    paragrahs () {
+      return this.articleContent.para.map(paragrah => {
+
+      })
+    }
+  }
+
+  onLoad (options = {}) {
+    wx.showLoading({
+      title: '加载中'
+    });
+    options.id = options.id || 'oivfz'
+    wx.request({
+      url: `https://www.shanbay.com/api/v2/news/articles/${options.id}/`,
+      success: (res) => {
+        if (res.data.msg === 'SUCCESS') {
+          console.log(res.data.data)
+          Object.assign(this.detail, res.data.data)
+          wx.request({
+            url: `https://www.shanbay.com/api/v2/news/articles/${options.id}/annotation/`,
+            success: (res) => {
+              if (res.data.msg === 'SUCCESS') {
+                Object.assign(this.annotation, res.data.data)
+              }
+            }
+          })
+        }
+        this.$apply();
+        wx.hideLoading()
+      }
+    })    
+  }
+}
+</script>

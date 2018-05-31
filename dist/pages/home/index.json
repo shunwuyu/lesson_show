@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ui-star": "../../packages/touchui-wx-components/ui-star/dist/index"
+  },
+  "navigationBarTitleText": "首页",
+  "backgroundColor": "#F4F4F4",
+  "navigationBarTextStyle": "black"
+}

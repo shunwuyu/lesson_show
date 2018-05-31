@@ -1,0 +1,9 @@
+<view>
+  <view class="starContent" wx:if="{{ isShow }}">
+    <ui-star _pid="{{_pid}}"></ui-star>
+  </view>
+
+  <view class="buttonContent">
+    <button type="primary" bindtap="starShow">创建评分控件</button>
+  </view>
+</view>
