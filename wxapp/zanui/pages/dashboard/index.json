@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "ZanUI-WeApp",
+  "usingComponents": {
+    "zan-panel": "../../components/panel/index",
+    "zan-cell-group": "../../components/cell-group/index",
+    "zan-cell": "../../components/cell/index"
+  }
+}

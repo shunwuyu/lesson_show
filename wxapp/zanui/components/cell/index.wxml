@@ -1,0 +1,16 @@
+<view 
+catchtap="cellTap"
+class="zan-cell {{ isLink ? 'zan-cell--access' : '' }}">
+  <view class="zan-cell__icon">
+    <slot name="icon"></slot>
+  </view>
+  <view class="zan-cell__bd">
+    <view class="zan-cell__text">{{ title }}</view>
+    <slot></slot>
+  </view>
+  <view 
+  bindtap="footerTap"
+  class="zan-cell__ft">
+    <block wx:if="{{valu}}">{{value}}</block>
+  </view>
+</view>
