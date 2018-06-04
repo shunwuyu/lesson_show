@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>点击按钮</title>
+</head>
+<body>
+  <button id="button">点击变色</button>
+  <script>
+  function Button(id) {
+    this.element = document.querySelector('#' + id);
+    this.bindEvent();
+  }
+  Button.prototype.bindEvent = function() {
+    this.element.addEventListener("click", this.setBgColor.bind(this), false);
+  }
+  Button.prototype.setBgColor = function() {
+    // console.log(this);
+    // this.style.backgroundColor = '#1abc9c';
+    this.element.style.backgroundColor = '#1abc9c';
+  }
+  var button = new Button("button");
+
+  </script>
+</body>
+</html>

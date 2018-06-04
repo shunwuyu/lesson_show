@@ -1,0 +1,95 @@
+<style lang="less">
+@import "./styles/base";
+@import "./styles/icon";
+@import "./styles/style";
+</style>
+
+<script>
+import wepy from 'wepy'
+import 'wepy-async-function'
+
+export default class extends wepy.app {
+  config = {
+    pages: [
+      'pages/authorize',
+      'pages/home',
+      'pages/classify',
+      'pages/shop_cart',
+      'pages/info'
+    ],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#fff',
+      navigationBarTitleText: 'WeChat',
+      navigationBarTextStyle: 'black'
+    },
+    "tabBar": {
+      "color": "#999999",
+      "selectedColor": "#ff6a3c",
+      "backgroundColor": "#ffffff",
+      "borderStyle": "black",
+      "list": [{
+        "pagePath": "pages/home",
+        "text": "首页",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_active.png"
+      }, {
+        "pagePath": "pages/classify",
+        "text": "分类",
+        "iconPath": "images/icon_classify.png",
+        "selectedIconPath": "images/icon_classify_active.png"
+      }, {
+        "pagePath": "pages/shop_cart",
+        "text": "购物车",
+        "iconPath": "images/icon_shop_cart.png",
+        "selectedIconPath": "images/icon_shop_cart_active.png"
+      }, {
+        "pagePath": "pages/info",
+        "text": "我",
+        "iconPath": "images/icon_info.png",
+        "selectedIconPath": "images/icon_info_active.png"
+      }]
+    }
+  }
+
+  globalData = {
+    userInfo: null
+  }
+
+  constructor () {
+    super()
+    this.use('requestfix')
+    this.use('promisify')
+  }
+
+  onLaunch() {
+    this.testAsync()
+  }
+
+  sleep (s) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('promise resolved')
+      }, s * 1000)
+    })
+  }
+
+  async testAsync () {
+    const data = await this.sleep(3)
+    console.log(data)
+  }
+
+  getUserInfo(cb) {
+    const that = this
+    if (this.globalData.userInfo) {
+      return this.globalData.userInfo
+    }
+    wepy.getUserInfo({
+      success (res) {
+        that.globalData.userInfo = res.userInfo
+        cb && cb(res.userInfo)
+      }
+    })
+  }
+}
+</script>

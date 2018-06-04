@@ -1,0 +1,12 @@
+<template>
+<view>
+</view>
+</template>
+<style >
+</style>
+<script>
+  import wepy from 'wepy';
+  export default class ShopCart extends wepy.page {
+    
+  }
+</script>

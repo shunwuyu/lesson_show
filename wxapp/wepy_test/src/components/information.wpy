@@ -1,0 +1,13 @@
+<template>
+<view></view>
+</template>
+<style>
+
+</style>
+<script>
+import wepy from 'wepy';
+export default class TipBox extends wepy.component {
+  data = {
+  }
+} 
+</script>
