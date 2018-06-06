@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body {
+    width: 300px;
+    position: relative;
+  }
+  .aside {
+    width: 100px;
+    height: 150px;
+    float: left;
+    background: #f66;
+  }
+  .main {
+    height: 200px;
+    background: #fcc;
+    overflow: hidden;
+  }
+  </style>
+</head>
+<body>
+  <!-- 每个元素的margin box的左边， 与包含块border box
+  的左边接触。
+  BFC区域不会与float box 重叠 -->
+  <div class="aside"></div>
+  <div class="main"></div>
+</body>
+</html>
