@@ -1,3 +1,7 @@
+// 如果不设置subClass.prorotype.constructor = subClass 
+// 子类的 author.__proto__.constructor 就是父类，
+// 加了后， 父类被污染 
+
 function Person(name) {
   this.name = name
 }
@@ -29,6 +33,8 @@ function extend(subClass, superClass) {
 }
 
 const zk = new Person('曾凯');
-const author = new Author('高尔基', ['我的大学']);
 console.log(zk.constructor.prototype);
+// const author = new Author('高尔基', ['我的大学']);
+// console.log(author.__proto__.constructor);
+// console.log(zk.constructor.prototype);
 

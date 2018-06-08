@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./common.css">
+</head>
+<body>
+  <div id="pureFullPage">
+    <div class="page">
+      <p>Page 1</p>
+    </div>
+    <div class="page">
+      <p>Page 2</p>
+    </div>
+    <div class="page">
+      <p>Page 3</p>
+    </div>
+  </div>
+  <script src="./util.js">
+  </script>
+  <script src="./common.js">
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var addAnimation = function() {
+      var i = - (this.currentPosition / this.viewHeight);
+      document.querySelector('.fade-in').classList.remove('fade-in');
+      this.pages[i].querySelector('p').classList.add('fade-in');
+    }
+    new PureFullPage({
+      definePages: addAnimation
+    }).init();
+  });
+  window.addEventListener('load', function() {
+    document.querySelector('p').classList.add('fade-in');
+  })
+  </script>
+</body>
+</html>
