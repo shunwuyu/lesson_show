@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 2000px;
+  }
+  .box {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 50px;
+  }
+  .box1 {
+    top: 0;
+    z-index: 1;
+    background: #007bff;
+  }
+  .box2 {
+    top: 30px;
+    z-index: 1;
+    background: #ffc107;
+  }
+  .box3 {
+    background: #f4516c;
+  }
+  </style>
+</head>
+<body>
+  <div style="height:200px">滚动试试</div>
+  <div class="box box1">box1</div>
+  <div class="box box2">box2</div>
+  <div class="box box3">box3</div>  
+  <div style="height:200px"></div>
+</body>
+</html>
