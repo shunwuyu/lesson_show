@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+}
+#pureFullPage {
+  position: relative;
+  top: 0;
+  transition: all 1s ease;
+}
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page:nth-child(1) {
+  background:lightpink;
+}
+.page:nth-child(2) {
+  background:lightblue;
+}
+.page:nth-child(3) {
+  background:lightgreen;
+}
+
+.page p {
+  font-size: 88px;
+}
