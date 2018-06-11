@@ -47,7 +47,8 @@ export default class bombScreen extends wepy.component {
       this.$emit("close")
     },
     callback() {
-      this.$emit("callback")
+      console.log('ddd')
+      //this.$emit("callback")
     }
   }
 

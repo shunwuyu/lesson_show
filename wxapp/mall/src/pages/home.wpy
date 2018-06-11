@@ -118,6 +118,9 @@ export default class Home extends wepy.page {
   }
 
   methods = {
+    closeAlert () {
+      
+    },
     goToAdvert (url) {
       if (url.length == 0) {
         return;
