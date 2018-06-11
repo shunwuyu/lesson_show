@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>queue</title>
+  <script src="./comparator.js"></script>
+  <script src="./linked-list.js"></script>
+  <script src="./queue.js"></script>
+</head>
+<body>
+  <script>
+  const queue = new Queue();
+  console.log(queue.isEmpty());
+  // queue.enqueue(1);
+  // queue.enqueue(2);
+  // console.log(queue.toString());
+  queue.enqueue({ value: 'test1', key: 'key1' });
+  queue.enqueue({ value: 'test2', key: 'key2' });
+  console.log(queue.dequeue());
+  console.log(queue.peek());
+  </script>
+</body>
+</html>
