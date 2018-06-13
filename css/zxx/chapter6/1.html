@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 700px;
+    margin: 0 auto;
+  }
+  .aside, .aside2, .main {
+    height: 200px;
+  }
+  .aside {
+    float: left;
+    width: 100px;
+    background: red;
+  }
+  .aside2 {
+    float: right;
+    width: 120px;
+    background: blue;
+  }
+  .main {
+    overflow: hidden;
+    background: green;
+  }
+  .box {
+    height: 100px;
+    width: 120px;
+    float: left;
+    background-color: pink;
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+  .box:nth-child(odd) {
+    background-color: yellow;
+  }
+  .bigbox {
+    width: 360px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="aside"></div>
+    <div class="aside2">
+    </div>
+    <div class="main">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box bigbox"></div>
+    </div>
+  </div>
+</body>
+</html>

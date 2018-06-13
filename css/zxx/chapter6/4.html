@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .father {
+    width: 200px;
+  }
+  p {
+    width: 200px;
+    background-color: red;
+    margin-left: -100px;
+  }
+  img {
+    float:left;
+  }
+  </style>
+</head>
+<body>
+  <!-- float 使你元素蹦不是bug , 而是为解决环绕 -->
+  <div class="father">
+    <img src="https://img3.doubanio.com/icon/g35351-1.jpg" alt=""/>
+  </div>
+  <p class="animal">小猫1，小猫2,小猫1，小猫2，小猫1，小猫2，小猫1，小猫2，小猫1，小猫2，小猫1，小猫2，小猫1，小猫2，</p>
+</body>
+</html>
