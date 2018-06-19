@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .image-item {
+    display: block;
+    margin-bottom: 50px;
+    height: 200px;
+    opacity:0;
+  }
+  .fadeIn {
+    animation: fadeIn forwards 1s;
+  }
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+  }
+  </style>
+</head>
+<body>
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/12124650/1tpztm43ooi8p7al!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/13120544/hcrrb7xnwwd5ste7!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/13235314/d2337bz0wl4bbzba!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/13152420/og6y7mhc9lxck84l">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/11082052/huvzm43c4hzfzrda!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/13161043/crmwgurdi6he9j63!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/13235947/1tvf415kub87l3ek!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/14000232/oc28e55gk380oo07!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/12053859/1a2mtmwqqoco2ka8!heading">
+  <img src="" alt="" class="image-item" lazyload="true" data-original="https://pic.36krcnd.com/201806/13234912/duq8psrgicigh4h2!heading">
+<script>
+  var viewHeight = document.documentElement.clientHeight;
+  function lazyload () {
+    var eles = document.querySelectorAll('img[data-original][lazyload]')
+    Array.prototype.forEach.call(eles, function(item, index) {
+      var rect;
+      if (item.dataset.original === "")
+      return
+      // 获取页面中某个元素的左上右下分别对浏览器视窗的位置
+      rect = item.getBoundingClientRect();
+      console.log(rect);
+      if (rect.bottom >= 0 && rect.top < viewHeight) {
+        (function() {
+          var img = new Image();
+          img.src = item.dataset.original;
+          img.onload = function() {
+            item.src = img.src
+            item.classList.add('fadeIn');
+          }
+          item.removeAttribute('data-original');
+          item.removeAttribute('lazyload');
+        })()
+      }
+    })
+  }
+  lazyload();
+  document.addEventListener('scroll', lazyload, false);
+</script>
+</body>
+</html>

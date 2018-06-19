@@ -23,3 +23,6 @@ getComputedStyle
 没有任何margin 合并
 自适应性
 
+万恶之源 破坏文档流
+浮动使高度塌陷不是bug, 而是标准!
+
