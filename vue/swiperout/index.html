@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue swiper out</title>
+  <link rel="stylesheet" href="./css.css">
+  <script src="https://cdn.bootcss.com/vue/2.5.15/vue.min.js"></script>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script>
+  new Vue({
+    el: '#root',
+    template: `
+      <ul class="r-swiper-out">
+        <li class="r-swiper-out-item" :style="itemStyle">
+          <div 
+          class="r-swiper-out-item-content" 
+          @touchstart="touchstart"
+          @touchmove="touchmove"
+          @touchend="touchend"
+          ref="content">
+            分手的我们没有走到一起
+          </div>
+          <div class="r-swiper-out-item-btns" ref="btns">
+            <div class="r-swiper-out-item-btn"  @click="delItem">删除</div>
+          </div>
+        </li>
+      </ul>
+    `,
+    data: {
+      oldPoint: null,
+      speed: 300,
+      translateX: 0,
+      btnsWidth: 0,
+      startX: 0
+    },
+    computed: {
+      itemStyle () {
+        return {
+          transform: `translate3d(${this.translateX}px, 0, 0)`,
+          transition: `all ${this.speed}ms`
+        }
+      }
+    },
+    methods: {
+      delItem () {
+        this.translateX = 0
+      },
+      touchstart (e) {
+        this.oldPoint = e.touches[0];
+        this.speed = 0;
+        this.startX = this.translateX;
+        // console.log(this.oldPoint, this.speed, this.startX);
+      },
+      touchmove (e) {
+        let moveX = e.touches[0].pageX - this.oldPoint.pageX;
+        let moveY = e.touches[0].pageY - this.oldPoint.pageY;
+        if (Math.abs(moveX) < Math.abs(moveY) || Math.abs(moveX) < 20 || Math.abs(moveY) > 30) return;
+        e.preventDefault();
+        moveX = this.startX * 1 + moveX * 1
+        // console.log(moveX);
+        if (moveX < -this.btnsWidth) {
+          moveX = -this.btnsWidth
+        } else if (moveX > 0) {
+          moveX = 0
+        }
+        this.translateX = moveX
+      },
+      touchend (e) {
+        let moveX = -this.translateX > 30 ? -this.btnsWidth : 0;
+        this.speed = 300
+        this.translateX = moveX
+      }
+    },
+    mounted () {
+      // console.log('dd')
+      this.$nextTick(() => {
+        this.btnsWidth = this.$refs.btns.offsetWidth;
+        // console.log(this.btnsWidth);
+      })
+    }
+  })
+  </script>
+</body>
+</html>
