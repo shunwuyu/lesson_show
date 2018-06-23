@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ajax</title>
+</head>
+<body>
+  <div class="box">
+    <p class="name"></p>
+    <p class="desc"></p>
+  </div>
+  <script>
+  const xhr = new XMLHttpRequest();
+  xhr.open('get', '/info', true);
+  // xhr.setRequestHeader('')
+  xhr.send();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // alert(xhr.responseText);
+      console.log(xhr.responseText);
+      const info = JSON.parse(xhr.responseText);
+      document.querySelector('.name').innerHTML = info.name;
+      document.querySelector('.desc').innerHTML = info.desc;
+    }
+  }  
+  </script>
+</body>
+</html>
