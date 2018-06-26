@@ -1,0 +1,21 @@
+{
+  "name": "babel",
+  "version": "0.1.0",
+  "description": "[source](https://juejin.im/post/5a79adeef265da4e93116430)  下一代JavaScript 语法的编译器",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}

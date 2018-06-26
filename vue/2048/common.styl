@@ -1,0 +1,127 @@
+body
+  overflow auto
+  -webkit-overflow-scrolling touch
+
+.layout
+  overflow auto
+  -webkit-overflow-scrolling touch
+  display flex
+  justify-content center
+  flex-direction column
+  align-items center
+  height 100%
+  overflow auto
+
+  header
+    display flex
+    max-width 600px
+    width 100%
+    padding 20px
+    flex-direction row
+    justify-content space-around
+    button
+      outline none
+      border none
+      background #8f7a66
+      color #fff
+      font-size 20px
+      padding 10px 30px
+      cursor pointer
+      border-radius 10px
+    span
+      width 100px
+      display inline-flex
+      align-items center
+      justify-content center
+  
+  .all-container
+    height 620px
+    width 620px
+
+    .background
+      box-sizing content-box
+      background-color #bbada0
+      display inline-flex
+      flex-wrap wrap
+      padding 10px
+      justify-content space-between
+      border-radius 10px
+      width 600px
+      position absolute
+      z-index -1
+
+      & > span
+        background-color #eee4da59
+        margin 10px
+        width 130px
+        height 130px
+        border-radius 10px
+    
+    .container
+      z-index 0
+      padding 10px
+      width 620px
+      height 620px
+      position absolute
+      display inline-flex
+      justify-content flex-start
+      align-items flex-start
+
+      .list
+        margin 10px
+        width 130px
+        height 130px
+        border-radius 10px
+        position absolute
+        font-size 55px
+        font-weight bold
+        transition-property transform
+        border-radius 10px
+        transition 100ms ease-in-out
+
+        .inner
+          width 100%
+          height 100%
+          color #fff
+          display inline-flex
+          align-items center
+          border-radius 10px
+          justify-content center
+          animation-fill-mode backwards
+          animation: appear 200ms ease-in-out
+
+@media screen and (max-width: 900px)
+  html, body
+    overflow hidden
+  .layout
+    overflow hidden
+    header
+      span
+        width 70px
+      button
+        padding 10px 15px
+    .all-container
+      margin 2vw
+      width 96vw
+      height 96vw
+      .background, .container
+        width 96vw
+        height 96vw
+        box-sizing border-box
+        padding 1vw
+        & > span, .list
+          width 21vw
+          height 21vw
+          margin 1vw
+          font-size 8vw
+    
+@keyframes appear
+  0%
+    opacity 0
+    transform scale(0)
+  80%
+    opacity 0
+    transform scale(0.8)
+  100%
+    opacity 1
+    transform scale(1)
