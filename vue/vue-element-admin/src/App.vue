@@ -1,18 +1,24 @@
 <template>
   <div id="app">
     <!-- <login /> -->
-    <markdown />
+    <!-- <markdown /> -->
+    <!-- <dynamic-table /> -->
+    <complex-table />
   </div>
 </template>
 
 <script>
-import Markdown from '@/views/Markdown'
+import ComplexTable from '@/views/ComplexTable'
+// import DynamicTable from '@/views/DynamicTable'
+// import Markdown from '@/views/Markdown'
 // import Login from '@/views/Login'
 // import TinymceDemo from '@/views/TinymceDemo'
 export default {
   name: 'App',
   components: {
-    markdown: Markdown
+    ComplexTable
+    // 'dynamic-table': DynamicTable
+    // markdown: Markdown
     // Login
     // 'tinymce-demo': TinymceDemo
   }
