@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import { Table, Pagination, Input, Row, Button, Modal, Form } from 'antd';
+import { Table, Pagination, Input, Row, Button, Modal, Form, message } from 'antd';
 import 'antd/dist/antd.css'
 const { Search } = Input;
 const FormItem = Form.Item;
@@ -24,14 +24,60 @@ class App extends Component {
     }
   }]
   state = {
-    dataSource: [{ username: "self", age: "18", address: "杭州", id: 1}],
+    dataSource: [],
     current: 1,
     size: 10,
     total: 1,
     visible: false,
     selectRow: null,
-    modalType: "add"
+    search: '',
+    modalType: "add",
+    editRow: null
+  }
 
+  componentDidMount () {
+    this.sizeChange(this.state.current, this.state.size)
+  }
+
+  sizeChange (current, size) {
+    let data = {
+      search: this.state.search,
+      limit: size,
+      offset: (parseInt(current) - 1) * size
+    }
+
+    axios.post("http://localhost:3006/user-search", data).then(data => { 
+      this.setState({
+        dataSource: data.data.rows,
+        total: data.data.count,
+        current,
+        size
+      })
+    })
+  }
+
+  handleOk = () => {
+    this.props.form.validateFieldsAndScroll((err, value) => {
+      if (err) return;
+      let data = {
+          username: value.username, age: value.age, address: value.address
+      };
+      if (this.state.modalType === 'add') {
+          axios.post("http://127.0.0.1:3006/user", data)
+              .then(msg => {
+                  this.sizeChange(this.state.current, this.state.size);
+                  this.setState({visible: false});
+                  message.success('success!')
+              })
+      } else {
+          axios.put("http://127.0.0.1:3006/user/" + this.state.editRow.id, data)
+              .then(data => {
+                this.sizeChange(this.state.current, this.state.size);
+                this.setState({visible: false});
+                message.success('success!')
+              })
+      }
+  })
   }
   modal = (type, row) => {
     this.setState({
@@ -45,6 +91,7 @@ class App extends Component {
         age: row.age,
         address: row.address
       })
+      this.setState({editRow: row})
     })
   }
   remove = (row) => {
@@ -55,46 +102,21 @@ class App extends Component {
       okText: '是',
       okType: '否',
       cancelText: 'No',
-      onOk() {
-        const _dataSource = that.state.dataSource.filter((data) => {
-          return data.id !== row.id
-        });
-
-        that.setState({
-          dataSource: _dataSource
-        })
-      },
-      onCancel() {
-
+      onOk () {
+        axios.delete("http://127.0.0.1:3006/user/"+row.id)
+          .then(data=>{
+            that.sizeChange(that.state.current, that.state.size);
+            message.success('success!')
+          })
       }
     })
   }
 
-  handleOk () {
-    this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        const type = this.state.modalType;
-        if (type == 'add') {
-          const _dataSource = this.state.dataSource;
-          _dataSource.unshift(values);
-          this.setState({
-            dataSource: _dataSource,
-            visible: false
-          });
-        } else if (type == 'edit') {
-          const _dataSource = this.state.dataSource;
-          // console.log(_dataSource);
-          const index = _dataSource.findIndex(data => data.id === this.state.selectRow.id)
-          Object.assign(_dataSource[index], values)
-          this.setState({
-            dataSource: _dataSource,
-            visible: false
-          });
-        }
-        
-        // console.log(_dataSource);
-        // console.log(_dataSource.findIndex(this.state.selectRow));
-      }
+  searchUser(event) {
+    this.setState({
+      search: event.target.value
+    }, () => {
+      this.sizeChange(1, 10)
     })
   }
 
@@ -113,7 +135,7 @@ class App extends Component {
     return (
       <div className="App">
         <Row>
-          <Search style={{width:300}} />
+          <Search style={{width:300}} onChange={ this.searchUser.bind(this)}/>
           <Button type="primary" style={{marginLeft: 20}} onClick={() => this.modal('add')}>
           添加用户
           </Button>
