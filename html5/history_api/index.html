@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="/common.css">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fluffy.html">Fluffy</a></li>
+      <li><a href="socks.html">Socks</a></li>
+      <li><a href="whiskers.html">Whiskers</a></li>
+    </ul>
+    <p class="content">
+      Welcome to Kittens! Home of Fluffy, Socks, and Whiskers. If you're not suffering from a cute overdose within the hour, then you really are a heartless bugger! Now lets look at some cats!
+    </p>
+    <div class="media">
+      <img src="http://www.ichong123.com/uploads/2014/08/m1.jpg" alt="" class="photo">
+    </div>
+  </div>
+  <script>
+  $(function() {
+    // 只有一个页面，本质还是多个，每个页面，变成一个状态，在SPA
+    // 为状态生成一个history 
+    // history 浏览器的历史， route 路由  状态对应的数据
+    // 堆栈
+    function createState(node) {
+      let state = {
+        content: node.find('.content').text(),
+        photo: node.find('.photo').attr('src'),
+        title: node.find('title').text()
+      }
+      return state
+    }
+    function displayContent(state) {
+      $('.content').text(state.content)
+      $('.photo').attr('src', state.photo)
+    }
+    // 冒泡事件注册
+    $(document).on('click', 'a', (event) => {
+      event.preventDefault();
+      const url = event.target.href;
+      console.log(url);
+      const req = $.ajax(url);
+      req.done(data => {
+        let state = createState($(data));
+        displayContent(state);
+        history.pushState(state, state.title, url)
+
+        // console.log($(data).find('p').text());
+      })
+    })
+    window.onpopstate = (event) => {
+      if (event.state) {
+        displayContent(event.state);
+      }
+    }
+  })
+  </script>
+</body>
+</html>

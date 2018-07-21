@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue 依赖收集</title>
+</head>
+<body>
+  <div id="app">
+    <h2>{{title}}</h2>
+    <input v-model="name">
+    <h1>{{name}}</h1>
+    <button v-on:click="clickMe">click me!</button>
+  </div>
+  <script src="js/observer.js"></script>
+  <script src="js/compile.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      title: 'hello world',
+      name: '曾凯'
+    },
+    methods: {
+      clickMe () {
+        console.log('执行了点击事件');
+        this.title = 'Nice to meet you';
+      }
+    },
+    // 生命周期 组件挂载render后， 函数执行,顺序在compile 等等之后
+    mounted: function() {
+      window.setTimeout(() => {
+        // console.log(this.title)
+        this.title = '你好'
+        // console.log(this.title);
+      }, 1000);
+    }
+  })
+  console.log(vm)
+  </script>
+</body>
+</html>

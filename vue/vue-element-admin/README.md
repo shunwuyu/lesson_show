@@ -25,3 +25,16 @@ group 的值发生改变， watch 一下, 重设一下formThead
   先写table 出来一个空的表格
   created()  早一些 请求数据
   请求对象做成一个json, 方便管理
+
+
+## 头像上传控件
+- 关闭按钮样式及mvvm
+  before after  hover   emit close
+
+- border 样式技巧 
+
+- FormData 
+  发送文件
+
+- 文件上传事件
+  点击  $ref  click e.target !== this.$refs.fileinput

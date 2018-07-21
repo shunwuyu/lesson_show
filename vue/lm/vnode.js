@@ -4,40 +4,20 @@ class VNode {
     this.data = data;
     this.children = children;
     this.text = text;
-    this.elm = elm
+    this.elm = elm;
   }
-
 }
 
-function render () {
-  reutn new VNode (
-    'span',
-    {
-      directive: [
-        {
-          rawName: 'v-show',
-          expression: 'isShow',
-          name: 'show',
-          value: true
-        }
-      ],
-      staticClass: 'demo'
-    },
-    [new VNode(undefined, undefined, undefined, 'This is a span')]
-  );
-}
-
-创建一个空节点
-function createEmptyVNode () {
+function createEmptyVNode() {
   const node = new VNode();
   node.text = '';
   return node;
 }
-function createTextVNode (val) {
+function createTextVNode(val) {
   return new VNode(undefined, undefined, undefined, String(val));
 }
 
-function cloneVNode (node) {
+function cloneVNode(node) {
   const cloneVnode = new VNode(
     node.tag,
     node.data,
@@ -47,4 +27,3 @@ function cloneVNode (node) {
   );
   return cloneVnode;
 }
-
