@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import './Login.css';
 import { connect } from 'react-redux';
-
+import { bindActionCreators } from 'redux';
+import { fetchData } from '../../actions/index';
+import './Login.css';
 const FormItem = Form.Item; 
 
 class Login extends Component {
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.form.validateFields((err, values) => {
+        if (!err) {
+            console.log('Received values of form: ', values);
+            const { fetchData } = this.props;
+            if (values.userName === 'admin' && values.password === 'admin') fetchData({funcName: 'admin', stateName: 'auth'});
+            if (values.userName === 'guest' && values.password === 'guest') fetchData({funcName: 'guest', stateName: 'auth'});
+        }
+    });
+  };
   github () {
     window.location.href ='https://github.com/login/oauth/authorize?client_id=792cdcd244e98dcd2dee&redirect_uri=http://localhost:3006/&scope=user&state=reactAdmin'
   }
@@ -55,4 +67,12 @@ class Login extends Component {
   }
 }
 
-export default Form.create()(Login)
+const mapStateToPorps = state => {
+  return {};
+};
+
+const mapDispatchToProps = dispatch => ({
+  fetchData: bindActionCreators(fetchData, dispatch)
+})
+
+export default connect(mapStateToPorps, mapDispatchToProps)(Form.create()(Login))
