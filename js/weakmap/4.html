@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 关联对象和数据， 不修改原有对象的情况下存储某些属性或者根据对象存储一些计算的修正， 而又不想管理这些数据的死活时，非常适合使用WeakMap
+  数据缓存 -->
+  <script>
+  const obj = {a: 1, b: 2};
+  const cache = new WeakMap();
+  function countOwnKeys(obj) {
+    if (cache.has(obj)) {
+      console.log('Cached');
+      return cache.get(obj);
+    } else {
+      console.log('Computed');
+      const count = Object.keys(obj).length;
+      cache.set(obj, count);
+      return count
+    }
+  } 
+
+  console.log(countOwnKeys(obj));
+  </script>
+</body>
+</html>

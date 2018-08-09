@@ -1,0 +1,17 @@
+{
+  "name": "diff",
+  "version": "1.0.0",
+  "description": "- DOM 更新太浪费  setState({ }) - DOM 树",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="element">
+  </div>
+  <script>
+    // 关联对象和数据
+  let wm = new WeakMap(),
+    element = document.querySelector('.element');
+    wm.set(element, 'data');
+    let value = wm.get(element);
+    console.log(value);
+    element.parentNode.removeChild(element);
+    element = null;
+    console.log(value);
+  </script>
+</body>
+</html>
