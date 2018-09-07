@@ -1,0 +1,15 @@
+{
+  "name": "try-redis",
+  "version": "1.0.0",
+  "description": "[source](https://www.cnblogs.com/lianer/p/6379915.html)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioredis": "^4.0.0"
+  }
+}
