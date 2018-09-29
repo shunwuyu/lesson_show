@@ -1,0 +1,464 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 3600000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "overwrite": true,
+      "signed": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function anonymous>"
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": true,
+        "useSession": false,
+        "ignoreJSON": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "matching": "<Function anonymous>"
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "methodnoallow": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "noopen": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "nosniff": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-onerror/lib/onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-session/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-jsonp/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-onerror/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-i18n/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-watcher/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-schedule/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-view/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg-mongoose/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/locales",
+        "/lesson/lesson_show/vue/egg-blog/config/locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "default",
+      "eventSources": {
+        "default": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "multipart": {
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 10485760,
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "/var/root/logs/egg-blog/egg-schedule.log"
+      }
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/lesson/lesson_show/vue/egg-blog/app/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": true,
+      "maxFiles": 1000,
+      "maxAge": 31536000,
+      "files": "<LRU>"
+    },
+    "view": {
+      "root": "/lesson/lesson_show/vue/egg-blog/app/view",
+      "cache": true,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "mongoose": {
+      "url": "",
+      "options": {},
+      "loadModel": true,
+      "app": true,
+      "agent": false,
+      "clients": {
+        "blog": {
+          "url": "mongodb://127.0.0.1/blogtest",
+          "useNewUrlParser": true,
+          "options": {}
+        }
+      }
+    },
+    "env": "prod",
+    "name": "egg-blog",
+    "keys": "<String len: 26>",
+    "proxy": false,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "egg-blog",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=egg-server-demo",
+        "dev": "egg-bin dev"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "egg": "^2.10.0",
+        "egg-mongoose": "^3.1.0",
+        "egg-scripts": "^2.8.1"
+      },
+      "devDependencies": {
+        "egg-bin": "^4.8.1"
+      }
+    },
+    "baseDir": "/lesson/lesson_show/vue/egg-blog",
+    "HOME": "/var/root",
+    "rundir": "/lesson/lesson_show/vue/egg-blog/run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "100kb",
+      "jsonLimit": "100kb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "returnRawBody": true
+    },
+    "logger": {
+      "dir": "/var/root/logs/egg-blog",
+      "encoding": "utf8",
+      "env": "prod",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": true,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "egg-blog-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {},
+      "allowDebugAtProd": false,
+      "type": "application"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheMaxLength": 1000,
+      "dnsCacheMaxAge": 10000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "securities",
+      "i18n"
+    ],
+    "workerStartTimeout": 600000,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "user": {
+      "userName": "admin",
+      "password": "<String len: 5>"
+    },
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": [],
+    "appMiddleware": "~config~appMiddlewares",
+    "multipartParseOptions": {
+      "autoFields": false,
+      "defCharset": "utf8",
+      "limits": {
+        "fieldNameSize": 100,
+        "fieldSize": 102400,
+        "fields": 10,
+        "fileSize": 10485760,
+        "files": 10
+      },
+      "checkFile": "<Function checkFile>"
+    }
+  },
+  "plugins": {
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-session",
+      "version": "3.1.0"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security",
+      "version": "2.3.1"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-jsonp",
+      "version": "2.0.0"
+    },
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-onerror",
+      "version": "2.1.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-i18n",
+      "version": "2.0.0"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-watcher",
+      "version": "3.0.0"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart",
+      "version": "2.1.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-schedule",
+      "version": "3.4.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator",
+      "version": "3.0.3"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static",
+      "version": "2.1.1"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-view",
+      "version": "2.1.0"
+    },
+    "mongoose": {
+      "enable": true,
+      "package": "egg-mongoose",
+      "name": "mongoose",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/lesson/lesson_show/vue/egg-blog/config/plugin.js",
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-mongoose",
+      "version": "3.1.0"
+    }
+  }
+}

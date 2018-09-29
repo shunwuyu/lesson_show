@@ -1,0 +1,1 @@
+{"version":3,"file":"0.50d88830b4cd531574c1.hot-update.js","sources":["webpack:///pages/about.js"],"sourcesContent":["export default () => (\n  <div>\n    <p>This is the about page</p>\n  </div>\n)\n\n \n\n\n// WEBPACK FOOTER //\n// pages/about.js"],"mappings":";;;;;;;;;;;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;AAFA;;;;;;;;;;;;;;;;;;;;;;;A","sourceRoot":""}

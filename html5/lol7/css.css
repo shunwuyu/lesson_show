@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none
+}
+a:hover, a:visited {
+  text-decoration: none;
+}
+ol, ul {
+  list-style: none;
+}
+
+.g-wrap {
+  width: 100%;
+  height: 3366px;
+  overflow: hidden;
+  position: relative;
+  font-size: 17px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* bg */
+.bg {
+  width: 100%;
+  position: absolute;
+}
+
+.bg_1 {
+  width: 100%;
+  height: 482px;
+  overflow: hidden;
+  background: url(http://ossweb-img.qq.com/images/lol/v2/index/7th/bg_01.jpg) center top no-repeat;
+}
+
+.video-bg {
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+}
+.cover-img {
+  position: absolute;
+  z-index: 1;
+  top: 369px;
+  left: 50%;
+  margin-left: -960px;
+}
+
+
+
+.btn-top-bg, .icon-arrow, .btn-video, .slogan, .tit-1, .tit-1:after,.tx-3:after, .tx-3:before, .nor-card,.btn-detail,.icon-arrow-1 {
+  background-size: 1335px 1194px;
+  background-image: url(http://ossweb-img.qq.com/images/lol/v2/index/7th/sprite-img.png);
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-box {
+  text-align: center;
+}
+
+
+/* 顶部按钮 */
+.btn-top-bg {
+  margin: 42px 25px 0;
+  width: 235px;
+  height: 84px;
+  /* background-size: 1335px 1194px;
+  background-image: url(http://ossweb-img.qq.com/images/lol/v2/index/7th/sprite-img.png); */
+  background-position: -337px -615px;
+  display: inline-block;
+  color: #bea468;
+  line-height: 78px;
+  text-align: center;
+}
+
+.btn-top-bg:hover {
+  background-position: -577px -615px;
+  width: 235px;
+  height: 84px;
+  color: #472c0f;
+}
+
+.icon-arrow {
+  width: 26px;
+  height: 25px;
+  background-position: -1281px -706px;
+  width: 26px;
+  height: 25px;
+  /* background-image: url(http://ossweb-img.qq.com/images/lol/v2/index/7th/sprite-img.png);
+  background-size: 1335px 1194px; */
+  display: none;
+  margin-left: 10px;
+  vertical-align: -7px;
+  
+}
+
+.btn-top-bg:hover .icon-arrow {
+  display: inline-block;
+  animation: arr-ani 2s infinite linear;
+}
+
+.arrow-down {
+  display: block;
+  background: url(http://ossweb-img.qq.com/images/lol/v2/index/7th/arr-down.png);
+  width: 75px;
+  height: 45px;
+  position: absolute;
+  top: 385px;
+  left: 50%;
+  margin: -37px;
+  animation: arr-ani-up .8s infinite linear;
+}
+
+.btn-video {
+  display: block;
+  background-position: -1165px -570px;
+  width: 168px;
+  height: 131px;
+  margin: 446px auto 0;
+  outline: none;
+}
+
+.slogan {
+  margin: -10px auto 0;
+  width: 458px;
+  height: 93px;
+  background-position: 0 -988px;
+} 
+
+.time-p {
+  margin-top: -8px;
+}
+
+.tit-1, .tit-2, .tit-3 {
+  margin: 80px auto 0;
+  position: relative;
+}
+
+.tit-1 {
+  background-position: -725px -707px;
+  width: 382px;
+  height: 123px;
+}
+
+.tit-1:after, .tit-2:after, .tit-3:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 136px;
+  left: 50%;
+  margin-left: -401px;
+}
+
+.tit-1:after, .tit-2:after, .tit-3:after, .tit-line {
+  background-position: -201px -918px;
+  width: 803px;
+  height: 23px;
+}
+
+.tx-1, .tx-2 {
+  color: #e7bc77;
+}
+.tx-1, .tx-4 {
+  margin: 52px 0 24px;
+}
+.tx-2 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+}
+.tx-3 {
+  display: inline-block;
+  position: relative;
+  color: #247389;
+  font-size: 16px;
+  margin-top: 14px;
+}
+
+.tx-3:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -26px;
+  top: 3px;
+}
+.icon-sq-l, .tx-3:before {
+  background-position: -1165px -742px;
+  width: 23px;
+  height: 15px;
+}
+
+.tx-3:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -26px;
+  top: 3px;
+}
+
+.icon-sq-r, .tx-3:after {
+  background-position: -1312px -706px;
+  width: 23px;
+  height: 15px;
+}
+
+.bg_2 {
+  width: 100%;
+  height: 1853px;
+  background: url(http://ossweb-img.qq.com/images/lol/v2/index/7th/bg_02.jpg) center top no-repeat;
+}
+
+.bg_3 {
+  width: 100%;
+  height: 1122px;
+  background: url(http://ossweb-img.qq.com/images/lol/v2/index/7th/bg_03.jpg) center top no-repeat;
+}
+
+/* card */
+.card-ul {
+  margin-left: -122px;
+  width: 1443px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.card-ul li {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.nor-card {
+  background-position: -1165px 0;
+  width: 170px;
+  height: 280px;
+}
+
+.nor-card-lig, .nor-card.on {
+  background-position: -1165px -285px;
+}
+
+.li-p-1 {
+  color: #efdba1;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.li-p-2 {
+  color: #247389;
+  font-size: 14px;
+}
+
+.btn-detail {
+  display:block;
+  background-position: -725px -835px;
+  width: 205px;
+  height: 66px;
+  margin: 35px auto;
+  color: #bea468;
+  line-height: 72px;
+  transition: transform .3s;
+}
+
+.icon-arrow-1 {
+  background-position: -1193px -742px;
+  width: 15px;
+  height: 13px;
+}
+
+.btn-detail:hover {
+  text-decoration: none;
+  -webkit-filter: brightness(1.2);
+}
+
+.btn-detail:hover .icon-arrow-1 {
+  display: inline-block;
+  animation: arr-ani 2s infinite linear;
+}
+
+@keyframes arr-ani {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(5px);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(5px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(8px);
+  }
+  95% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes arr-ani-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}

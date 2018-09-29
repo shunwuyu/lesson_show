@@ -1,0 +1,260 @@
+{
+  "user": {
+    "userName": "/lesson/lesson_show/vue/egg-blog/config/config.default.js",
+    "password": "/lesson/lesson_show/vue/egg-blog/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/lesson/lesson_show/vue/egg-blog/config/config.default.js",
+    "key": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-session/config/config.default.js"
+  },
+  "keys": "/lesson/lesson_show/vue/egg-blog/config/config.default.js",
+  "mongoose": {
+    "clients": {
+      "blog": {
+        "url": "/lesson/lesson_show/vue/egg-blog/config/config.default.js",
+        "useNewUrlParser": "/lesson/lesson_show/vue/egg-blog/config/config.default.js",
+        "options": "/lesson/lesson_show/vue/egg-blog/config/config.default.js"
+      }
+    },
+    "url": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-mongoose/config/config.default.js",
+    "options": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-mongoose/config/config.default.js",
+    "loadModel": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-mongoose/config/config.default.js",
+    "app": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-mongoose/config/config.default.js",
+    "agent": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-mongoose/config/config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "useSession": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "headerName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "queryName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "value": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "maxAge": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "value": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "value": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "policy": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-watcher/config/config.default.js",
+    "eventSources": {
+      "default": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-watcher/config/config.default.js",
+      "development": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "multipart": {
+    "autoFields": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "files": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-multipart/config/config.default.js"
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-schedule/config/config.default.js",
+      "file": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/config.default.js",
+    "dir": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/config.default.js",
+    "preload": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/config.default.js",
+    "buffer": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/config.prod.js",
+    "maxFiles": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/config.default.js",
+    "maxAge": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-static/config/config.prod.js"
+  },
+  "view": {
+    "root": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-view/config/config.default.js",
+    "cache": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-view/config/config.default.js",
+    "defaultExtension": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-view/config/config.default.js",
+    "mapping": "/lesson/lesson_show/vue/egg-blog/node_modules/egg-view/config/config.default.js"
+  },
+  "env": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "name": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "proxy": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "version": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "description": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "main": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "scripts": {
+      "start": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "dev": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    },
+    "keywords": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "author": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "license": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "dependencies": {
+      "egg": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "egg-mongoose": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    }
+  },
+  "baseDir": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "HOME": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "rundir": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "notFound": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "sitefile": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "middlewares": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "httpClient": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "encoding": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "formLimit": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "strict": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "depth": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "encoding": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "env": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "level": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "outputJSON": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "buffer": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "appLogName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "coreLogName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "agentLogName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "errorLogName": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "coreLogger": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "allowDebugAtProd": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxAge": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "maxSockets": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "maxSockets": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "logging": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "port": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+      "hostname": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/lesson/lesson_show/vue/egg-blog/node_modules/egg/config/config.default.js"
+}

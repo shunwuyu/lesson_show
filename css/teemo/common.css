@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0px;
+  color: #440a0e;
+}
+.main-content {
+  width: 1195px;
+  height: 896px;
+  margin: 0 auto;
+  background:url(http://lol.qq.com/act/a20161020teemo/_img/click/bg.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.asset {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.catwalk-left {
+  bottom: 62px;
+  left: 0;
+  width: 598px;
+  height: 538px;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/catwalk-left.png);
+}
+
+.cauldron-container {
+  position: absolute;
+  width: 611px;
+  height: 574px;
+  bottom: 170px;
+  left: 367px;
+}
+
+.cauldron {
+  width: 100%;
+  height: 50%;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/cauldron.png);
+  left: 0;
+  bottom: 0;
+  background-size: auto 100%;
+}
+.smoke {
+  width: 50.5%;
+  height: 37.7%;
+  top: 17.8%;
+  left: 36.3%;
+  z-index: 10;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/_smoke2.png);
+  background-size: auto 100%;
+  opacity: 0.2;
+  animation: smokeAnimation 1.2s infinite steps(5);
+}
+
+.fire-container {
+  width: 20%;
+  height: 40%;
+  bottom: 7%;
+  left: 41.4%;
+  position: absolute;
+  z-index: 1;
+}
+.fire, .highlights {
+  width: 140%;
+  height: 102%;
+  top: 21%;
+  left: -14%;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/fires.png);
+  background-size: auto 100%;
+  opacity: 0.2;
+}
+.fire {
+  transform-origin: 50% 64%;
+  animation: flameAnimation 0.6s infinite steps(1);
+}
+
+.highlights {
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/fire-highlights.png);
+  animation: highLightAnimation 0.5s infinite steps(1);
+}
+
+.platform {
+  width: 76.6%;
+  height: 18.2%;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/platform.png);
+  bottom: 5.9%;
+  left: -4.2%;
+  z-index: 1;
+}
+
+.catwalk-right {
+  bottom: 0;
+  right: 0;
+  width: 23%;
+  height: 44.4%;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/catwalk2.png);
+} 
+
+/* doormask 进门的小人 */
+.door-mask {
+  position: absolute;
+  width: 20.8%;
+  height: 9%;
+  right: 0;
+  top: 49.9%;
+  overflow: hidden;
+}
+
+.door-shadow {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 18%;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/door-shadow.png);
+  z-index: 10;
+  background-repeat: no-repeat;
+}
+
+.minion-transition {
+  height: 100%;
+  position: absolute;
+  animation: minionRightMove 3.2s infinite linear;
+}
+.minion-right {
+  height: 100%;
+  position: relative;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/minion-walk.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  animation: minionWalkAnimation 0.4s infinite steps(3);
+}
+img.img-spacer {
+  opacity: 0;
+  height: 100%;
+}
+
+.minion-transition:nth-child(2) {
+  animation-delay: -0.8s;
+}
+
+.minion-transition:nth-child(3) {
+  animation-delay: -1.6s;
+}
+
+.minion-transition:nth-child(4) {
+  animation-delay: -2.4s;
+}
+
+
+@keyframes smokeAnimation {
+  0% {
+    background-position: 0%;
+  }
+  32% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+.logs {
+  width: 100%;
+  height: 100%;
+  background-image: url(http://lol.qq.com/act/a20161020teemo/_img/click/logs.png);
+  bottom: 0;
+  background-size:100% auto;
+  background-position: center bottom;
+}
+
+.minion-right.delay2 {
+  animation-delay: -.2s;
+}
+
+.minion-right.delay1 {
+  animation-delay: -.1s;
+}
+
+.minion-right.delay3 {
+  animation-delay: -.3s;
+}
+
+/* 小怪容器 */
+.minions-container {
+  position: absolute;
+  left: 0;
+  top: 24%;
+  width: 50%;
+  height: 15%;
+}
+
+.minions-container .minion-transition.static {
+  animation: minionBounce 1.2s infinite linear;
+}
+
+.minions-container .minion-transition.static:nth-child(1) {
+  left: 10%;
+  animation-delay: -.23s;
+  -webkit-animation-delay: -.23s;
+  animation-duration: 1.6s;
+  -webkit-animation-duration: 1.6s;
+  z-index: 7;
+}
+
+.minions-container .minion-transition.static:nth-child(2) {
+  left: 20%;
+  z-index: 6;
+  animation-delay: -.71s;
+  -webkit-animation-delay: -.71s;
+}
+
+.minions-container .minion-transition.reverse {
+  animation: minionBounceReverse 1.2s infinite linear;
+  -webkit-animation: minionBounceReverse 1.2s infinite linear;
+}
+
+.minions-container .minion-transition.static:nth-child(3) {
+  left: 30%;
+  animation-delay: -.37s;
+  -webkit-animation-delay: -.37s;
+  animation-duration: 3.2s;
+}
+
+.minions-container .minion-transition.static:nth-child(4) {
+  left: 40%;
+  animation-delay: -.92s;
+  -webkit-animation-delay: -.92s;
+}
+
+.minions-container .minion-transition.static:nth-child(5) {
+  left: 50%;
+  z-index: 9;
+  animation-delay: -.43s;
+  -webkit-animation-delay: -.43s;
+  animation-duration: 2.3s;
+}
+.minion-right.delay1 {
+  -webkit-animation-delay: -.1s;
+}
+.minion-right.delay2 {
+  animation-delay: -.2s;
+  -webkit-animation-delay: -.2s;
+}
+
+.minions-container .minion-transition.static:nth-child(6) {
+  left: 60%;
+  z-index: 1;
+  animation-delay: -.69s;
+  -webkit-animation-delay: -.69s;
+}
+.minions-container .minion-transition.static:nth-child(7) {
+  left: 74%;
+  z-index: 4;
+  animation-delay: -.22s;
+  -webkit-animation-delay: -.22s;
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+}
+.minions-container .minion-transition.staticTwo {
+  animation: minionBounceTwo 1.2s infinite linear;
+  -webkit-animation: minionBounceTwo 1.2s infinite linear;
+  left: 56%;
+}
+
+.minions-container .minion-transition.slow {
+  animation: minionLeftMove 7.4s infinite linear -4s;
+  -webkit-animation: minionLeftMove 7.4s infinite linear -4s;
+  z-index: 7;
+}
+
+.minions-container .minion-transition.fast {
+  animation: minionLeftMove 5s infinite linear -3s;
+  -webkit-animation: minionLeftMove 5s infinite linear -3s;
+  z-index: 7;
+}
+
+.minions-container .minion-transition.two.fast {
+  animation: minionLeftMove 4.6s infinite linear;
+  -webkit-animation: minionLeftMove 4.6s infinite linear;
+  z-index: 7;
+}
+
+.minions-container .minion-transition.two {
+  animation: minionLeftMove 5.8s infinite linear -3s;
+  -webkit-animation: minionLeftMove 5.8s infinite linear -3s;
+  z-index: 2;
+}
+
+.minions-container .minion-transition.two.slow {
+  animation: minionLeftMove 7s infinite linear -1s;
+  -webkit-animation: minionLeftMove 7s infinite linear -1s;
+  z-index: 7;
+}
+
+@keyframes flameAnimation {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 25%;
+    transform: scale(0.8);
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes highLightAnimation {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 25%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes minionRightMove {
+  0% {
+    transform: scaleX(-1) translate3d(-300%, 0, 0);
+  }
+  25% {
+    transform: scaleX(-1) translate3d(-200%, 0, 0);
+  }
+  50% {
+    transform: scaleX(-1) translate3d(-100%, 0 , 0);
+  }
+  70% {
+    transform: scaleX(-1) translate3d(0%, 0 , 0);
+  }
+  100% {
+    transform: scaleX(-1) translate3d(100%, 0 , 0);
+  }
+}
+
+@keyframes minionWalkAnimation {
+  100% {
+    background-position: 100%;
+  }
+}
+
+@keyframes minionBounce {
+  0% {
+    transform: translate3d(0%, 0, 0) scaleX(-1);
+  }
+  50% {
+    transform: translate3d(-20%, 0, 0) scaleX(-1);
+  }
+  51% {
+    transform: translate3d(-20%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes minionBounceReverse {
+  0% {
+    transform: translate3d(0%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+  }
+  50% {
+      transform: translate3d(50%, 0, 0);
+      -webkit-transform: translate3d(50%, 0, 0);
+  }
+  51% {
+      transform: translate3d(50%, 0, 0) scaleX(-1);
+      -webkit-transform: translate3d(50%, 0, 0) scaleX(-1);
+  }
+  100% {
+      transform: translate3d(0%, 0, 0) scaleX(-1);
+      -webkit-transform: translate3d(0%, 0, 0) scaleX(-1);
+  }
+}
+
+@keyframes minionBounceTwo {
+  0% {
+    transform: translate3d(0%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+  }
+  25% {
+      transform: translate3d(4%, 0, 0);
+      -webkit-transform: translate3d(4%, 0, 0);
+  }
+  50% {
+      transform: translate3d(0%, 0, 0);
+      -webkit-transform: translate3d(0%, 0, 0);
+  }
+  75% {
+      transform: translate3d(0%, -2%, 0);
+      -webkit-transform: translate3d(0%, -2%, 0);
+  }
+  100% {
+      transform: translate3d(0%, 0, 0);
+      -webkit-transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes minionLeftMove {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+  50% {
+      transform: translate3d(250%, 0, 0);
+      -webkit-transform: translate3d(250%, 0, 0);
+  }
+  51% {
+      transform: translate3d(250%, 0, 0) scaleX(-1);
+      -webkit-transform: translate3d(250%, 0, 0) scaleX(-1);
+  }
+  100% {
+      transform: translate3d(-100%, 0, 0) scaleX(-1);
+      -webkit-transform: translate3d(-100%, 0, 0) scaleX(-1);
+  }
+}
