@@ -35,3 +35,16 @@ webpack 是一个JS代码模块化的打包工具，功能完善的构建工具�
   webpack 的配置其实是一个 Node.js 的脚本, 配置对象， 
 
   resource,  issuer, 
+
+# HMR 
+  Hot Module Replacement 模块热替换，
+  Hot Reloading 代码改变， 刷新整个页面，而HMR, 只替换部分模块代码， 极大提高开发效率。
+
+  webpack-dev-server 配置 hot true
+  plugins:[
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+  ]
+
+  Manifest 各个模块之间交互的表数据， 
+  入口代码文件和构建出来的bundle文件的对应关系。
