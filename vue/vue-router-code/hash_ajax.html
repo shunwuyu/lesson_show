@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .box {
+    min-height: 100px;
+    background: rgba(0,0,0,.45);
+    color: white;
+    font-size: 30px;
+  }
+  </style>
+</head>
+<body>
+<a href="#!a">A</a>
+<a href="#!b">B</a>
+<a href="#!c">C</a>
+<div class="box">
+
+</div>
+<script>
+window.addEventListener('hashchange', () => {
+  let tag = location.hash;
+  if (!tag) {
+    return false
+  }
+
+  tag = tag.replace('#!', '');
+  // console.log(tag);
+  // 页面的不同状态
+  const file = `${tag}.json`;
+  fetchData(file)
+},false);
+function fetchData(file) {
+  fetch(file)
+    .then(res => res.text())
+    .then(data => {
+      document.querySelector('.box').innerHTML = data;
+    })
+}
+
+window.onload = () => {
+  let tag = location.hash;
+  if (tag) {
+    tag = tag.replace('#!', '');
+    const file = `${tag}.json`;
+    fetchData(file)
+  }
+}
+</script>
+
+
+</body>
+</html>

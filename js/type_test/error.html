@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form name="login-form" action="http://www.baidu.com" method="post">
+    <div>
+      <label for="username">用户名</label>
+      <input type="text" name="username" id="username"/>
+    </div>
+    <div>
+      <input type="submit" value="提交"/>
+    </div>
+  </form>
+  <script>
+    // 键头函数的使用
+    const usernameInput = document.getElementById('username');
+    const oForm = document.forms['login-form'];
+    oForm.addEventListener('submit', function() {
+      event.preventDefault();
+      if (usernameInput.value == '') {
+        throw new Error('请填写用户名');
+        
+      } else {
+        // console.log(this);
+        this.submit();
+      }
+      
+    });
+    
+  </script>
+</body>
+</html>

@@ -4,6 +4,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:gsy/common/redux/GSYState.dart';
 import 'package:gsy/common/style/GSYStyle.dart';
 import 'package:gsy/common/utils/NavigatorUtils.dart';
+import 'package:redux/redux.dart';
 
 class WelcomePage extends StatefulWidget {
   static final String sName = "/";
@@ -29,8 +30,10 @@ class _WelcomePageState extends State<WelcomePage> {
 
     hadInit = true;
     print('xxx');
+    Store<GSYState> store = StoreProvider.of(context);
     new Future.delayed(const Duration(seconds: 2), () {
-      NavigatorUtils.goHome(context);
+      // NavigatorUtils.goHome(context);
+      NavigatorUtils.goLogin(context);
     });
   }
 

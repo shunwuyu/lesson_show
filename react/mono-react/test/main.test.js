@@ -1,5 +1,5 @@
-describe('mini-react', () => {
+describe("mini-react", () => {
   it("render", () => {
-    const root = document.createElement('div');
-  })
-})
+    const root = document.createElement("div");
+  });
+});

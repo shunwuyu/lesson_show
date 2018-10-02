@@ -1,0 +1,31 @@
+时间： 9月15日上午10点
+地点：范家新村B区10栋（大操场旁）
+
+准备
+一. 自带电脑, 充电器。
+二. 学前准备
+  刷一刷廖雪峰老师的文章，基础好的可以飘过。
+  https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000
+
+三. 安装好以下环境
+  1. vscode   https://code.visualstudio.com/
+  2. node.js  
+  https://nodejs.org/en/  8.0以上版本即可
+  3. 安装yarn
+  命令行环境下安装 npm install -g yarn
+  yarn global add live-server
+  4. 安装微信小程序编辑器
+  https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html
+  5. git 安装与配置
+  https://www.cnblogs.com/yanqingxu/p/7154654.html
+  6. 创建 workspace目录， 比如 D:\workspace目录  目录自己定
+
+四. 课程
+  上午：秋梦班开幕式， 主唱献唱， 百度刘江龙， 新浪邬嗣敏，滴滴周超等分享学习及就业心得
+  下午：html5 打击乐实战。
+
+
+
+
+
+

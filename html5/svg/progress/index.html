@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SVG制作圆形</title>
+  <style>
+  html, body {
+    background-color: #2962FF;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .progress-ring {}
+  .progress-ring__circle {
+    transition: .35s stroke-dashoffset;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dasharray: 326.726, 326.726;
+    stroke-dashoffset: 10;
+  }
+
+  input {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+  }
+  
+
+  </style>
+</head>
+<body>
+    <svg
+      class="progress-ring"
+      width="120"
+      height="120">
+      <circle
+        class="progress-ring__circle"
+        stroke="white"
+        stroke-width="4"
+        fill="transparent"
+        r="52"
+        cx="60"
+        cy="60"/>
+    </svg>
+ 
+  <input
+    value="10"
+    type="number"
+    step="5"
+    min="0"
+    max="100"
+    placeholder="progress"
+  >
+  <script>
+    // var circle = document.querySelector('circle');
+    // var radius = circle.r.baseVal.value;
+    // var circumference = radius * 2 * Math.PI;
+    // circle.style.strokeDasharray = `${circumference} ${circumference}`
+    // circle.style.strokeDashoffset = `${circumference}`;
+    // function setProgress(percent) {
+    //   const offset = circumference - percent / 100 * circumference;
+    //   circle.style.strokeDashoffset = offset;
+    // }
+    // const input = document.querySelector('input');
+    // setProgress(input.value);
+    // input.addEventListener('change', function(e) {
+    //   if (input.value < 101 && input.value > -1) {
+    //     setProgress(input.value);
+    //   } 
+    // })
+  </script>
+</body>
+</html>

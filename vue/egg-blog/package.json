@@ -1,0 +1,21 @@
+{
+  "name": "egg-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-demo",
+    "dev": "egg-bin dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^2.10.0",
+    "egg-mongoose": "^3.1.0",
+    "egg-scripts": "^2.8.1"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.8.1"
+  }
+}

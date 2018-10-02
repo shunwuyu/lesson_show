@@ -1,0 +1,32 @@
+{
+  "name": "hpi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "crypto": "^1.0.1",
+    "env2": "^2.2.2",
+    "hapi": "16",
+    "hapi-auth-jwt2": "7",
+    "hapi-pagination": "^1.22.0",
+    "hapi-swagger": "7",
+    "inert": "4",
+    "joi": "13",
+    "jsonwebtoken": "^8.3.0",
+    "mysql2": "^1.6.1",
+    "package": "^1.0.1",
+    "sequelize": "^4.38.1",
+    "vision": "4",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^4.1.1"
+  }
+}

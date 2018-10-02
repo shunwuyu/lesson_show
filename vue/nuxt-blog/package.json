@@ -1,0 +1,50 @@
+{
+  "name": "nuxt-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -w ./server -w ./start.js --exec node ./start.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/pwa": "^2.0.5",
+    "cross-env": "^5.0.1",
+    "formidable": "^1.1.1",
+    "highlight.js": "^9.12.0",
+    "jsonwebtoken": "^8.1.1",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "koa-static": "^4.0.2",
+    "markdown-it": "^8.4.0",
+    "md5": "^2.2.1",
+    "mongoose": "^5.0.1",
+    "nodemailer": "^4.6.7",
+    "nuxt": "latest",
+    "source-map-support": "^0.4.15",
+    "top-editor": "^0.0.8"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-preset-latest-node": "^0.4.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "backpack-core": "^0.3.0",
+    "eslint": "^3.13.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^2.0.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.8.3",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^7.0.1",
+    "scmp": "^2.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

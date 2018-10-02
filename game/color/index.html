@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>suporka color game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="wgt-home" id="page-one">
+      <h1>辨色力测试</h1>
+      <p>找出所有色块里颜色不同的一个</p>
+      <a href="javascript:;" id="start" class="btn btn-primary btn-lg">开始挑战</a>
+    </div>
+    <header class="header">
+      <h1>辨色力测试</h1>
+    </header>
+    <aside class="wgt-score"></aside>
+    <section id="screen" class="screen"></section>
+    <footer>
+      <div> <a href="http://zxpsuper.github.io" style="color: #FAF8EF"> my blog</a></div>
+      ©<a href="https://zxpsuper.github.io">Suporka</a>
+      ©<a href="https://zxpsuper.github.io/Demo/advanced_front_end/">My book</a>
+      ©<a href="https://github.com/zxpsuper">My Github</a>
+    </footer>
+  </div>
+  <script src="./colorGame.js"></script>
+  <script>
+  window.onload = function() {
+    document.querySelector('#start').addEventListener('click', function() {
+      document.querySelector('#page-one').style.display = 'none';
+      new ColorGame({
+        time: 30
+      });
+    }, false);
+  }
+  </script>
+</body>
+</html>

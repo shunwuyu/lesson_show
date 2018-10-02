@@ -39,9 +39,9 @@ function create () {
   starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
   
   bullets = game.add.group();
-  // 启动物理身体
+  // // 启动物理身体
   bullets.enableBody = true;
-  // 物理身体的类型， 
+  // // 物理身体的类型， 
   bullets.physicsBodyType = Phaser.Physics.ARCADE;
   bullets.createMultiple(30, 'bullet');
   bullets.setAll('anchor.x', 0.5);
@@ -78,7 +78,7 @@ function create () {
   });
   stateText = game.add.text(game.world.centerX, game.world.centerY, '', { font: '84px Arial', fill: '#fff'});
   stateText.anchor.setTo(0.5, 0.5);
-  stateText.visible = true;
+  stateText.visible = false;
 
   for (var i = 0; i < 3; i++) {
     var ship = lives.create(game.world.width-100 + (30*i), 60, 'ship');
@@ -209,6 +209,7 @@ function enemyFires () {
     var random = game.rnd.integerInRange(0, livingEnemies.length-1);
     var shooter = livingEnemies[random];
     enemyBullet.reset(shooter.body.x, shooter.body.y);
+
     game.physics.arcade.moveToObject(enemyBullet, player, 120);
     firingTimer = game.time.now + 2000;
   }

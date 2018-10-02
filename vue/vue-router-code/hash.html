@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style lang="">
+  .box {
+    height: 1200px;
+    background-color: green;
+  }
+  .ybox {
+    background: yellow;
+  }
+  </style>
+</head>
+<body>
+<a name="top"></a>
+<div class="box"></div>
+<a href="#top">回到头部</a>
+<a name="middle"></a>
+<div class="box ybox"></div>
+<a href="#middle">回到中间</a>
+<div class="box"></div>
+<script>
+window.addEventListener('hashchange', doHashChange, false);
+function doHashChange (event) {
+  // console.log(event);
+  let id = window.location.hash;
+  if (id) {
+    id = id.replace('#', '');
+  }
+  console.log(id);
+}
+</script>
+</body>
+</html>
