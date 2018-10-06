@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .myNode {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+  }
+  </style>
+</head>
+<body>
+<script>
+let XStart = 0, YStart = 0, XEnd = 1000, YEnd = 1000;
+let Time = 520; 
+let Xspeed = (XEnd - XStart) / Time;
+const Yspeed = (YEnd- YStart) / Time;
+let A = 2 * (YEnd - YStart ) / (Time * Time);
+let Node = document.createElement('div');
+document.body.appendChild(Node);
+Node.className = 'myNode';
+Node.style.top = YStart + 'px';
+Node.style.left = XStart + 'px';
+let nowX = XStart;
+let nowY = YStart;
+let loop = 0;
+let move = () => {
+  if (nowY >=  YEnd) {
+    Node.parentNode.removeChild(Node);
+    return;
+  }
+  nowX += Xspeed;
+  nowY += A * loop;
+  requestAnimationFrame(() => {
+    console.log(nowX, nowY);
+    Node.style.top = nowY + 'px';
+    Node.style.left = nowX + 'px';
+    loop++;
+    move();
+  })
+}
+move();
+  
+</script>
+</body>
+</html>
