@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>清除float浮动</title>
+  <style>
+  .z1 {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    background: skyblue;
+    padding-top: 80px;
+    opacity: .5;
+  }
+  .z2 {
+    background: yellow;
+  }
+  .z3 {
+    background: red;
+  }
+  .z4 {
+    background: green;
+  }
+  .z5 {
+    background: pink;
+  }
+  </style>
+</head>
+<body>
+  <div class="fu">
+    <div class="z2">没有设置任何浮动的容器，背景为黄色</div>
+    <div class="z3">没有设置任何浮动的容器，背景为红色</div>
+    <div class="z1">设置了浮动的元素，opacity为0.5</div>
+    <div class="z4">没有设置任何浮动的容器，背景为绿色</div>
+    <div class="z5">没有设置任何浮动的容器，背景为粉色</div>
+  </div>
+</body>
+</html>

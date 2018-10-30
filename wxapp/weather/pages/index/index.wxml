@@ -1,0 +1,14 @@
+<view class="wrapper" style="background: url({{backgroundImage}}) center -178rpx / 100% no-repeat {{backgroundColor}};">
+  <view class="navigator" bindtap="goDiary">
+    <icon type="edit"/>
+  </view>
+
+  <view class="container" id="canvas-wrapper" style="padding-top: {{paddingTop}}px">
+    <view class="now">
+      <view class="location" bindtap="chooseLocation">
+        <icon type="dingwei" />
+        <text>{{ address }}</text>
+      </view>
+    </view>
+  </view>
+</view>

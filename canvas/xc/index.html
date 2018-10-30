@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  #canvas {
+    background: #000;
+    /* width: 400px;
+    height: 400px; */
+  }
+  </style>
+</head>
+<body>
+  <!-- css来设置宽高的话，画布就会按300*150 的比例缩放。 -->
+  <canvas id="canvas"></canvas>
+  <script>
+  var canvas = document.getElementById('canvas');
+  var context = canvas.getContext('2d');
+  var cx = canvas.width = 400;
+  var cy = canvas.height = 400;
+  // context.strokeStyle = 'white';
+  // context.strokeRect(5,5,50,25);
+  // context.scale(2,2);
+  // context.strokeRect(5,5,50,25);
+  // context.scale(2,2);
+  // context.strokeRect(5,5,50,25);
+  // context.fillStyle = 'white';
+  // context.rotate(20*Math.PI/180);
+  // context.fillRect(70, 30, 200, 100);
+  var img = new Image();
+  img.src = 'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=256455501,1794197464&fm=173&app=25&f=JPEG?w=218&h=146&s=83A001AF48210C9A84BC15F20300D030';
+  context.drawImage(img, 50, 50);
+  
+  </script>
+</body>
+</html>

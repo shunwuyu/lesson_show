@@ -1,0 +1,63 @@
+/* miniprogram/pages/publish/publish.wxss */
+.images{
+  width: 100%;
+  background-color: #fff;
+  padding-top: 30rpx;
+}
+.images > image,.images > view{
+  margin:0 15rpx 30rpx 15rpx;
+  float:left;
+}
+.images .addImgButton{
+  border: 2rpx solid #999;
+  position: relative;
+  box-sizing: border-box;
+}
+.images .addImgButton::before{
+  content: "";
+  width: 60rpx;
+  height: 4rpx;
+  background-color: #999;
+  position: absolute;
+  margin-left: -30rpx;
+  margin-top: -2rpx;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+.images .addImgButton::after{
+  content: "";
+  width: 4rpx;
+  height: 60rpx;
+  background-color: #999;
+  position: absolute;
+  margin-left: -2rpx;
+  margin-top: -30rpx;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+}
+form{
+  width: 100%;
+}
+.txt{
+  width: 100%;
+  background-color: #fff;
+  padding:0 30rpx;
+  box-sizing: border-box;
+}
+.txt textarea{
+  width: 100%;
+  padding: 20rpx 0rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  background-color: #e2e2e2;
+}
+.button{
+  width: 100%;
+  background: #fff;
+  padding: 30rpx;
+}
+.button button{
+  width: 70%;
+}

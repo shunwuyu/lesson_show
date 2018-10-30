@@ -1,0 +1,2 @@
+<button bindtap="user">user</button>
+<button bindtap="school">school</button>

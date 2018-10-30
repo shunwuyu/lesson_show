@@ -1,0 +1,27 @@
+<template name="travelCircel">
+  <view class="travelItem">
+    <view class="itemTitle">
+      <image src="{{item.user.avatar}}" mode="aspectFill"/>
+      <view class="itemTitleTxt fc9">
+        <view class="f28 fc3 fw">{{item.user.nickname}}</view>
+        <view class="f24">{{item.user.summary}}</view>
+      </view>
+    </view>
+    <scroll-view scroll-x class="itemScroll" wx:if="{{item.pic}}">
+      <block wx:for="{{item.pic}}" wx:for-item="pic" wx:key="pic._id">
+        <image src="{{pic.url}}" mode="aspectFill"></image>
+      </block>
+    </scroll-view>
+    <view class="itemSummary fw f32 fc3">{{item.summary}}</view>
+    <view class="itemAddTime f24 fc9">{{item.add_time}}</view>
+    <view class="itemBottom f24 fc9">
+      <view class="itemBottomViewTime f24 fc9">
+      <!-- 点赞 -->
+      </view>
+      <view class="itemBottomOther">
+        <image mode="aspectFill" src="../../images/icon/commend.png"></image>
+      </view>
+    </view>
+  </view>
+</template>
+  

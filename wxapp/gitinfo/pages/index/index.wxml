@@ -1,0 +1,60 @@
+<view>
+  <view>
+    <button bindtap="backInput">返回重输</button>
+  </view>
+  <view>
+    <view class="userInfo">
+      <view>
+        <image class="avatar" src="{{userInfo.avatar_url}}" alt="avatar"></image>
+      </view>
+      <view class="user-r">
+        <view>
+          <span>用户名：</span>
+          <span>{{userInfo.login}}</span>
+        </view>
+        <view>
+          <span>创建时间：</span>
+          <span>{{userInfo.created_at}}</span>
+        </view>
+        <view>
+          <span>公开仓库：</span>
+          <span>{{userInfo.public_repos}}</span>
+        </view>
+        <view>
+          <span>关注了：</span>
+          <span>{{userInfo.followers}}</span>
+        </view>
+        <view>
+          <span>关注者：</span>
+          <span>{{userInfo.following}}</span>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text class="subTitle">跟随(可点击查看用户哟):</text>
+  <view class="followMain" bindtap="toInfo">
+    <view class="follow" wx:for="{{following}}" wx:key="{{key}}">
+      <image class="followImg" src="{{item.avatar_url}}" alt="avatar" data-name="{{item.login}}"></image>
+      <text class="foName" data-name="{{item.login}}">{{item.login}}</text>
+    </view>
+  </view>
+  <text class="subTitle">粉丝:</text>
+  <view class="followMain">
+    <view wx:for="{{follow}}"  class="follow" wx:key="{{key}}">
+      <image class="followImg" src="{{item.avatar_url}}" alt="avatar"></image>
+      <text class="foName">{{item.login}}</text>
+    </view>
+  </view>
+  <view>
+    <text class="subTitle">仓库Starts柱状图:</text>
+    <canvas class="canvas" canvas-id="starts" style="height:300px;width:100%;"></canvas>
+  </view>
+  <view>
+    <text class="subTitle">仓库库语言分布：</text>
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px;width:100%;"></canvas>
+  </view>
+  <view>
+    <text class="subTitle">仓库大小情况：</text>
+    <canvas canvas-id="ringCanvas" style="height:300px;width:100%;"  bindtouchstart="touchHandler"></canvas>
+  </view>
+</view>

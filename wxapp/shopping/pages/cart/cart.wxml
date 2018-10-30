@@ -5,7 +5,8 @@
         <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
                 <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/>
         <navigator url="../details/details?id={{item.id}}">
-          <image class="cart-thumb" src="{{item.image}}"></image>
+          <image cl
+          ass="cart-thumb" src="{{item.image}}"></image>
         </navigator>
         <text class="cart-pro-name">{{item.title}}</text>
         <text class="cart-pro-price">￥{{item.price}}</text>

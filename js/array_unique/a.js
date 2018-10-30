@@ -1,4 +1,4 @@
-function unique(arr) {
+function unique(arr) {https://github.com/cccyb/vue-eleme-app/blob/master/src/common/stylus/icon.styl
     if (!Array.isArray(arr)) {
         console.log('type error!')
         return

@@ -1,0 +1,11 @@
+<view class="index">
+  <view>
+    <image class="log" src="/assets/github.png"></image>
+  </view>
+  <view class="weui-cell uInput">
+    <input class="weui-input username" placeholder="输入您的Github用户名" bindinput="userNameInput" />
+    <view class="weui-cell__ft">
+      <icon type="search" size="18" bindtap="toInfo"></icon>
+    </view>
+  </view>
+</view>

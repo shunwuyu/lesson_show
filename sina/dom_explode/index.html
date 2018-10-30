@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  html,body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+  .box img {
+    width: 25px;
+    height: 25px;
+  }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+<script src="https://www.zhangxinxu.com/GitHub/Tween/tween.js"></script>
+<script src="./partical/partical.js"></script>
+<script src="./boom/boom.js"></script>
+<script>
+  let boomChildList = [];
+  const icons = ['./images/laugh.png', './images/movie.png', './images/music.png','./images/run.png','./images/shoe.png','./images/rainbow.png','./images/mkf.png','./images/kl.png','./images/cup.png','./images/coffee.png'];
+  const oBox = document.querySelector('.box');
+  for (let i = 0; i < 10; i++) {
+    let tempDom = document.createElement('div');
+    tempDom.className = 'demoDom';
+    tempDom.innerHTML = `<img src="${icons[i]}">`;
+    boomChildList.push(tempDom);
+  }  
+  let boom = new Boom({
+    childList: boomChildList,
+    boomNumber: 10,
+    rotate: 0,
+    spread: 360,
+    delayRange: 100,
+    power: 3
+  });
+  boom.setContainer(document.querySelector('.box'));
+  oBox.addEventListener('click', () => {
+    boom.boom();
+  }, false)
+  
+</script>
+</body>
+</html>

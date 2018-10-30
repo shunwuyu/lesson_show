@@ -1,0 +1,6 @@
+<image class="headImage" src="{{photo}}" mode="aspectFill"></image>
+<view style="padding:0px 50rpx;">
+  <van-button class="dBtn" bindtap="downloadPhoto" plain block type="danger">下载到本地</van-button>
+  <van-button class="dBtn" bindtap="downloadQRcode"  block type="primary">分享到朋友圈</van-button>
+  <van-button class="dBtn" bindtap="generateUrl"  block type="primary">生成临时链接</van-button>
+</view>

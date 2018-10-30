@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+  const oCanvas = document.getElementById('canvas');
+  const ctx = oCanvas.getContext('2d');
+  // save表示之前的状态
+  ctx.save()
+  ctx.fillStyle = 'red'
+  ctx.scale(2, 2);
+  ctx.fillRect(10,10,150,100)
+  // 用的save的状态
+  ctx.restore();
+  // ctx.fillStyle = 'black'
+  ctx.fillRect(50, 50, 150, 100)
+  
+  </script>
+</body>
+</html>

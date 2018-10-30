@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="images">
+    <block wx:if="{{picCount}}" wx:for="{{pics}}" wx:for-item="pic" wx:key="index">
+      <image src="{{pic}}" mode="aspectFill" style='width:{{windowWidth/3-15}}px;height:{{windowWidth/3-15}}px'/>
+    </block>
+    <view class="addImgButton" wx:if="{{picCount < 6}}" style="width:{{windowWidth/3-15}}px;height:{{windowWidth/3-15}}px" bindtap="publishImage"></view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="txt">
+      <textarea name="summary" auto-height="true" placeholder="输入20字范围内的点评" maxlength="20"></textarea>
+    </view>
+    <view class="button">
+      <button type="primary" form-type="submit">提交</button>
+    </view>
+  </form>
+</view>
