@@ -1,0 +1,6 @@
+<svg
+  id="mysvg"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 800 600">
+  <circle id="mycircle" cx="400" cy="300" r="50"/>
+</svg>

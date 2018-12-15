@@ -33,4 +33,17 @@
   5. branch 的通俗化理解：
     从初始commit 到branch所指向的commit 之间的所有commit S的一个串
     平等
+
+## git 本质
+push： 把branch 上传到远端仓库
+1. 把当前的分支上传到远程仓库，并把这个branch的路径上的所有commit上一并上传
+2. 指定远程分支名， 
+3. 默认分支
+
+## Feature Branching
+
+1. 任何新的功能或bug 修复全部新建一个branch 够苹果难过
+2. branch 写完后， 合并到master, 然后删除这个branch
+
+
   
