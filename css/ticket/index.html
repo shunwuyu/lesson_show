@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ticket</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-image: linear-gradient(-45deg, #8067B7, #EC87C0);
+    min-height: calc(100vh - 40px);
+    margin: 20px;
+    font-family: 'Lato', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .top {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .top, .bottom, .rip {
+    background-color: #fff;
+  }
+  [class^='--flex'], [class*=' --flex'], .--flex, [class^='--inline-flex'], [class*=' --inline-flex'], .--inline-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .--flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .-bold {
+    font-weight: bold;
+  }
+  .top > div, .bottom > div {
+    padding: 0 18px;
+  }
+  .top > div:first-child, .bottom > div:first-child {
+    padding-top: 18px;
+  }
+  .top img, .bottom img {
+    padding: 18px 0;
+  }
+  .top .deetz {
+    padding-bottom: 10px !important;
+  }
+  [class*='-row'] {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  [class*='-j!sb'] {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .rip {
+    height: 20px;
+    margin: 0 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAACCAYAAAB7Xa1eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4AAAAaSURBVBhXY5g7f97/2XPn/AcCBmSMQ+I/AwB2eyNBlrqzUQAAAABJRU5ErkJggg==);
+    background-size: 4px 2px;
+    background-repeat: repeat-x;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 1px 0 0 #fff, 0 -1px 0 0 #fff;
+  }
+  .rip:before, .rip:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-radius: 100%;
+    pointer-events: none;
+  }
+  .rip:before {
+    left: -10px;
+  }
+  .rip:after {
+    -webkit-transform: translate(-50%, -50%) rotate(225deg);
+    transform: translate(-50%, -50%) rotate(225deg);
+    right: -40px;
+  }
+  .bottom {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 18px;
+    height: 30px;
+    padding-top: 10px;
+  }
+  .bottom .barcode {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAAABCAYAAABXChlMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4AAACPSURBVChTXVAJDsMgDOsrVpELiqb+/4c0DgStQ7JMYogNh2gdvg5VfXFCRIZaC6BOtnoNFpvaumNmwb/71Frrm8XvgYkker1/g9WzMOsohaOGNziRs5inDsAn8yEPengTapJ5bmdZ2Yv7VvfPN6AH2NJx7nOWPTf1/78hoqgxhzw3ZqYG1Dr/9ur3y8vMxgNZhcAUnR4xKgAAAABJRU5ErkJggg==);
+    background-repeat: repeat-y;
+    min-width: 58px;
+  }
+  .bottom .buy {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #5D9CEC;
+    padding: 0 18px;
+    line-height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="--flex-column">
+      <div class="top --flex-column">
+        <div class="bandname -bold">Ghost Mice</div>
+        <div class="tourname">Home Tour</div>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/concert.png" alt="">
+        <div class="deetz --flex-row-j!sb">
+            <div class="event --flex-column">
+              <div class="date">3rd March 2017</div>
+              <div class="location -bold">Bloomington, Indiana</div>
+            </div>
+            <div class="price --flex-column">
+              <div class="label">Price</div>
+              <div class="cost -bold">$30</div>
+            </div> 
+        </div> 
+      </div>
+      <div class="rip"></div>
+      <div class="bottom --flex-row-j!sb">
+        <div class="barcode"></div>
+        <a class="buy" href="#">BUY TICKET</a>
+      </div>
+  </div>
+  
+</body>
+</html>

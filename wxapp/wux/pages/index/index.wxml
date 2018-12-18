@@ -1,0 +1,6 @@
+<wux-dialog id="wux-dialog" />
+<view class="page">
+  <wux-button block type="light" bind:click="open">Default Dialog</wux-button>
+  <wux-button block size="large" type="light" bind:click="open">Default Dialog</wux-button>
+  <wux-button block size="large" disabled type="light" bind:click="open">Default Dialog</wux-button>
+</view>

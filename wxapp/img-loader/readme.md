@@ -1,0 +1,1 @@
+[source](https://github.com/o2team/wxapp-img-loader/blob/master/img-loader/img-loader.js)

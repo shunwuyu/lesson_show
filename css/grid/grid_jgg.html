@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0,0);
+  }
+  .weui-grids {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid: auto / 1fr 1fr 1fr;
+  }
+  .weui-grids:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+  .weui-grids:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+  }
+  .weui-grid {
+    position: relative;
+    float: left;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  .weui-grid:before {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-right: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+  }
+  .weui-grid:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+  .weui-grid__icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+  }
+  .weui-grid__icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .weui-grid__icon + .weui-grid__label {
+    margin-top: 5px;
+  }
+  .weui-grid__label {
+    display: block;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="weui-grids">
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+    <a href="" class="weui-grid">
+      <div class="weui-grid__icon">
+        <img src="https://weui.io/images/icon_tabbar.png" alt=""></div>
+      <p class="weui-grid__label">Grid</p>
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Worker</title>
+</head>
+<body>
+  <script>
+  var worker = new Worker('work.js');
+  // worker.postMessage('Hello World');
+  // worker.postMessage({cmd: 'start', msg: 'dfdf', args: ['Work']})
+  worker.postMessage({cmd: 'stop', msg: 'dfdf', args: ['Work']})
+  worker.onmessage = function (event) {
+    console.log('Received message ' + event.data);
+    doSomething();
+  }
+  worker.onerror(function (event) {
+    console.log([
+      'ERROR: Line ', e.lineno, ' in ', e.filename, ': ', e.message 
+    ].join(''));
+  })
+  function doSomething() {
+    worker.postMessage('Work done!');
+    worker.terminate();
+  }
+  </script>
+</body>
+</html>

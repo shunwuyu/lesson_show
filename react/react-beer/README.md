@@ -1,0 +1,1 @@
+[source](https://github.com/wesbos/React-Beer-Me/blob/master/finished/src/index.js)

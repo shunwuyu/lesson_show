@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Throttle 节流</title>
+  <style>
+  #container {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background: #666;
+    line-height: 500px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">0</div>
+  <script>
+  function throttle(func, wait, options) {
+    var timeout, context, args, result;
+    var previous = 0;
+    if (!options) options = {};
+    var later = function() {
+      previous = options.leading === false ? 0 : new Date().getTime();
+      timeout = null;
+      func.apply(context, args);
+      if (!timeout) context = args = null;
+    }
+    var throttled = function() {
+      var now = new Date().getTime();
+      if (!previous && options.leading === false) previous = now;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      // 调整时间
+      if (remaining <= 0 || remaining > wait) {
+        if (timeout) {
+          clearTimeout(timeout);
+          timeout = null;
+        }
+        previous = now;
+        func.apply(context, args);
+        if (!timeout) context = args = null;
+      } else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
+    };
+    throttled.cancel = function() {
+      clearTimeout(timeout);
+      previous = 0; 
+      timeout = null;
+    }
+
+    return throttled;
+  }
+  function getUserAction () {
+    let num = parseInt(this.innerHTML);
+    this.innerHTML = ++num;
+  }
+  container.onmousemove = throttle(getUserAction, 1000, { leading: false, trailing: false });
+  </script>
+</body>
+</html>

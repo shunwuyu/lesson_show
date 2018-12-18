@@ -1,0 +1,22 @@
+{
+  "name": "barrage",
+  "version": "1.0.0",
+  "description": "[source](https://juejin.im/post/5be54a286fb9a049ae07641b)",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-preset-env": "^1.7.0",
+    "redis": "^2.8.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "ws": "^6.1.2"
+  }
+}

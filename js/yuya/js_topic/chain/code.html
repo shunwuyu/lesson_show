@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+var _ = function(obj) {
+  if (!(this instanceof _)) return new _(obj);
+  this._wrapped = obj;
+}; 
+var chainResult = function(instance, obj) {
+  return instance._chain ? _.chain(obj) : obj;
+}
+_.chain = function(obj) {
+  var instance = _(obj);
+  console.log(instance);
+  instance._chain = true
+  return instance;
+}
+_.prototype.push = function(num) {
+  this._wrapped.push(num);
+  // return this._wrapped;\\
+  return chainResult(this, this._wrapped);
+}
+_.prototype.shift = function(num) {
+  this._wrapped.shift();
+  // console.log(this._wrapped);
+  // return this._wrapped
+  return chainResult(this, this._wrapped)
+}
+_.prototype.value = function() {
+  return this._wrapped;
+}
+
+// var res = _.chain([1, 2, 3]).push(4);
+// // 将上一个函数的返回值，传入 _.chain，然后再继续调用其他函数
+// var res2 = _.chain(res).shift();
+// console.log(_.chain([1, 2, 3, 4]).push(5).shift());
+console.log(_.chain([1, 2, 3]).push(4).shift().value());
+</script>
+</body>
+</html>

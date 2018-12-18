@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .btn {
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+  }
+  #hello, #hi {
+    height: 500px;
+    background: #666;
+    text-align: center;
+    line-height: 500px;
+    color: white;
+    font-size: 100px;
+    transition: all 2s;
+    transform: translateX(100%);
+  }
+
+  </style>
+</head>
+<body>
+  <a href="#/hello" class="btn">hello hash</a>
+  <a href="#/hi" class="btn">hi hash</a>
+  <div id="hello">Hello</div>
+  <div id="hi">hi</div>
+  <script>
+  const hello = document.getElementById('hello');
+  const hi = document.getElementById('hi');
+  window.addEventListener('hashchange', e => {
+    var hashVal = window.location.hash.substring(1); 
+    console.log(hashVal);
+    if (hashVal == '/hello') {
+      if (hello.style.transform == 'translate(0%, 0%)') {
+        hello.style.transform = 'translate(100%, 0%)';
+      } else {
+        hello.style.transform = 'translate(0%, 0%)';
+      }
+    } else if (hashVal == '/hi') {
+      if (hi.style.transform == 'translate(0%, 0%)') {
+        hi.style.transform = 'translate(100%, 0%)';
+      } else {
+        hi.style.transform = 'translate(0%, 0%)';
+      }
+    }
+  });
+  </script>
+</body>
+</html>

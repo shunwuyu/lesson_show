@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  .action-container {
+    width: 100%;
+    height: 100%;
+    background:darkcyan;
+    margin-left: 0;
+  }
+  .container {
+    width: 200px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    background: red;
+  }
+  </style>
+</head>
+<body>
+  <div id="action-container" class="action-container">
+    <button id="action">抽屉</button>
+  </div>
+  <div id="container" class="container"></div>
+  <script src="./main.js"></script>
+  <script>
+  let state = true;
+  const action = document.getElementById("action");
+  const container = document.getElementById("container");
+  const actionContainer = document.getElementById("action-container");
+  const drawer = new Drawer({
+    enterDOM: container,
+    leaveDOM: actionContainer
+  })
+  if (action) {
+    action.addEventListener("click", () => {
+      // alert(state);
+      if (state) {
+        state = false;
+        console.log(drawer);
+        drawer.enter();
+      } else {
+        state = true;
+        drawer.leave();
+      }
+    })
+  }
+  </script>
+</body>
+</html>

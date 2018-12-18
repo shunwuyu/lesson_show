@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Chain</title>
+  <style>
+  div {
+    display: none;
+    height: 200px;
+    background: red;
+  }
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <!-- <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script> -->
+  <script>
+  // function JQuery(selector) {
+  //   this.elements = [];
+  //   var nodeLists = document.querySelectorAll(selector);
+  //   // console.log(nodeLists);
+  //   for (var i = 0; i < nodeLists.length; i++) {
+  //     this.elements.push(nodeLists[i]);
+  //   }
+  //   return this;
+  // }
+  // JQuery.prototype = {
+  //   eq: function(num) {
+  //     if (num < 0 || num >= this.elements.length) 
+  //       return this;
+  //     this.elements = [this.elements[num]];
+  //     console.log(this.elements);
+  //     return this;
+  //   },
+  //   css: function(prop, val) {
+  //     this.elements.forEach(function(el) {
+  //       el.style[prop] = val;
+  //     })
+  //     return this;
+  //   },
+  //   show: function() {
+  //     this.css('display', 'block');
+  //     return this;
+  //   }
+  // }
+  // window.$ = function(selector) {
+  //   return new JQuery(selector);
+  // }
+  var jQuery = {
+    eq: function(){
+        console.log('调用 eq 方法');
+        return this;
+    },
+    show: function(){
+        console.log('调用 show 方法');
+        return this;
+    }
+}
+
+jQuery.eq().show();   
+  </script>
+  <script>
+  // $("div")
+  //   .eq(0)
+  //   .css("width", "200px")
+  //   .show();
+  </script>
+</body>
+</html>

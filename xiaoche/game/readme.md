@@ -25,5 +25,17 @@
   game.js, game.json
     deviceOrientation  showStatusBar  networkTimeout
   - 分包加载的配置
-    首先是主包， wx.loadSubpackage() 
+    首先是主包， wx.loadSubpackage() \
+  
+  - 不同的场景页，从而实现场景的切片分发。
+  多人对战游戏
+  关联跳转能力， 拉新能力， 让流量优化。看广告拿道具
+
+  ## 游戏开发引擎及支持情况
+    图形渲染、UI、动画、多媒体、网络等，粒子系统、物理模块
+    LayaAir
+  显示对象（DisplayObject） 和显示容器(DisplayObjectContainer)
+  Stage 舞台
+  场景 Scene
+  
   

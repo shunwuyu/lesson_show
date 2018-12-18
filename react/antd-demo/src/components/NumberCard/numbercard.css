@@ -1,0 +1,29 @@
+.numberCard {
+  padding: 32px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.numberCard .iconWarp {
+  font-size: 54px;
+  float: left;
+}
+
+.numberCard .content {
+    width: 100%;
+    padding-left: 78px;
+}
+
+.title {
+  line-height: 16px;
+  font-size: 16px;
+  margin-bottom: 8px;
+  height: 16px;
+}
+
+.number {
+  line-height: 32px;
+  font-size: 24px;
+  height: 32px;
+  margin-bottom: 0;
+}

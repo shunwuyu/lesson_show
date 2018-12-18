@@ -1,0 +1,15 @@
+{
+  "name": "generator",
+  "version": "0.1.0",
+  "description": "[source](https://juejin.im/post/5bc88f4ef265da0af1617162)",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}

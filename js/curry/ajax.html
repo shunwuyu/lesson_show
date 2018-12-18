@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ajax</title>
+</head>
+<body>
+<script src="./curry_extend.js"></script>
+<script>
+function ajax(type, url, data, fn) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(type, url, true);
+  xhr.send(data);
+  xhr.onreadystatechange = function() {
+    // if (state)
+    
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // console.log(xhr.responseText)
+      fn(xhr.responseText);
+    }
+  }
+}
+var ajaxCurry = curry(ajax);
+var getAjax = ajaxCurry('GET');
+console.log(getAjax('a.json')({})(function(data) {
+  console.log(data);
+}));
+</script>
+
+</body>
+</html>

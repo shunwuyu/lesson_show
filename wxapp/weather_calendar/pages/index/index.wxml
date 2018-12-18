@@ -1,5 +1,8 @@
 <view class="calendar">
-  <calendar binddateChange="dateChange" weeks-type="full-en" cell-size="30" next="{{false}}" prev="{{false}}" show-more-days="{{true}}" calendar-style="demo6-calendar" header-style="calendar-header" board-style="calendar-board" days-color="{{daysStyle}}"/>
+  <calendar binddateChange="dateChange"
+   weeks-type="full-en"
+    cell-size="30" next="{{false}}"
+     prev="{{false}}" show-more-days="{{true}}" calendar-style="demo6-calendar" header-style="calendar-header" board-style="calendar-board" days-color="{{daysStyle}}"/>
 </view>
 <view class="auth-button" wx:if="{{auth === 0}}">
   <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">使用该功能需要授权登录</button>
@@ -27,7 +30,8 @@
           <icon type="{{item}}" class="emoji"/>
           <icon class='checked' type='checked2'></icon>
         </view>
-        <view bindtap="checkedColor" data-emotion="{{item}}" wx:else style="background-color:{{colors[item]}}"><icon type="{{item}}" class="emoji"/></view>
+        <view bindtap="checkedColor" data-emotion="{{item}}" wx:else style="background-color:{{colors[item]}}">
+        <icon type="{{item}}" class="emoji"/></view>
       </view>
     </view>
     <button bindtap="submitEmotion">提交心情</button>

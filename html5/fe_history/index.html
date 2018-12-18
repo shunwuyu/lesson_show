@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>前端路由实现</title>
+  <style>
+  .warp{
+      width:400px;
+      height:400px;
+      border:1px solid grey;
+      margin:0 auto;
+  }
+  .nav{
+      border-bottom:1px solid grey;
+  }
+  .nav li{
+      display:inline-block;
+      list-style:none;
+  }
+  .nav li a{
+      display:inline-block;
+      text-decoration: none;
+      padding:10px 15px;
+  }
+  .router{
+      padding:20px;
+  }
+  a{
+      cursor: pointer;
+  }
+ </style>
+</head>
+<body>
+<section class="wrap">
+  <div class="nav">
+    <ul>
+      <li><a href="javascript:;"  data-path="index">首页</a></li>
+      <li><a href="javascript:;" data-path="news">新闻</a></li>
+      <li><a href="javascript:;" data-path="about">关于</a></li>
+    </ul>
+    <div id="router" class="router">
+      
+    </div>
+  </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+// (function() {
+//   history.replaceState(null, null, '');
+//   $('#router').html('<p>显示内容区域</p>');
+//   $('a').on('click', function() {
+//     console.log(this.text);
+//     var text = this.text;
+//     $('#router').html('<p>' + text + '</p>');
+//     history.pushState(null, null, '#/' + text);
+//   })
+// })()
+// (function(){   
+//    var count = [0,0,0]
+//    $('#router').html('<p>首页</p>'+count[0]+'<p>新闻</p>'+count[1]+'<p>关于</p>'+count[2])
+//    // history.replaceState(count,null,'');//最开始的状态，采用replace直接替换
+
+//    for(var i = 0 ; i<$('a').length; i++){
+//        $('a')[i].index = i
+//        $('a').eq(i).on('click',function(){
+//            console.log(this.index);
+//            var index = this.index;
+//            count[index]++;
+//            $('#router').html('<p>首页</p>'+count[0]+'<p>新闻</p>'+count[1]+'<p>关于</p>'+count[2])
+//            console.log(count)
+//            history.pushState(count,null,'#/count'+count[index]);//之后的状态，需要进行保存
+//        })
+//    }
+//    //监听history其他api导致地址栏url改变事件
+//    window.addEventListener('popstate',function(e){
+//        console.log(e.state);
+//        var state = e.state;
+//        $('#router').html('<p>首页</p>'+state[0]+'<p>新闻</p>'+state[1]+'<p>关于</p>'+state[2])
+
+//    })
+// })()
+(function(){   
+
+var url = '内容展示';
+
+history.replaceState(url,null,'');//最开始的状态，采用replace直接替换
+$('#router').html('<p>'+url+'</p>')
+
+$('a').on('click',function(){
+    console.log(this.text)
+    url = this.text;
+
+    $('#router').html('<p>'+ url +'</p>')
+    history.pushState(url,null,'#/'+url);
+})
+window.addEventListener('popstate',function(e){
+    console.log(e.state);
+    url = e.state
+    $('#router').html('<p>'+ url +'</p>')
+
+ });     
+})()
+</script>
+</body>
+</html>

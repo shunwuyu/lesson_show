@@ -1,0 +1,6 @@
+<button
+  class="wux-class wux-button {{type ? 'wux-button--' + type : ''}} {{size?'wux-button--' + size : ''}} {{block ? 'wux-button--block' : ''}} {{disabled ? 'wux-button--disabled' : ''}}" 
+  
+  >
+  <slot></slot>
+</button>

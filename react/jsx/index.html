@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  // const element = <h1>Hello, World!</h1>;
+  // const name = 'Josh Perez';
+  // const element = <h1>Hello, {name}, age is { 18 + 0 }</h1>
+  function formatName(user) {
+    return user.firstName + ' ' + user.lastName;
+  }
+  const user = {
+    firstName: 'Harper',
+    lastName: 'Perez',
+    avatarUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K'
+  };
+  function getGreeting(user) {
+    if (user) {
+      return <h1>Hello, {formatName(user)}!</h1>;
+    }
+    return <h1>Hello, Stranger.</h1>;
+  }
+  // const element = (
+  //   <h1>
+  //     {getGreeting()}
+  //   </h1>
+  // );
+  // const element = <img tabIndex="0" className="logo" src={user.avatarUrl} />
+  const element2 = React.createElement(
+    'div',
+    { className: 'greeting' },
+    'Hello, world!'
+  );
+
+  const element = (
+    <h1 className="greeting">
+      Hello, world!
+      {element2}
+    </h1>
+  )
+
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+</script>
+</body>
+</html>

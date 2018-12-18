@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+var fetchData = function() {
+  return fetch('/data.json')
+}  
+var getIncompleteTaskSummaries = function(membername) {
+  return fetchData()
+    .then(data =>  data.json())
+    .then(data => {
+      return data.tasks;
+    })
+    .then(tasks => {
+      // console.log(tasks);
+      // const t = tasks.filter(task => {
+      //   return (task.username == membername);
+      // });
+      // console.log(t);
+      return tasks.filter(task => {
+        return task.username == membername
+      })
+    })
+    .then(tasks => {
+      return tasks.filter(task => {
+        return !task.complete
+      })
+    })
+    .then(tasks => {
+      // console.log(tasks);
+      return tasks.map(task => {
+        return {
+          id: task.id,
+          dueDate: task.dueDate,
+          title: task.title,
+          priority: task.priority
+        }
+      })
+    }) 
+    .then(tasks => {
+      // console.log(tasks);
+      return tasks.sort((first, second) => {
+        var a = first.dueDate,
+          b = second.dueDate;
+          return a < b ? -1 : a > b ? 1 : 0;
+      })
+    })
+
+}
+getIncompleteTaskSummaries('Scott')
+  .then(tasks => {
+    console.log(tasks);
+  })
+</script>
+</body>
+</html>

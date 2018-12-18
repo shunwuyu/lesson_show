@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+  // const GreetingCard = (props) => {
+  //   return (
+  //     <div>
+  //       <h1>Hello! {props.name}</h1>
+  //     </div>
+  //   )
+  // }
+  class Greeting extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        name: "",
+      };
+    }
+  
+    componentDidMount() {
+      // AJAX
+      this.setState(() => {
+        return {
+          name: "William",
+        };
+      });
+    }
+  
+    render() {
+      return (
+        <div>
+          <h1>Hello! {this.state.name}</h1>
+          <GreetingCard name={this.state.name} />
+        </div>
+      );
+    }
+  }
+  ReactDOM.render(<Greeting/>, document.getElementById('root'));
+  </script>
+</body>
+</html>

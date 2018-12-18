@@ -1,0 +1,54 @@
+.ant-form {
+  margin: 0 auto !important;
+}
+.login_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 0;
+  max-width: 935px;
+  height: 768px;
+  padding-bottom: 44px;
+  width: 100%;
+}
+.descript {
+  position: relative;
+  width: 454px;
+  height: 618px;
+  background-position: 0 0;
+  background-size: 454px 618px;
+  height: 618px;
+  margin-left: -35px;
+  background-image: url('../assets/image/login/loginbg.png');
+  background-repeat: no-repeat;
+}
+
+.photo {
+  height: 428px;
+  width: 240px;
+  position: absolute;
+  left: 151px;
+  top: 99px;
+  background-image: url('../assets/image/login/1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation:ma 10s infinite alternate;
+}
+
+@keyframes ma {
+  0% {
+      background-image: url('../assets/image/login/1.jpg');
+  }
+  25% {
+      background-image: url('../assets/image/login/2.jpg');
+  }
+  50% {
+      background-image: url('../assets/image/login/3.jpg');
+  }
+  75% {
+      background-image: url('../assets/image/login/4.jpg');
+  }
+  100% {
+      background-image: url('../assets/image/login/5.jpg');
+  }
+}

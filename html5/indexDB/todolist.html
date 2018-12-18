@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TodoList</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  body {
+      padding: 50px;
+      margin: 10px;
+  }
+  #title {
+      font-size: 25px;
+      color: white;
+  }
+  .list-group {
+      padding-top: 30px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <form action="javascript:addTodo()" class="row navbar-form">
+          <div class="col-md-offset-2 col-md-2">
+            <div id="title" class="vertical-center">TodoList</div>
+          </div>
+          <div class="col-md-offset-1 col-md-4 form-group">
+            <input type="text" id="todoText" class="vertical-center form-control">
+          </div>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="container">
+      <div class="col-md-offset-1 col-md-2">
+        <h3>正在进行:</h3>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-group" id="todoList"></ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-offset-1 col-md-2">
+        <h3>已经完成:</h3>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-group" id="hasDoneList"></ul>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+  <script>
+  const todoStore = 'todos';
+  const todoDB = {
+    dbName: 'todolist',
+    version: 1,
+    db: null,
+  }
+  let todo = [];
+
+  (function init() {
+    openDB(todoDB, todoStore);
+    setTimeout(function() {
+      getData(todoDB.db, todoStore, () => {
+        showData(request.result);
+      });
+    }, 500);
+  })();
+
+  function openDB(myDB, storeName, cb) {
+    console.log(myDB, storeName);
+    const version = myDB.version || 1;
+    const request = indexedDB.open(myDB.dbName, version);
+
+    request.onerror = function(e) {
+      console.log('open error!');
+    }
+
+    request.onsuccess = function(e) {
+      console.log('success!');
+      myDB.db = e.target.result;
+      // cb();
+    }
+
+    request.onupgradeneeded = function(e) {
+      console.log('upgrade');
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains(storeName)) {
+        db.createObjectStore(storeName, { keyPath: "todotext" });
+      }
+      console.log(name + 'db varsion change to ' + version);
+    }
+  }
+
+  function showData() {
+
+  }
+  function addTodo () {
+    const text = $("#todoText").val();
+    if (text == "") {
+      alert("the todo can not be empty");
+    }
+    todo.push({
+      todotext: text,
+      hasDone: false
+    });
+    $("#todoText").val("");
+    addData(todoDB.db, todoStore);
+    getData(todoDB.db, todoStore, () => {
+      showData(request.result);
+    });
+  }
+
+  function getData(db, storeName, callback, key) {
+    var key = key || null;
+    var transaction = db.transaction(storeName, 'readwrite');
+    var store = transaction.objectStore(storeName);
+    if (key) {
+      request = store.get(key);
+    } else {
+      request = store.getAll();
+    }
+    request.onsuccess = function() {
+      callback();
+      console.log(request.result)
+      return request.result;
+    }
+  }
+
+  function showData(result) {
+    console.log(result);
+    todos = result;
+    $('#todoList').html("");
+    $('#hasDoneList').html("");
+    for (let i = 0; i < todos.length; i++) {
+      if (!todos[i].hasDone) {
+        $('#todoList').append("<li class='list-group-item'><a href='javascript:void(0)' onclick='doIt(event)'><span class='glyphicon glyphicon-check' aria-hidden='true' value='" + i+ "'>&nbsp;</span></a>" + todos[i].todotext + "<a href='' onclick='removeIt(event)'>\
+          <span class='glyphicon glyphicon-remove pull-right' aria-hidden='true'>&nbsp;</span></a></li>")
+      } else {
+        $('#hasDoneList').append("<li class='list-group-item'><a href=\"javascript:void(0)\" onclick=\"getBack(event)\">\
+            <span class=\"glyphicon glyphicon-check\" aria-hidden=\"true\" value=\"" + i + "\">&nbsp</span></a><del>"
+            + todos[i].todotext + "</del><a href=\"javascript:void(0)\" onclick=\"removeIt(event)\">\
+            <span class=\"glyphicon glyphicon-remove pull-right\" aria-hidden=\"true\">&nbsp</span></a></li>");
+      }
+    }
+  } 
+
+  function addData(db, storeName) {
+    const transaction = db.transaction(storeName, 'readwrite');
+    const store = transaction.objectStore(storeName);
+    for (let i = 0; i < todo.length; i++) {
+      const request = store.put(todo[i])
+    }
+    todo = [];
+  }
+  function doIt(event) {
+    var key = event.target.attributes.value.value;
+    // alert(key);
+    todos[key].hasDone = true;
+    setData(todoDB.db, todoStore, event.target.parentElement.parentElement.innerText.replace(/\s/g, ""), todos[key]);
+    getData(todoDB.db, todoStore, () => {
+      showData(request.result);
+    })
+  }
+  function setData(db, storeName, key, value) {
+    var transaction = db.transaction(storeName, 'readwrite');
+    var store = transaction.objectStore(storeName);
+    var request = store.put(value); 
+  }
+
+  function removeIt(event) {
+    var transaction = todoDB.db.transaction(todoStore, 'readwrite');
+    var store = transaction.objectStore(todoStore);
+    store.delete(event.target.parentElement.parentElement.innerText.replace(/\s/g,""));
+    getData(todoDB.db,todoStore, () => {
+      showData(request.result);
+    });
+  }
+  </script>
+</body>
+</html>
