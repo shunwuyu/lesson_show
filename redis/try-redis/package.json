@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ioredis": "^4.0.0"
+    "ioredis": "^4.3.0"
   }
 }

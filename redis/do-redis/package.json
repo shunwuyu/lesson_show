@@ -1,0 +1,15 @@
+{
+  "name": "do-redis",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}

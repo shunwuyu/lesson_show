@@ -1,0 +1,17 @@
+{
+  "name": "lxf_seq",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
+  }
+}

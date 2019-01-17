@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "element-react": "^1.4.20",
+    "element-react": "^1.4.26",
     "element-theme-default": "^1.4.13",
     "immutable": "^3.8.2",
     "react": "^16.4.1",

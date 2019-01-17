@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HOC</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  class Student extends React.Component {
+    static sayHello() {
+      console.log('hello from Student');
+    }
+    constructor(props) {
+      super(props);
+    }
+
+    inputElement = React.createRef()
+
+    componentWillMount() {
+      console.log('Student componentWillMount')
+      
+      // this.props.inputRef(this.inputElement.current());
+      this.setState({
+        name: this.props.name,
+        age: this.props.age
+      })
+    }
+    componentDidMount() {
+      this.props.inputRef(this.inputElement.current);
+    }
+    componentWillReceiveProps(nextProps) {
+
+    }
+    focus = () => {
+      // console.log()this.
+      this.inputElement.current.focus();
+    }
+    render () {
+      return (
+        <div>
+          <p>姓名:{this.state.name}</p>
+          <p>
+            年龄:
+            <input 
+              value={this.state.age}
+              onChange={(e) => {this.setState({
+                age: e.target.value
+              })}}
+              ref={this.inputElement}
+              />
+          </p>
+          <p>
+            <input
+              type="button"
+              value="focus input"
+              onClick={this.focus}
+             />  
+          </p>
+        </div>
+      )
+    }
+  }
+
+  function EnhanceWrapper(WrappedComponent) {
+    let inputElement = null;
+    function handleClick() {
+      inputElement.focus();
+    }
+    function wrappedComponentStaic() {
+      WrappedComponent.sayHello();
+    }
+    return props => (
+      <div>
+        <WrappedComponent 
+          inputRef = {el => {inputElement = el;}}
+          {...props}
+          />
+        <input
+          type="button"
+          value="focus子组件input"
+          onClick={handleClick}
+          />
+        <input
+            type="button"
+            value="调用子组件static"
+            onClick={wrappedComponentStaic}
+        />
+      </div>   
+    )
+  }
+
+  const WrapperComponent = EnhanceWrapper(Student)
+
+  ReactDOM.render(<WrapperComponent
+    name="小明"
+    age={18}/>, 
+    document.getElementById('root'))
+</script>
+</body>
+</html>
