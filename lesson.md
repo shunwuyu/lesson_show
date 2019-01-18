@@ -1,2 +1,3 @@
 - nvm 
 - ~~生命周期~~
+- redis  try-redis
