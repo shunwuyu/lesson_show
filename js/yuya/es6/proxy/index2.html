@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <span id="container">1</span>
+  <button id="button">点击加 1</button>
+  <script>
+   (function() {
+    var root = this;
+
+    function watch(target, func) {
+
+        var proxy = new Proxy(target, {
+            get: function(target, prop) {
+                return target[prop];
+            },
+            set: function(target, prop, value) {
+                target[prop] = value;
+                func(prop, value);
+            }
+        });
+
+        return proxy;
+    }
+
+    this.watch = watch;
+})()
+
+var obj = {
+    value: 1
+}
+
+var newObj = watch(obj, function(key, newvalue) {
+    if (key == 'value') document.getElementById('container').innerHTML = newvalue;
+})
+
+document.getElementById('button').addEventListener("click", function() {
+    newObj.value += 1
+});
+  </script>
+</body>
+</html>

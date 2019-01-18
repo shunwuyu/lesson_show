@@ -1,0 +1,15 @@
+{
+  "name": "immutable",
+  "version": "0.1.0",
+  "description": "[source](https://juejin.im/post/5b9b30a35188255c6418e67c)",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
+  }
+}

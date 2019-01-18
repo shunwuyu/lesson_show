@@ -1,0 +1,1 @@
+https://github.com/oliyg/hapiblog/blob/master/routes/blog/getlist.js

@@ -1,0 +1,30 @@
+{
+  "name": "music",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "proxyquire": "^2.1.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "rewire": "^4.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  },
+  "scripts": {
+    "start": "node scripts/customized-build start",
+    "build": "node scripts/customized-build build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

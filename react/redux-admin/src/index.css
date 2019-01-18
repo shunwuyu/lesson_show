@@ -1,0 +1,104 @@
+@import '~antd/dist/antd.css';
+@import './style/antd/menu.css';
+ul, li {
+  list-style:none;
+}
+.header .ant-menu {
+  background: transparent;
+  color: #ffffff;
+}
+
+.avatar i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 100%;
+}
+
+.avatar i.bottom {
+  left: auto;
+  top: auto;
+  bottom: 0;
+  right: 0;
+}
+
+.avatar i.on {
+  background-color: #6cc788;
+}
+
+.mr-m {
+  margin-right: 1rem!important;
+}
+
+.w-40, .w-48 {
+  display: inline-block;
+  text-align: center;
+}
+.w-40 {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.pull-left {
+  float: left;
+}
+.img-circle {
+  border-radius: 50%;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.list-group .list-group-item:first-child {
+  border-top-width: 0;
+}
+.list-group .list-group-item {
+  position: relative;
+  display: block;
+  margin-bottom: -1px;
+  padding: 12px 16px;
+  background: transparent;
+  border: 1px solid hsla(210,8%,51%,.065);
+  border-width: 1px 0;
+}
+
+.clear {
+  display: block;
+  overflow: hidden;
+}
+.text-muted, small {
+  opacity: .6;
+}
+
+.block {
+  display: block;
+}
+
+.gutter-box {
+  padding: 5px 0;
+}
+
+.ant-card-body {
+  padding: 24px;
+  zoom: 1;
+}
+
+.ant-card {
+  color: #000000;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.ant-layout .logo {
+  height: 32px;
+  background: #fff;
+  border-radius: 6px;
+  margin: 16px;
+}

@@ -1,0 +1,18 @@
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  line-height: 1;
+  border-radius: 500px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.avatar img {
+  border-radius: 500px;
+  width: 100%;
+}
+
+.ant-layout-content {
+  min-height: auto;
+}

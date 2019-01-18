@@ -1,0 +1,42 @@
+:local(.page-header){
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  transition: height .2s ease-in-out;
+  .header {
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 77px;
+    justify-content: center;
+    align-items: center;
+    width: 1010px;
+    padding: 0 40px;
+    transition: height .2s ease-in-out;
+    &.toggle {
+      height: 52px;
+    }
+    // 用户导航
+    .navigate {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1 0 0%;
+      a {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        margin-left: 30px;
+      }
+      .user {
+        background-repeat: no-repeat;
+        background-image: url('~@assets/image/sprite.png');
+        background-size: 495px 483px;
+        background-position: -376px -399px;
+      }
+    }
+  }
+}
