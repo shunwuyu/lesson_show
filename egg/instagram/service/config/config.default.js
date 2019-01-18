@@ -8,6 +8,14 @@ module.exports = appInfo => {
 
   // add your config here
   config.middleware = [];
-
+  config.security = {csrf: { enable: false }}
+  config.sequelize = {
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: 3306,
+    password: '1234567890',
+    database: 'learn'
+  }
+  
   return config;
 };
