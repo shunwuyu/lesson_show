@@ -22,3 +22,10 @@ CLI  Athena
   componentDidUpdate  更新完成时， 会执行的函数， prevProps, prevState
   componentWillUnmount  回收工作    定时器
   shouldComponentUpdate 返回false 时， 将不会进行更新， 可用于渲染优化。
+
+- 安装 taro
+  yarn global add @tarojs/cli
+- taro build --type weapp --watch
+- Redux 是 JavaScript 状态容器， 提供可预测的状态管理。 
+  方便管理这些状态， 同一数据， 一次请求， 应用全局共享。
+  
