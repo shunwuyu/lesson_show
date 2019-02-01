@@ -21,5 +21,12 @@ module.exports = app => {
   //topic
   apiV2Router.post('/topic/add', controller.topic.addTopic);
   apiV2Router.get('/topic/detail', controller.topic.topicDetail);
-  
+  apiV2Router.get('/topic/friend/list', controller.topic.friendsTopicList);
+
+  //comments
+  apiV2Router.post('/topic/discuss/add', controller.topic.addDiscuss);
+
+  //like
+  apiV2Router.post('/topic/like', controller.topic.putLikeTopic);
+  apiV2Router.get('/handle/upload/get-token', controller.handle.getQiniuToken);
 };

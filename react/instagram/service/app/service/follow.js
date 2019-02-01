@@ -16,6 +16,13 @@ class FollowService extends Service {
       return await ctx.model.Follow.create(followUser);
     }
   }
+
+  async findFollow(query) {
+    let { ctx } = this;
+    return await ctx.model.Follow.findAll({
+      where: query
+    });
+  }
 }
 
 module.exports = FollowService;

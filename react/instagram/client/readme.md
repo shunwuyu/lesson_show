@@ -61,6 +61,21 @@
   - Sequelize.Op 
   - Follow  status 设计
 
+13. react 全栈开发之十三Follow组件开发
+  http://v.youku.com/v_show/id_XNDAyNzkxMDI5Mg==.html?spm=a2hzp.8244740.0.0
+  - babel-plugin-transform-object-rest-spread
+  - Avatar组件prop-type defaultProps
+    
+14. react 全栈开发之十四FriendTopic
+  http://v.youku.com/v_show/id_XNDAyODcwMTYwMA==.html?spm=a2hzp.8244740.0.0
+  - 未关注用户查询 
+  - Sequelize.Op
+  
+15. react 全栈开发之十五发表评论
+  https://v.douyu.com/show/LDBbMAx49Gn7yJRP
+  - Discuss Model
+  - username 字段设计原则
+
 react 全栈开发之instagram四之scss
 
 旅梦开发团React全栈开源项目

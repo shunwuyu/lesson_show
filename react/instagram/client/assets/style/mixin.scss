@@ -4,3 +4,9 @@
   background-size: 495px 483px;
   background-position: $poz;
 }
+@mixin sprite-1x($poz) {
+  background-repeat: no-repeat;
+  background-image: url('~@assets/image/sprite2.png');
+  background-size: 236px 211px;
+  background-position: $poz;
+}
