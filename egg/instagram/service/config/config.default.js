@@ -12,10 +12,18 @@ module.exports = appInfo => {
   config.sequelize = {
     dialect: 'mysql',
     host: '127.0.0.1',
-    port: 3306,
+    port: 33306,
     password: '1234567890',
     database: 'learn'
   }
   
+  config.authWhiteList = ['/api/v2/login','/api/v2/login/register'];
+
+  config.middleware = ['errorHandler', 'authorization']
+
+  config.auth_cookie_name = 'token';
+  config.jwtSecret = 'shawzhou';
+  config.password_secret = 'ps124secr';
+
   return config;
 };

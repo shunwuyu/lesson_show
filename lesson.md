@@ -1,8 +1,5 @@
 - nvm 
-<<<<<<< HEAD
-- ~~生命周期~~
 - redis  try-redis
-=======
 - ~~生命周期~~ 
 - ~~高阶组件  react/HOC~~
 - ~~canvas 组件 抽奖 react/lottery~~
@@ -31,6 +28,3 @@
     command 连接 auth
     do-redis =>  try-redis
     danmu
-  
-
->>>>>>> 295446ecf56f7c52cdca5e310908ff9f49f86420

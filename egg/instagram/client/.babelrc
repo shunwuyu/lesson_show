@@ -3,6 +3,11 @@
   "plugins": [
     "transform-class-properties",
     [
+      "transform-runtime"
+    ],
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    [
       "import",
       {
           "libraryName": "antd",
