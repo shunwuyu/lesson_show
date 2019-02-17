@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import topicList from './topicList'
+import userInfo from './userInfo'
+import personalInfo from './personalInfo'
 
 export default combineReducers({
-  topicList
+  userInfo,
+  personalInfo
 })

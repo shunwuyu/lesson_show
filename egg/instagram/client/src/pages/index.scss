@@ -1,0 +1,18 @@
+:global body {
+  height: 100%;
+  width: 100%;
+}
+:global #app {
+  height: 100%;
+  width: 100%;
+  background: #fafafa !important;
+}
+:global .page {
+  height: 100%;
+  width: 100%;
+}
+:global .page-container {
+  background: #fafafa;
+//   margin-top: 136px;
+  padding-top: 136px;
+}

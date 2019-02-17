@@ -2,7 +2,21 @@ import React from 'react'
 import { Menu, Dropdown, notification } from 'antd';
 import {Link} from 'react-router-dom'
 import Style from './index.scss'
-console.log(Style);
+import { connect } from 'react-redux';
+import API from '../../common/api.js';
+console.log(API);
+@connect (
+  store => {
+    return {
+      userInfo: store.userInfo
+    }
+  },
+  dispatch => {
+    return {
+
+    }
+  }
+)
 class Nav extends React.Component{
   constructor(props){
     super(props)
@@ -10,6 +24,15 @@ class Nav extends React.Component{
         toggle: true,
         focusStatus: false,
         search: ''
+    }
+  }
+
+  componentDidMount () {
+    if (!this.props.userInfo.userId) {
+      API.getUserInfo().then(response => {
+        console.log('ppppppp',response);
+        // this.props.addUserInfo(response.data);
+      })
     }
   }
 
