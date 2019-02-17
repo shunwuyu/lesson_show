@@ -1,6 +1,0 @@
-@mixin sprite-2x($poz) {
-  background-repeat: no-repeat;
-  background-image: url('~@assets/image/sprite.png');
-  background-size: 495px 483px;
-  background-position: $poz;
-}
