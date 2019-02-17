@@ -5,12 +5,14 @@ class Detail extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
+        showPostTopic: false
       }
   }
   render () {
     return (
       <main>
         <Nav />
+        
       </main>
     )
   }
