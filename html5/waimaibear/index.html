@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>外卖熊</title>
+  <!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>著作权归作者所有。 -->
+  <link rel="stylesheet" href="./bear.css">
+</head>
+<body>
+  <div class="view preload">
+    <div class="load-logo-c">
+      <div class="rider1-c">
+        <div class="rider1"></div>
+      </div>
+      <div class="process-c">
+        <div class="process-v"></div>
+      </div>
+      <div class="process-txt"></div>
+    </div>
+    <div class="footer">
+      <div class="product-logo"></div>
+      <div class="product-logo-desc">@ 2015 Baidu Waimai Produced</div>
+    </div>
+  </div>
+  <script>
+  window.onload = function() {
+    let progress = 0;
+    let interval = setInterval(function() {
+      
+      progress += 10;
+      
+      document.querySelector('.process-v').style.width = progress + '%';
+      // console.log(percent);
+      if (progress >= 100) clearInterval(interval); 
+    },100);
+  }
+  </script>
+</body>
+</html>

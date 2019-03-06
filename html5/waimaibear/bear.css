@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size:37.5px;
+}
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size:0.38rem!important;
+}
+.view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.view.preload {
+  background-color: #ffebeb;
+}
+.load-logo-c {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+}
+.rider1-c {
+  width: 6.5rem;
+  margin: 0 auto .1rem;
+  height: 1.890625rem;
+  position: relative;
+}
+.rider1 {
+  background-image: url(http://s1.map.bdimg.com/zt/y2015/waimaibear/mobile/images/rider1_1b78925.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 2.40625rem;
+  height: 1.89063rem;
+  position: absolute;
+  left: 4.75rem;
+  top: 0;
+
+  -webkit-animation:rider1drive 1s 0s linear forwards;
+}
+.process-c {
+  width: 6.25rem;
+  height: .245rem;
+  border: 2px solid #373838;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.process-v {
+  height: 100%;
+  background-color: #ff2d4b;
+  float: right;
+  border-radius: .2rem;
+  width: 25%;
+  transition: width .1s;
+}
+.process-txt {
+  width: 3.4375rem;
+  height: .4375rem;
+  background-image: url(http://s0.map.bdimg.com/zt/y2015/waimaibear/mobile/images/loading-txt_8f4bf50.png);
+  margin: .625rem auto 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.product-logo {
+  background-image: url(http://s0.map.bdimg.com/zt/y2015/waimaibear/mobile/images/waimai-logo_5200f51.png);
+  width: 2.53125rem;
+  height: 0.609375rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.product-logo-desc {
+  color: #ff8797;
+  text-align: center;
+  margin: .375rem 0 1rem;
+}
+@-webkit-keyframes rider1drive{0%{-webkit-transform:translate3d(0rem,0rem,0rem)}4%{-webkit-transform:translate3d(0rem,-.125rem,0rem)}8%{-webkit-transform:translate3d(0rem,0rem,0rem)}16%{-webkit-transform:translate3d(-.4rem,-.125rem,0rem)}24%{-webkit-transform:translate3d(-.8rem,0rem,0rem)}32%{-webkit-transform:translate3d(-1.2rem,-.125rem,0rem)}40%{-webkit-transform:translate3d(-1.6rem,0rem,0rem)}48%{-webkit-transform:translate3d(-2rem,-.125rem,0rem)}56%{-webkit-transform:translate3d(-2.4rem,0rem,0rem)}64%{-webkit-transform:translate3d(-2.8rem,-.125rem,0rem)}72%{-webkit-transform:translate3d(-3.2rem,0rem,0rem)}80%{-webkit-transform:translate3d(-3.6rem,-.125rem,0rem)}88%{-webkit-transform:translate3d(-4rem,0rem,0rem)}96%{-webkit-transform:translate3d(-4.4rem,-.125rem,0rem)}100%{-webkit-transform:translate3d(-4.8rem,0rem,0rem)}}
