@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Seven wonders of the world</h1>
+  <p>Do you know the seven wonders of the world?</p>
+  <div id="content">
+    <h2>Wonders from Antiquity</h2>
+    <p>This list comes to us from ancient times.</p>
+    <ul class="wonders" id="ancient">
+        <li class="exists">Great Pyramid of Giza</li>
+        <li>Hanging Gardens of Babylon</li>
+        <li>Lighthouse of Alexandria</li>
+        <li>Statue of Zeus at Olympia</li>
+        <li>Temple of Artemis at Ephesus</li>
+        <li>Mausoleum at Halicarnassus</li>
+        <li>Colossus of Rhodes</li>
+    </ul>
+    <h2>Modern wonders of the world</h2>
+    <p>This list was decided by vote.</p>
+    <ul class="wonders" id="new">
+        <li class="exists">Petra</li>
+        <li class="exists">Great Wall of China</li>
+        <Li class="exists">Christ the Redeemer</Li>
+        <Li class="exists">Machu Picchu</Li>
+        <li class="exists">Chichen Itza</li>
+        <li class="exists">Colosseum</li>
+        <li class="exists">Taj Mahal</li>
+    </ul>
+    <h2>References</h2>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World">Seven Wonders of the Ancient World</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/New7Wonders_of_the_World">New Wonders of the World</a></li>
+    </ul>
+  </div>
+  <script>
+  // 换行也算
+  // console.log(document.body.childNodes[5].childNodes[1]);
+
+  // const titleElements = document.getElementsByTagName("h2");
+  // console.log(titleElements[0]);
+  // console.log(titleElements.length);
+
+  // const existingElements = Array.from(document.getElementsByClassName("exists"));
+  // existingElements.forEach(element => {
+  //   console.log(element);
+  // })
+
+  // console.log(document.getElementById("new")); //更快
+
+  // console.log(document.getElementById("ancient").getElementsByClassName("exists").length);
+
+  // console.log(document.querySelectorAll("p").length);
+
+  // console.log(document.querySelectorAll("#content p").length);
+
+  // console.log(document.querySelectorAll(".exists").length);
+  
+  // console.log(document.querySelectorAll("#ancient > .exists").length);
+
+  // console.log(document.querySelector("p"))
+  // console.log(document.getElementById("content").innerHTML);
+  // console.log(document.getElementById("content").textContent);
+  // console.log(document.querySelector("a").getAttribute("href"));
+  // console.log(document.querySelector("ul").id);
+  // console.log(document.querySelector("a").href);
+  // if (document.querySelector("a").hasAttribute("target")) {
+  //   console.log("The first link has a target attribute.");
+  // } else {
+  //   console.log("The first link does not have a target attribute."); // Will be shown
+  // }
+  // const classes = document.getElementById("ancient").classList;
+  // console.log(classes.length);
+  // console.log(classes[0]); 
+  // if (document.getElementById("ancient").classList.contains("wonders")) {
+  // console.log("The element with ID 'ancient' has the class 'wonders'."); // Will be shown
+  // } else {
+  //   console.log("The element with ID 'ancient' does not have the class 'wonders'.");
+  // }
+  
+  </script>
+</body>
+</html>

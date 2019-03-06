@@ -1,3 +1,11 @@
+- [drum kit](https://github.com/wesbos/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit)
+- hld  css/hld
+- baymax css/
+- bear  css/
+- calc  css/
+- git 视频
+
+
 - nvm 
 - redis  try-redis
 - ~~生命周期~~ 
@@ -27,4 +35,27 @@
     try-redis
     command 连接 auth
     do-redis =>  try-redis
-    danmu
+    dan
+
+
+1.  读书建议
+  JavaScript语言精粹 先读
+  JavaScript权威指南 随时读
+  你不知道的JavaScript 后读
+2. 视频学习
+  张鑫旭
+  https://www.imooc.com/learn/755
+  https://www.imooc.com/learn/710
+  https://www.imooc.com/learn/643
+  https://www.imooc.com/learn/403
+  https://www.imooc.com/learn/256
+  JS 
+  https://www.imooc.com/learn/36
+  https://www.imooc.com/learn/277
+  https://www.imooc.com/learn/10
+3. 学习及生活习惯
+  游戏删一删，放松时， 去网吧， 或跑跑步
+  12点前一定睡，保证好睡眠
+4. 手机装微信读书App  
+  搜索一本 算法图解
+  
