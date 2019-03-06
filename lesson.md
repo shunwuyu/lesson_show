@@ -1,9 +1,12 @@
-- [drum kit](https://github.com/wesbos/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit)
+- [drum kit](https://github.com/wesbos/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit) A 
 - hld  css/hld
 - baymax css/
 - bear  css/
 - calc  css/
 - git 视频
+- the js way  walk DOM  
+- bear waimai  
+
 
 
 - nvm 
