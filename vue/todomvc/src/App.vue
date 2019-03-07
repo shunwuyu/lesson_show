@@ -18,6 +18,7 @@
         />
       </ul>
     </section>
+    
   </section>
 </template>
 
@@ -54,7 +55,6 @@ export default {
     },
   },
   methods: {
-    
     addTodo (e) {
       const text = e.target.value
       // console.log(this.$store);

@@ -6,7 +6,7 @@
 
 - 账号申请
   1. 掘金
-  2. SF
+  2. Segmentfault
   3. github 
 
 D:/workspace/css

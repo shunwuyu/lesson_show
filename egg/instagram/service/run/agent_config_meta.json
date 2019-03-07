@@ -1,0 +1,303 @@
+{
+  "keys": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+  "middleware": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+  "security": {
+    "csrf": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+      "useSession": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "sequelize": {
+    "dialect": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+    "host": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+    "port": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+    "password": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+    "database": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+    "username": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-sequelize/config/config.default.js"
+  },
+  "authWhiteList": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+  "auth_cookie_name": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+  "jwtSecret": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+  "password_secret": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/config/config.default.js",
+  "session": {
+    "maxAge": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "autoFields": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-static/config/config.default.js",
+    "dir": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-static/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-view/config/config.default.js",
+    "mapping": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg-view/config/config.default.js"
+  },
+  "env": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "name": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "version": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "description": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "private": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "dependencies": {
+      "egg": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "egg-router-plus": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "jsonwebtoken": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "mysql2": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "sequelize": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "uuid": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "autod-egg": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "egg-ci": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "egg-mock": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "sequelize-cli": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "webstorm-disable-index": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "stop": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "dev": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "debug": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "test": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "test-local": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "cov": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "lint": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "ci": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "autod": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "url": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "license": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "strict": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "depth": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "env": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "level": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "logging": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "port": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/shunwuyu/lesson/lesson_show/egg/instagram/service/node_modules/egg/config/config.default.js"
+}

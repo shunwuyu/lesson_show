@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ThreeJS基础</title>
+  <script src="https://cdn.bootcss.com/three.js/r83/three.min.js"></script>
+  <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+  <div id="retina"></div>
+  <script>
+  window.onload = function() {
+    createWorld();
+  }
+
+  var renderer;
+  var width;
+  var height;
+  var camera;
+  var origPoint = new THREE.Vector3(1,1,1);
+  var pointLight;
+  var ambientLight;
+  var cube;
+  var secene;
+  function initScene() {
+    scene = new THREE.Scene();
+    scene.add(pointLight);
+    scene.add(ambientLight);
+    scene.add(cube);
+  }
+  function initObject() {
+    var geometry = new THREE.BoxGeometry(100, 100, 100);
+    var material = new THREE.MeshLambertMaterial({color: 0xff0000});
+    cube = new THREE.Mesh(geometry, material);
+    cube.position.set(0,0,0);
+  }
+  
+  function initLight() {
+    pointLight = new THREE.PointLight(0xffffff, 1, 20000);
+    pointLight.position.set(70, 112, 98);
+    ambientLight = new THREE.AmbientLight(0x333333);
+  }
+
+  function initCamera() {
+    camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+    camera.position.set(200, 400, 600); //相机位置
+    camera.up.set(0, 1, 0); // 设置相机正方向 
+    camera.lookAt(origPoint);// 相机视点
+  }
+
+  function render() {
+    renderer.clear();
+    renderer.render(scene, camera);
+    cube.rotation.x += 0.005;
+    cube.rotation.y += 0.005;
+    requestAnimationFrame(render);
+  }
+
+
+  function initRender(){
+    width = window.innerWidth;
+    height = window.innerHeight;
+    renderer = new THREE.WebGLRenderer({
+      antialias: true
+    });
+    renderer.setSize(width, height);
+    renderer.setClearColor('#000000', 1.0); //背影颜色 
+    renderer.setPixelRatio(window.devicePixelRatio);//高清
+    document.getElementById('retina').appendChild(renderer.domElement);
+  }
+
+  function createWorld() {
+    initRender(); //渲染器
+    initCamera(); //相机
+    initLight(); // 光源
+    initObject(); // 物体
+    initScene();
+    render();
+  }
+
+  </script>
+</body>
+</html>
