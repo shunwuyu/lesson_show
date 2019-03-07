@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Mon rêve familier</h1>
+
+  <p>Je fais souvent ce rêve <span class="adjective">étrange</span> et <span class="adjective">pénétrant</span></p>
+  <p>D'une <span>femme <span class="adjective">inconnue</span></span>, et que j'aime, et qui m'aime</p>
+  <p>Et qui n'est, chaque fois, ni tout à fait la même</p>
+  <p>Ni tout à fait une autre, et m'aime et me comprend.</p>
+  <script>
+    function countElements(qs) {
+      return document.querySelectorAll(qs).length;
+    }
+    console.log(countElements("p")); 
+    console.log(countElements(".adjective"));
+    console.log(countElements("p .adjective"));
+    console.log(countElements("p > .adjective"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>红绿灯</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #1acbfc;
+  }
+  .traffic-light {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 22.5em;
+    width: 10em;
+    background: #333333;
+    border: 0.5em solid #eee;
+    border-radius: 2em;
+    z-index: 10;
+  }
+  .traffic-light::before {
+    content: "";
+    width: 3em;
+    height: 8em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eeeeee;
+    z-index: 0;
+  }
+  .light {
+    width: 6em;
+    height: 5.5em;
+    background: #000000;
+    border-top: 0.5em solid #000;
+    border-radius: 50%;
+    margin: 1em auto;
+  }
+  .red {
+    animation: red 10s linear infinite;
+  }
+  .amber {
+    animation: amber 10s linear infinite;
+  }
+  .green {
+    animation: green 10s linear infinite;
+  }
+  @keyframes red {
+    0% {
+      background: black;
+    }
+    2%, 40% {
+      background-color: red;
+    }
+    42%, 100% {
+      background-color: black;
+    }
+  }
+  @keyframes amber {
+    0%, 20% {
+      background: black;
+    }
+    22%, 40% {
+      background: #ff7e00;
+    }
+    42%, 80% {
+      background: black;
+    }
+    82%, 100% {
+      background: #ff7e00;
+    }
+  }
+  @keyframes green {
+    0%, 40% {
+      background: black;
+    }
+    42%, 80% {
+      background: green;
+    }
+    82%, 100% {
+      background: black;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <div class="traffic-light">
+    <div class="light red"></div>
+    <div class="light amber"></div>
+    <div class="light green"></div>
+  </div>
+</body>
+</html>

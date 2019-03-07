@@ -1,0 +1,299 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+/* html{
+  height:100%;
+}
+body{
+  height:100%;
+} */
+.bear {
+  width: 345px;
+  height: 500px;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* background-color: red; */
+}
+.bear .head {
+  width: 346px;
+  height: 288px;
+  background-color: #e1b79b;
+  border: 3px solid #a57662;
+  /* border-radius: 50% 50% 50% 50% / 70% 80% 70% 70%;  苹果脸*/
+  border-radius: 50% 50% 50% 50% / 70% 60% 40% 40%;
+  position: relative;
+  z-index: 88;
+}
+
+.earLeft {
+  height: 50px;
+  width: 70px;
+  border-radius: 200px 200px 100px 100px;
+  border: 3px solid #a57662;
+  transform: rotate(-49deg);
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+.earRight {
+  height: 50px;
+  width: 70px;
+  border-radius: 200px 200px 100px 100px;
+  border: 3px solid #a57662;
+  transform: rotate(40deg);
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.earLeft, .earRight {
+  background-color: #e1b79b;
+}
+
+
+.head .eyeLeft {
+  height: 78px;
+  width: 67px;
+  background-color: #ffffff;
+  border-radius: 50% / 50%;
+  transform: rotate(20deg);
+  position: absolute;
+  top: 113px;
+  left: 68px;
+}
+
+/*左眼珠*/
+.head .eyeConLeft {
+  width: 28px;
+  height: 33px;
+  background-color: #511313;
+  position: absolute;
+  border-radius: 50%/50%;
+  transform: rotate(-13deg);
+  top: 20px;
+  right: 15px;
+}
+.head .eyeRight {
+  height: 78px;
+  width: 67px;
+  background-color: #ffffff;
+  border-radius: 50% / 50%;
+  transform: rotate(-20deg);
+  position: absolute;
+  top: 113px;
+  right: 68px;
+}
+
+/*右眼珠*/
+.head .eyeConRight {
+  width: 28px;
+  height: 33px;
+  background-color: #511313;
+  position: absolute;
+  border-radius: 50%/50%;
+  transform: rotate(13deg);
+  top: 20px;
+  left: 15px;
+}
+.head .mouse {
+  width: 99px;
+  height: 76px;
+  background-color: #f7f9e5;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  border-radius: 50% / 50%;
+  top: 187px;
+}
+.head .nose {
+  width: 18px;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  margin-left: -9px;
+  top: 13px;
+}
+.nose .noseTop {
+  width: 18px;
+  height: 8px;
+  background-color: #511313;
+  border-radius: 50%/100% 100% 0 0;
+}
+.nose .noseBottom {
+  width: 0;
+  height: 0;
+  border-width: 9px 9px 0;
+  border-style: solid;
+  border-color: #511313 transparent transparent;
+  position: relative;
+}
+.earLeft .earCon {
+  width: 40px;
+  height: 60px;
+  background-color: #eed8c5;
+  border-radius: 50%/ 40% 40% 30% 30%;
+  margin-left: 17px;
+  margin-top: 15px;
+  transform: rotate(-3deg);
+}
+
+/*右耳朵内部*/
+.earRight .earCon {
+  width: 40px;
+  height: 60px;
+  background-color: #eed8c5;
+  border-radius: 50%/ 40% 40% 30% 30%;
+  margin-left: 17px;
+  margin-top: 15px;
+  transform: rotate(-3deg);
+}
+.head .arcLeft {
+  position: absolute;
+  top: 36px;
+  left: 23px;
+  width: 80px;
+  height: 30px;
+  background-color: #e1b79b;
+  border-radius: 50%/ 50%;
+  transform: rotate(-45deg);
+}
+
+/*右侧辅助要素*/
+.head .arcRight {
+  position: absolute;
+  top: 34px;
+  right: 16px;
+  width: 80px;
+  height: 30px;
+  background-color: #e1b79b;
+  border-radius: 50%/ 50%;
+  transform: rotate(43deg); 
+}
+.body {
+  width: 208px;
+  height: 217px;
+  margin: -10px auto;
+  position: relative;
+  /* background: red; */
+}
+.body .armLeft {
+  width: 53px;
+  height: 150px;
+  background-color: #e1b79b;
+  border: 2px solid #a57662;
+  border-radius: 50% 50%/60% 30%;
+  transform: rotate(10deg);
+  left: 6px;
+  position: absolute;
+}
+.body .armRight {
+  width: 53px;
+  height: 150px;
+  background-color: #e1b79b;
+  border: 2px solid #a57662;
+  border-radius: 50% 50%/60% 30%;
+  transform: rotate(-14deg);
+  position: absolute;
+  right: 6px;
+}
+.body .tummy {
+  width: 144px;
+  height: 200px;
+  background-color: #e1b79b;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+  margin-top: -30px;
+  border: 2px solid #a57662;
+  /* z-index:2; */
+}
+.body .tummyCon {
+  width: 83px;
+  height: 90px;
+  background-color: #f7f9e5;
+  border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.body .legLeft {
+  width: 53px;
+  height: 100px;
+  background-color: #e1b79b;
+  position: absolute;
+  bottom: -7px;
+  left: 30px;
+  border: 2px solid #a57662;
+  border-color: transparent transparent #a57662 #a57662;
+  border-radius: 50% 50% 50% 50%/0 0 10% 50%;
+}
+.body .legRight {
+  width: 53px;
+  height: 100px;
+  background-color: #e1b79b;
+  position: absolute;
+  bottom: -7px;
+  right: 30px;
+  border: 2px solid #a57662;
+  border-color: transparent #a57662 #a57662 transparent;
+  border-radius: 50% 50% 50% 50%/0 0 50% 10%;
+}
+.body .neck {
+  width: 120px;
+  height: 30px;
+  background-color: #e1b79b;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+/*肚子辅助线*/
+.body .arc {
+  border-bottom: 2px solid #511313;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100px;
+  height: 100px;
+  border: solid 2px #a57662;
+  border-color: transparent transparent #a57662 transparent;
+  border-radius: 50%/ 0 0 30% 30%;
+}
+
+/*左脚辅助线*/
+.body .arcLeft {
+  border-bottom: 2px solid #511313;
+  position: absolute;
+  bottom: -30px;
+  left: 43px;
+  width: 35px;
+  height: 50px;
+  border: solid 2px #a57662;
+  border-color: #a57662 transparent transparent transparent;
+  border-radius: 50%/ 20% 20% 0 0;
+}
+
+/*右脚辅助线*/
+.body .arcRight {
+  border-bottom: 2px solid #511313;
+  position: absolute;
+  bottom: -30px;
+  right: 43px;
+  width: 35px;
+  height: 50px;
+  border: solid 2px #a57662;
+  border-color: #a57662 transparent transparent transparent;
+  border-radius: 50%/ 20% 20% 0 0;
+}
+.shadow {
+  width: 217px;
+  height: 39px;
+  background-color: #e9ecee;
+  margin: -20px auto;
+  border-radius: 50%/50%;
+}

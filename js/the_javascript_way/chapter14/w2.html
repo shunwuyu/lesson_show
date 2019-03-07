@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Some musical instruments</h1>
+  <ul>
+    <li id="clarinet" class="wind woodwind">
+      The <a href="https://en.wikipedia.org/wiki/Clarinet">clarinet</a>
+    </li>
+    <li id="saxophone" class="wind woodwind">
+      The <a href="https://en.wikipedia.org/wiki/Saxophone">saxophone</a>
+    </li>
+    <li id="trumpet" class="wind brass">
+      The <a href="https://en.wikipedia.org/wiki/Trumpet">trumpet</a>
+    </li>
+    <li id="violin" class="chordophone">
+      The <a href="https://en.wikipedia.org/wiki/Violin">violin</a>
+    </li>
+    <li id="harpsichord">
+      The <a href="https://en.wikipedia.org/wiki/Harpsichord">harpsichord</a>
+    </li>
+  </ul>
+  <script>
+  function linkInfo() {
+    const links = document.getElementsByTagName("a");
+    console.log(links.length);
+    if (links) {
+      console.log(links[0].href);
+      console.log(links[links.length - 1].href);
+    }
+  }
+  linkInfo();
+  const has = (id, someClass) => {
+    if (!id || !someClass) {
+      console.error("没有传id 或类名");
+      return ;
+    }
+    let ele = document.getElementById(id);
+    if (!ele) {
+      console.error("不存在元素");
+      return;
+    };
+    if (ele.classList.contains("woodwind")) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  }
+  has("saxophone", "woodwind");     // Should show true
+  has("saxophone", "brass");        // Should show false
+  has("trumpet", "brass");          // Should show true
+  has("contrabass", "chordophone");
+  has();
+  </script>
+</body>
+</html>
