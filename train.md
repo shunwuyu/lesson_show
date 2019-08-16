@@ -110,3 +110,41 @@
 
 
 15级软件工程 嵌入式学长留
+
+
+1. B开班 签到， 没来的人， 赵负责联系? 
+2. 下周课程安排
+  主讲,  
+  三个人线下课 
+  喻全课|  赵猛 红宝书|css世界 
+  彭 界面课程， 
+3. 彭联系一下余铮   
+  1. 微信支付 + markman
+  2. 蓝湖+个人作品的简单页
+5. 线下课， 录播课， 直播课 
+6. 行政
+  买登子 10个  
+  excel 课程表 A/B
+
+  周一
+    下午 B班 WEUI     A班 git  git bash 廖雪峰
+    晚上 A班 WEUI     B班 markman + 美团 1.5小时 |  微信支付 
+  周二
+    下午 A班 douban 界面    B班 git git bash   js_fullstack 
+    晚上 B班 栈及js 入门     A班  ? ? 
+  周三  练习日
+    下午休息 基础课
+    晚上 markman + 界面（录屏）   js 基础  录屏
+  周四 大课
+    A html5 demo show     B班 js 课
+    晚上 B班 html5 demo show   A班 js 课
+  周五 WEUI
+
+  周六  小程序
+  周日  小程序
+  
+
+
+
+
+

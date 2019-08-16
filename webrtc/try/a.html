@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <video></video>
+<script>
+var pc = new RTCPeerConnection();
+let video = document.querySelector('video');
+pc.onaddstream = function(obj) {
+  video.srcObject = obj.stream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  }
+}
+
+// Helper functions
+function endCall() {
+  var videos = document.getElementsByTagName("video");
+  for (var i = 0; i < videos.length; i++) {
+    videos[i].pause();
+  }
+
+  pc.close();
+}
+
+function error(err) { endCall(); }
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+    // var video = document.querySelector('video');
+  navigator.getUserMedia({
+    audio: true,
+    video: {width:400, height:400},
+  }, function(stream) {
+    pc.onaddstream({stream: stream});
+  // Adding a local stream won't trigger the onaddstream callback
+  pc.addStream(stream);
+
+  pc.createOffer(function(offer) {
+    pc.setLocalDescription(new RTCSessionDescription(offer), function() {
+        // send the offer to a server to be forwarded to the friend you're calling.
+      }, error);
+    }, error);
+  }, function(error) {
+
+  });
+
+
+</script>
+</body>
+</html>

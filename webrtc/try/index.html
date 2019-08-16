@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WebRTC</title>
+  <style>
+  video, canvas {
+    display: inline-block;
+  }
+  </style>
+</head>
+<body>
+  <video width="400" height="400" style="vertical-align: middle;"></video>
+  <canvas width="400" height="400"></canvas>
+  <script>
+  const videoConstraints = { width: 400, height: 400 };
+  const video = document.querySelector('video');
+  let canvas = document.querySelector('canvas');
+  let ctx = canvas.getContext('2d'); 
+  let s;
+  var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+  function hasGetUserMedia() {
+    return !!(navigator.getUserMedia || navigator.webkitGetUserMedia || mozGetUserMeida || navigator.msGetUserMedia);
+  }
+  console.log(hasGetUserMedia());
+  if (hasGetUserMedia()) {
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+    // var video = document.querySelector('video');
+    navigator.getUserMedia({
+      audio: true,
+      video: videoConstraints,
+    }, function(stream) {
+      s = stream;
+      video.srcObject = stream;
+      video.onloadedmetadata = function(e) {
+        video.play();
+      }
+      // console.log(stream);
+      // console.log(window.URL.createObjectURL(stream));
+      // video.src = window.URL.creatObjectURL(stream);
+    }, function(error) {
+      console.log(error);
+    })
+  } 
+
+  video.addEventListener('click', function() {
+    ctx.drawImage(video, 0, 0);
+    var img = new Image();
+    img.src = canvas.toDataURL('image/png');
+    document.appendChild(img);
+  })
+
+  var v = document.createElement("video");
+  var pc = new PeerConnection();
+  pc.addStream(video);
+  pc.createOffer(function(desc) {
+    pc.setLocalDescription(desc, function() {
+        // send the offer to a server that can negotiate with a remote client
+    });
+  })
+  var pc = new PeerConnection();
+  pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
+      pc.createAnswer(function(answer) {
+          pc.setLocalDescription(answer, function() {
+              // send the answer to the remote connection
+          });
+      });
+  })
+  </script>
+</body>
+</html>
