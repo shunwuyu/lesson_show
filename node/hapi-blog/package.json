@@ -24,7 +24,7 @@
     "jsonwebtoken": "^8.4.0",
     "mysql2": "^1.6.4",
     "package": "^1.0.1",
-    "sequelize": "4",
+    "sequelize": "5",
     "sequelize-cli": "^5.4.0",
     "vision": "4"
   }
