@@ -19,7 +19,7 @@
     "react-redux": "^5.0.7",
     "sass-loader": "^7.1.0",
     "semantic-ui-css": "^2.4.1",
-    "sequelize": "^4.42.0",
+    "sequelize": "^5.15.1",
     "style-loader": "^0.23.1",
     "touchui-wx-components": "^1.0.0",
     "url-loader": "^1.1.2",
