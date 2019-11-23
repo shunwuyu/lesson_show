@@ -13,7 +13,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
-    "sequelize": "^4.38.0"
+    "sequelize": "^5.15.1"
   },
   "scripts": {
     "start": "react-scripts start",
