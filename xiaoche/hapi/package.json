@@ -17,7 +17,7 @@
     "inert": "4",
     "mysql2": "^1.6.4",
     "package": "^1.0.1",
-    "sequelize": "^4.42.0",
+    "sequelize": "^5.15.1",
     "vision": "^5.4.4"
   },
   "devDependencies": {
