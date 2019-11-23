@@ -1,8 +1,8 @@
 {
   "cloud": true,
   "pages": [
-    "pages/complex/complex",
     "pages/home/home",
+    "pages/complex/complex",
     "pages/index/index",
     "pages/add/add"
   ],
@@ -12,5 +12,6 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "云开发 数据库实战",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,6 @@
+
+<van-row>
+  <van-col offset="5">
+    <van-button type="primary" bind:click="scanCode">扫码加书</van-button>
+  </van-col>
+</van-row>

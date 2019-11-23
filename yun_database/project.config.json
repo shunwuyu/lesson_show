@@ -11,6 +11,8 @@
 	"appid": "wxf440ec69475cbdbf",
 	"projectname": "yun_database",
 	"libVersion": "2.2.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
