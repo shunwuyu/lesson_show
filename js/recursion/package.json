@@ -10,6 +10,6 @@
   "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.19"
   }
 }
