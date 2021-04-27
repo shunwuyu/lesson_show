@@ -10,6 +10,6 @@
   "author": "yushunwu <shunwu2001@163.com> (https://shunwuyu.github.io)",
   "license": "MIT",
   "dependencies": {
-    "redis": "^2.8.0"
+    "redis": "^3.1.1"
   }
 }
