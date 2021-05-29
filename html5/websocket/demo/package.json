@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
-    "ws": "^6.1.2"
+    "ws": "^7.4.6"
   }
 }
