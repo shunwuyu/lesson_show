@@ -6,7 +6,7 @@
     "antd": "^3.11.0",
     "classnames": "^2.2.6",
     "mockjs": "^1.0.1-beta3",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "react": "^16.6.3",
     "react-countup": "^4.0.0",
     "react-dom": "^16.6.3",
