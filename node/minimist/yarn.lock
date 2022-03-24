@@ -27,8 +27,8 @@ map-stream@0.0.7:
   resolved "http://registry.npm.taobao.org/map-stream/download/map-stream-0.0.7.tgz#8a1f07896d82b10926bd3744a2420009f88974a8"
 
 minimist@^1.2.0:
-  version "1.2.0"
-  resolved "http://registry.npm.taobao.org/minimist/download/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
 
 pause-stream@^0.0.11:
   version "0.0.11"
