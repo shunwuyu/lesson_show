@@ -48,7 +48,7 @@
     "sass-loader": "^7.0.3",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
-    "tinymce": "^4.7.13",
+    "tinymce": "^5.10.7",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
